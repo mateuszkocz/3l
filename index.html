@@ -1,1 +1,181 @@
-Nowsza wersja
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	
+	<title>3L - Lots of Love for LESS ♥ Awesome collection of mixins for LESS</title>
+	<meta name="description" content="Improve your CSS development with 3L - awesome collection of basic and advanced mixins for LESS.">
+	
+	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	
+	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Twitter -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+</head>
+<body>
+<div class="top">
+  <header>
+		<h1>Lots of Love for LESS</h1>
+		<p>Your LESS will be more awesome now!</p>
+		<ul class="feature">
+			<li>The biggest collection of mixins!</li>
+			<li>No more prefixes!</li>
+			<li>Improve your SEO with only CSS</li>
+			<li>No more @keyframes hell!</li>
+			<li>Compatible with Bootstrap</li>
+			<li>It's totally free to use (Apache License)</li>
+		</ul>
+		<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.0.0.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);" class="button">
+			Download the greatest<br />
+			<small>mixins collection ever made!</small>
+		</a>
+		<p class="version">version: 1.0 (2012-03-15)</p>
+		<aside>
+			<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+		</aside>
+		<h2>Make your websites awesome with 3L &mdash; a collection of basic and advanced mixins and some sweet supporting classes</h2>
+  </header>
+</div> <!-- eof top -->
+
+<div role="main" class="main">
+
+	<h2>More reasons why you will love 3L</h2>
+	
+	<div class="awesomeness">
+		
+		<h3>You already know why writing CSS is so awesome with LESS</h3>
+		<p>With 3L it becomes even greater! It saves you a lot of time you'd have to spare for repeating your code over and over again. Just use those easy to remember semantic classes included in 3L and declare some of your own style to make totally awesome web site.</p>
+		
+		<h3>Many, many properties to get out of the prefix hell</h3>
+		<p>Box-shadow, border-radius, box-sizing, background-clip, gradients, columns, transformations, transitions, animations, background-size, and flex-box. All with a bit of explanation and usage examples.</p>
+		
+		<h3>Speed up your production process even more with Twitter's Bootstrap</h3>
+		<p><a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> is an awesome project that lets you create a website in a blink of an eye. Yet you might want to add some of your own style to the outcome. 3L will help you!</p>
+		<p>3L is compatible with Bootstrap. You just do some super-easy copy/paste/replace, et voila! It's a beta feature though, so in some rare cases something might goes wrong. (Submit an issue if you'll be that &ndash; ekhm &ndash; lucky and catch that bug.)</p>
+		
+		<h3>Other sets of mixins let me declare only one box-shadow</h3>
+		<p>They do a good job, since usually one box-shadow is enough. But 3L isn't <i>the other</i> set of mixins! With only one class name you can declare up to five different shadows &ndash; be it 1px 1px red or inset 10px 10px 20px 30px hsla(0,0,0,.5) &ndash; you can do them all!</p>
+		<p>Five is too low for you? You can easily get six, seven or even eight + n just with some copy&paste.</p>
+	
+		<h3>You love animations, I love animations, we all love animations!</h3>
+		<p>But they're pain in the nose to set them up thanks to those annoying prefixes! No longer! 3L lets you declare your own animations and @keyframes easily, without bothering yourself with prefixes!</p>
+		<p>That's right! You <strong>do not</strong> need to declare 5 @keyframes with prefixes! Just do it once!</p>
+		
+		<h3>SEO and HTML debugging with CSS</h3>
+		<p>No kidding! 3L includes a nice trick to let you know, when there's some SEO issue in your code with only CSS. If you activate the SEO-supporting class, all of your images without alt attribute, all links without anchor or with rel="nofollow" attribute will ask for your love with red outline. You'll also get an alert message if you forget &lt;title&gt;.</p>
+		<p><a href="http://radiatingstar.com/how-to-improve-seo-with-css">Check out how does it work!</a></p>
+		<p>Caution! SEO is an important part of creating a website, so promise you'll take care of it even without this trick!</p>
+	
+		<h3>No predefined styles</h3>
+		<p>3L isn't meant to style your website (as for example Bootstrap is). It's meant to help <strong>you</strong> styling your website. You're the king here. You're the designer here. You know better than a (great) bunch of mixins how to make your website beautiful.</p>
+		<p>OK! There is a 5px border radius default and 0 1px 3px hsla(0,0,0,.25) box shadow default, but it is in this rare case that you'll need a 5px radius or 0 1px (and so on) shadow and will work only if you won't declare any arguments in .border-radius() or .box-shadow() classes.</p>
+				
+		<h3>Make your object's transparent in your way</h3>
+		<p>Let me ask you in what kind of value opacity is declared in Photoshop or GIMP? In percentages. How do you declare opacity in older Internet Explorers? In number between 0 and 100. What values goes into opacity property? The numbers from 0 to 1. Last question: what values you use in .opacity() class in 3L? Well&hellip; percentages, 0-100 and 0-1. Sweet, eh?</p>
+		
+		<h3>(Non)semantic helper classes from HTML5 Boilerplate</h3>
+		<p><a href="http://html5boilerplate.com/" target="_blank">HTML5 boilerplate</a> has those nice helper classes: clearfix, image-replacement, visuallyhidden and some more. You might find them useful so 3L has them implemented but they're now LESS, so it's easy to use them in any other element in your style sheet and you won't be tempted to use them unsemantically as a class name in HTML.</p>
+
+		<h3>Many, many names to remember&hellip;</h3>
+		<p>Well, yes. You'll need to remember <i>some</i> of the classes' names, but those names are the same as properties' names, so it won't be that difficult. 3L has the <em>anti-fuck-up-system</em> implemented. .border-radius or round corners? Both works! Padding-box or maybe padding? Both works. Background-clip or bg-clip? Both works. It's your code &ndash; you decide!</p>
+		
+		<h3>Documentation and examples</h3>
+		<p>3L has a small portion of explanation of all used classes and properties. If you don't know what classes or properties do, just read the comments and refer to other resources pointed in 3L.</p>
+		
+		<h3>3L won't create any useless code</h3>
+		<p>After compilation no sign of 3L is left in your CSS. Only properties you used go into style sheet. Also 3L uses almost only shorthand properties so you don't get any code redundancy.</p>
+	</div> <!-- eof awesomeness -->
+	<div class="download">
+		<h2>How to use 3L?</h2>
+		<ol>
+			<li>
+				<h4>Download&hellip;</h4>
+				<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.0.0.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a> and unzip it. Inside you'll have:
+				<ul>
+					<li>my-style.less &ndash; here you'll be writing you code,</li>
+					<li>3L-mini.less &ndash; the basic file with mixins,</li>
+					<li>3L-maxi.less &ndash; mixins with documentation and examples,</li>
+					<li>less.js &ndash; the newest, compatible with 3L version of LESS.js,</li>
+					<li>animations.less &ndash; mixins required for declaring @keyframes,</li>
+					<li>bootstrap &ndash; files to be replaced in Bootstrap's less directory in order to use 3L together with Bootstrap.</li>
+				</ul>
+			</li>
+			<li>
+			<h4>&hellip; and use.</h4>
+			<p>Copy my-style.less, 3L-mini.less and less.js into the folder with your project. Place the code below in the &lt;head&gt; section of your .html file.</p>
+			<code>
+				&lt;link rel="stylesheet/less" type="text/css" href="my-style.less" /&gt;<br />
+				&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;
+			</code>
+			<p>You can now start writing your own style in my-style.less. Check out the documentation for class names available to use and make your code awesome!</p>
+			<p>You might want to watch the <a href="https://github.com/mateuszkocz/3l">3L project on GitHub</a> for news and updates.</p>
+			</li>
+			<li>
+				<h4>Animations made simpLESS</h4>
+				<p>Using animations with 3L is pretty easy. Copy the animations less files (animationX.less) to the folder where you have your style sheet. In your code just type @import "animation1" (or any other number), create a class .animation1 (or any other) and declare your animation. 3L will make @keyframes for you. Now just use this animation in any element you want with .animation() class.</p>
+<code><pre>
+@import "animation1";
+.animation1 () {
+	/* your @keyframes rules */
+	}
+.someClassName {
+	.animation(.animation1 1s);
+	}</pre></code>
+			</li>
+			<li>
+				<h4>How to make 3L compatible with Bootstrap?</h4>
+				<p>It's easy! First you need to download pre-compiled Bootstrap (tested on v.2.0.2) with LESS files. <a href="https://github.com/twitter/bootstrap/" target="_blank">Get it here</a> and unzip it. Then, in your downloaded 3L folder, you have a bootstrap folder with 2 files: bootstrap.less and mixins.less. Replace Bootstrap's original files in less folder with those two. After that just copy and paste 3l-mini.less (and all animations if you wish to use them) to the Bootstrap's less folder and create some awesome website!</p>
+			</li>
+		</ol>
+	</div>
+	<h2>Questions, Answers and Issues</h2>
+
+	<div class="questions">
+		
+		<h3>Where are my grids?</h3>
+		<p>3L doesn't have a grid system implemented. It is not meant to have any style included. Of course grids are cool so create yours with <a href="http://gridpak.com/" target="_blank">Gridpak &mdash; a responsive grid generator</a>. Gridpak gives you a responsive grid in LESS file so you can use it together with 3L.</p>
+		
+		<h3>Compiler I use fail to compile 3L!</h3>
+		<p>Unfortunately not all compilers can deal with some of the 3L classes. The hardest to compile are opacity in percentages (it uses a small piece of JavaSript), keyframes and <a href="http://lesscss.org/#-pattern-matching-and-guard-expressions" target="_blank">guarded mixins</a>. I strongly encourage you to use <a href="http://winless.org/" target="_blank">WinLess</a> (also the online version) as it works very well with all 3L classes.</p>
+		<p>If you're on a Mac and compiler you use was able to deal with all the issues stated above, please, <a href="mailto:mateusz@radiatingstar.com">let me know!</a></p>
+		<p>Other solution would be to delete the option to declare opacity in percentages (it's the biggest class in opacity block in 3L.less file and uses JavaScript). If it still doesn't help, you seriously need to consider getting a better compiler compatible with all LESS functionality!</p>
+		
+		<h3>I've found a bug (in your English)</h3>
+		<p>That's great! Please, <a href="https://github.com/mateuszkocz/3l/issues?state=open">submit an issue</a> via GitHub, so I'll get it fixed ASAP.</p>
+		<p>If you find an error in language &mdash; be it on this website or in 3L's documentation &mdash; do not hesitate to also point that out! 3L is learning English very hard!</p>
+		
+		<h3>After compilation I have many comments in my style sheet</h3>
+		<p>The reason is that you're using 3L-maxi.less that has documentation included. Your compiler leaves the comments intact. Solution is pretty easy &mdash; use either 3L-mini.less (if you use my-style.less 3L-mini is the default) or minify your CSS. Actually you should always minify CSS files so even if you were using 3L-maxi.less, those comments will be deleted eventually.</p>
+	</div> <!-- eof Q&A -->
+	
+</div>
+  <footer>
+		<p>3L was made for YOU by Mateusz ★ Kocz from <a href="http://radiatingstar.com">Radiating Star</a> with Lots of Love ♥</p>
+		<p>3L is licensed under <a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>. Content on this website is <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">CC-BY</a>.</p>
+		<p><a href="http://lesscss.org">LESS</a> was made by <a href="http://cloudhead.io/">Alexis Sellier</a> and is available under Apache License.</p>
+  </footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30243135-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
