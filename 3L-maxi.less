@@ -974,6 +974,12 @@
 	-o-transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
 	transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
 	}
+.transition-transform (@transformArguments) {
+	-webkit-transition: -webkit-transform @transformArguments;
+	-moz-transition: -moz-transform @transformArguments;
+	-ms-transition: -ms-transform @transformArguments;
+	-o-transition: -o-transform @transformArguments;
+	}
 .transition-transform (@transformArguments, @arguments1) {
 	-webkit-transition: -webkit-transform @transformArguments, @arguments1;
 	-moz-transition: -moz-transform @transformArguments, @arguments1;

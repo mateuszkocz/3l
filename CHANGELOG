@@ -1,0 +1,3 @@
+1.0.1
+
+-- .transition-transform mixin now doesn't require more properties to be declared - you can now use if you want to transition only the transform property.
