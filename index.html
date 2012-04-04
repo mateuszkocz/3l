@@ -12,13 +12,45 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	
 	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
+
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
 	<!-- Twitter -->
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	  $('a[href*=#]').click(function() {
+	 if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	 && location.hostname == this.hostname) {
+	   var $target = $(this.hash);
+	   $target = $target.length && $target
+	   || $('[id=' + this.hash.slice(1) +']');
+	   if ($target.length) {
+	  var targetOffset = $target.offset().top - 50;
+	  $('html,body')
+	  .animate({scrollTop: targetOffset}, 500);
+	    return false;
+	   }
+	 }
+	  });
+	});
+	</script>
+	<script type="text/javascript">
+	$(function(){
+        var stickyHeaderTop = $('#main-nav').offset().top;
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('#main-nav').css({position: 'fixed', top: '0px'});
+                } else {
+                        $('#main-nav').css({position: 'static'});
+                }
+        });
+	});
+	</script>
 </head>
 <body>
 <div class="top">
@@ -48,7 +80,16 @@
 
 <div role="main" class="main">
 
-	<h2>More reasons why you will love 3L</h2>
+		<nav role="navigation">
+			<ul class="nav" id="main-nav">
+				<li><a href="#awesomeness">Awesomeness</a></li>
+				<!--<li><a href="#mixins">The Mixins</a></li>-->
+				<li><a href="#install">How to use</a></li>
+				<li><a href="#qa">Q&A, Issues</a></li>
+			</ul>
+		</nav>
+
+	<h2 id="awesomeness">More reasons why you will love 3L</h2>
 	
 	<div class="awesomeness">
 		
@@ -94,8 +135,11 @@
 		<h3>3L won't create any useless code</h3>
 		<p>After compilation no sign of 3L is left in your CSS. Only properties you used go into style sheet. Also 3L uses almost only shorthand properties so you don't get any code redundancy.</p>
 	</div> <!-- eof awesomeness -->
+	
+	<!--<div id="mixins"></div>-->
+	
 	<div class="download">
-		<h2>How to use 3L?</h2>
+		<h2 id="install">How to use 3L?</h2>
 		<ol>
 			<li>
 				<h4>Download&hellip;</h4>
@@ -137,8 +181,8 @@
 			</li>
 		</ol>
 	</div>
-	<h2>Questions, Answers and Issues</h2>
 
+	<h2 id="qa">Questions, Answers and Issues</h2>
 	<div class="questions">
 		
 		<h3>Where are my grids?</h3>
@@ -164,7 +208,7 @@
 		<p><a href="http://lesscss.org">LESS</a> was made by <a href="http://cloudhead.io/">Alexis Sellier</a> and is available under Apache License.</p>
   </footer>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-30243135-1']);
@@ -176,6 +220,6 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script>-->
 </body>
 </html>

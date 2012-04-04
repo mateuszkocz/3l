@@ -286,9 +286,45 @@ h2 {
   text-align: justify;
   color: #424242;
 }
+.main nav ul {
+	text-align: center;
+}
+#main-nav {
+	left: 0; 
+	right: 0; 
+	z-index: 100;
+	}
+.main nav ul li {
+	display: inline-block;
+}
+.main nav ul li a {
+	display: block;
+	padding: 10px;
+	border-bottom: none;
+	font-size: 16px;
+	background-color: #424242;
+	color: #fff;
+	position: relative;
+}
+.main nav ul li a:hover:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 32px;
+	border-top: 17px solid #ffa500;
+	border-left: 10px solid transparent;;
+	border-right: 10px solid transparent;
+}
+
 .main h2 {
   padding-bottom: 18.5px;
   border-bottom: 1px solid #353535;
+  /*clear: both;*/
 }
 .main a {
   color: #424242;
