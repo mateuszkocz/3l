@@ -1,3 +1,8 @@
+1.1.1
+
+-- mixins updated to be compatible with new variadic arguments - https://gist.github.com/1933613,
+-- many @arguments changed to semantic names,
+
 1.0.1
 
 -- .transition-transform mixin now doesn't require more properties to be declared - you can now use if you want to transition only the transform property.

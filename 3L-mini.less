@@ -34,75 +34,75 @@
 .background-clip (content){.content-box;}
 .background-clip (content-box){.content-box;}
 .bg-clip(@arguments){.background-clip(@arguments);}
-.box-shadow (@arguments: 0 1px 3px fade(#000,25%)){
+.box-shadow (@shadow: 0 1px 3px fade(#000,25%)){
 	-webkit-box-shadow: @arguments;
 	-moz-box-shadow: @arguments;
 	box-shadow: @arguments;
 }
-.box-shadow (@arguments1, @arguments2){
-	-webkit-box-shadow: @arguments1, @arguments2;
-	-moz-box-shadow: @arguments1, @arguments2;
-	box-shadow: @arguments1, @arguments2;
+.box-shadow (@shadow1, @shadow2){
+	-webkit-box-shadow: @shadow1, @shadow2;
+	-moz-box-shadow: @shadow1, @shadow2;
+	box-shadow: @shadow1, @shadow2;
 }
-.box-shadow (@arguments1, @arguments2, @arguments3){
-	-webkit-box-shadow: @arguments1, @arguments2, @arguments3;
-	-moz-box-shadow: @arguments1, @arguments2, @arguments3;
-	box-shadow: @arguments1, @arguments2, @arguments3;
+.box-shadow (@shadow1, @shadow2, @shadow3){
+	-webkit-box-shadow: @shadow1, @shadow2, @shadow3;
+	-moz-box-shadow: @shadow1, @shadow2, @shadow3;
+	box-shadow: @shadow1, @shadow2, @shadow3;
 }
-.box-shadow (@arguments1, @arguments2, @arguments3, @arguments4){
-	-webkit-box-shadow: @arguments1, @arguments2, @arguments3, @arguments4;
-	-moz-box-shadow: @arguments1, @arguments2, @arguments3, @arguments4;
-	box-shadow: @arguments1, @arguments2, @arguments3, @arguments4;
+.box-shadow (@shadow1, @shadow2, @shadow3, @shadow4){
+	-webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+	-moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
+	box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
 }
-.box-shadow (@arguments1, @arguments2, @arguments3, @arguments4, @arguments5){
-	-webkit-box-shadow: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-moz-box-shadow: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	box-shadow: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
+.box-shadow (@shadow1, @shadow2, @shadow3, @shadow4, @shadow5){
+	-webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+	-moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+	box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
 }
 .border-radius-fix(){.background-clip(padding-box);}
-.border-radius (@arguments:5px) {
+.border-radius (@radius:5px, ...) {
 	-webkit-border-radius: @arguments;
 	-moz-border-radius: @arguments;
 	border-radius: @arguments;
 }
-.round-corners (@arguments:5px) {.border-radius(@arguments);}
-.elliptical-border-radius (@arguments1, @arguments2) {
-	-webkit-border-radius: @arguments1 ~"/" @arguments2;
-	-moz-border-radius: @arguments1 ~"/" @arguments2;
-	border-radius: @arguments1 ~"/" @arguments2;
+.round-corners (@radius:5px, ...) {.border-radius(@arguments);}
+.elliptical-border-radius (@radius1, @radius2) {
+	-webkit-border-radius: @radius1 ~"/" @radius2;
+	-moz-border-radius: @radius1 ~"/" @radius2;
+	border-radius: @radius1 ~"/" @radius2;
 }
-.round-corner (top-left, @values){
-	-webkit-border-top-left-radius: @values;
-	-moz-border-top-left-radius: @values;
-	border-top-left-radius: @values;
+.round-corner (top-left, @radius...){
+	-webkit-border-top-left-radius: @radius;
+	-moz-border-top-left-radius: @radius;
+	border-top-left-radius: @radius;
 }
-.round-corner (top-right, @values){
-	-webkit-border-top-right-radius: @values;
-	-moz-border-top-right-radius: @values;
-	border-top-right-radius: @values;
+.round-corner (top-right, @radius...){
+	-webkit-border-top-right-radius: @radius;
+	-moz-border-top-right-radius: @radius;
+	border-top-right-radius: @radius;
 }
-.round-corner (bottom-right, @values) {
-	-webkit-border-bottom-right-radius: @values;
-	-moz-border-bottom-right-radius: @values;
-	border-bottom-right-radius: @values;
+.round-corner (bottom-right, @radius...) {
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-bottom-right-radius: @radius;
+	border-bottom-right-radius: @radius;
 }
-.round-corner (bottom-left, @values) {
-	-webkit-border-bottom-left-radius: @values;
-	-moz-border-bottom-left-radius: @values;
-	border-bottom-left-radius: @values;
+.round-corner (bottom-left, @radius...) {
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-bottom-left-radius: @radius;
+	border-bottom-left-radius: @radius;
 }
-.border-top-left-radius (@arguments) {.round-corner(top-left,@arguments);}
-.border-top-right-radius (@arguments) {.round-corner(top-right,@arguments);}
-.border-bottom-right-radius (@arguments) {.round-corner(bottom-right,@arguments);}
-.border-bottom-left-radius (@arguments) {.round-corner(bottom-left,@arguments);}
-.border-top-radius (@arguments) {.round-corner(top-left,@arguments);.round-corner(top-right,@arguments);}
-.border-bottom-radius (@arguments) {.round-corner(bottom-left,@arguments);.round-corner(bottom-right,@arguments);}
-.border-left-radius (@arguments) {.round-corner(top-left,@arguments);.round-corner(bottom-left,@arguments);}
-.border-right-radius (@arguments) {.round-corner(top-right,@arguments);.round-corner(bottom-right,@arguments);}
-.round-top-corners (@arguments) {.border-top-radius(@arguments);}
-.round-bottom-corners (@arguments) {.border-bottom-radius(@arguments);}
-.round-left-corners (@arguments) {.border-left-radius(@arguments);}
-.round-right-corners (@arguments) {.border-right-radius(@arguments);}
+.border-top-left-radius (...) {.round-corner(top-left,@arguments);}
+.border-top-right-radius (...) {.round-corner(top-right,@arguments);}
+.border-bottom-right-radius (...) {.round-corner(bottom-right,@arguments);}
+.border-bottom-left-radius (...) {.round-corner(bottom-left,@arguments);}
+.border-top-radius (...) {.round-corner(top-left,@arguments);.round-corner(top-right,@arguments);}
+.border-bottom-radius (...) {.round-corner(bottom-left,@arguments);.round-corner(bottom-right,@arguments);}
+.border-left-radius (...) {.round-corner(top-left,@arguments);.round-corner(bottom-left,@arguments);}
+.border-right-radius (...) {.round-corner(top-right,@arguments);.round-corner(bottom-right,@arguments);}
+.round-top-corners (...) {.border-top-radius(@arguments);}
+.round-bottom-corners (...) {.border-bottom-radius(@arguments);}
+.round-left-corners (...) {.border-left-radius(@arguments);}
+.round-right-corners (...) {.border-right-radius(@arguments);}
 .transparent() {.opacity(0);}
 .non-transparent() {.opacity(1);}
 .half-transparent () {.opacity(.5);}
@@ -202,57 +202,57 @@
 	background: radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
-.background-size (@arguments) {
+.background-size (...) {
 	-webkit-background-size: @arguments;
 	-moz-background-size: @arguments;
 	background-size: @arguments;
 	}
-.bg-size (@arguments) {.background-size(@arguments)}
-.columns (@arguments) {
+.bg-size (...) {.background-size(@arguments)}
+.columns (...) {
 	-webkit-columns: @arguments;
 	-moz-columns: @arguments;
 	columns: @arguments;
 	}
-.column-gap (@arguments) {
-	-webkit-column-gap: @arguments;
-	-moz-column-gap: @arguments;
-	column-gap: @arguments;
+.column-gap (@gap) {
+	-webkit-column-gap: @gap;
+	-moz-column-gap: @gap;
+	column-gap: @gap;
 	}
-.columns-gap (@arguments) {.column-gap(@arguments);}
-.column-rule (@arguments) {
+.columns-gap (@gap) {.column-gap(@gap);}
+.column-rule (...) {
 	-webkit-column-rule: @arguments;
 	-moz-column-rule: @arguments;
 	column-rule: @arguments;
 	}
-.columns-rule (@arguments) {.column-rule(@arguments);}
-.column-fill (@arguments) {
-	-webkit-column-fill: @arguments;
-	-moz-column-fill: @arguments;
-	column-fill: @arguments;
+.columns-rule (...) {.column-rule(@arguments);}
+.column-fill (@fill) {
+	-webkit-column-fill: @fill;
+	-moz-column-fill: @fill;
+	column-fill: @fill;
 }
-.columns-fill (@arguments) {.column-fill(@arguments);}
-.transform-origin (@arguments) {
+.columns-fill (@fill) {.column-fill(@fill);}
+.transform-origin (...) {
 	-webkit-transform-origin: @arguments;
 	-moz-transform-origin: @arguments;
 	-ms-transform-origin: @arguments;
 	-o-transform-origin: @arguments;
 	transform-origin: @arguments;
 	}
-.perspective (@arguments) {
+.perspective (...) {
 	-webkit-perspective: @arguments;
 	-moz-perspective: @arguments;
 	-ms-perspective: @arguments;
 	-o-perspective: @arguments;
 	perspective: @arguments;
 	}
-.transform (@arguments) {
+.transform (...) {
 	-webkit-transform: @arguments;
 	-moz-transform: @arguments;
 	-ms-transform: @arguments;
 	-o-transform: @arguments;
 	transform: @arguments;
 	}
-.transform3d (@arguments) {
+.transform3d (...) {
 	-webkit-transform: @arguments;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform: @arguments;
@@ -264,12 +264,12 @@
 	transform: @arguments;
 	transform-style: preserve-3d;
 }
-.rotate (@arguments) {
-	-webkit-transform: rotate(@arguments);
-	-moz-transform: rotate(@arguments);
-	-ms-transform: rotate(@arguments);
-	-o-transform: rotate(@arguments);
-	transform: rotate(@arguments);
+.rotate (@rotate) {
+	-webkit-transform: rotate(@rotate);
+	-moz-transform: rotate(@rotate);
+	-ms-transform: rotate(@rotate);
+	-o-transform: rotate(@rotate);
+	transform: rotate(@rotate);
 	}
 .rotate3d (@deg1, @deg2:0, @deg3:0){
 	-webkit-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
@@ -283,124 +283,124 @@
 	transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
 	transform-style: preserve-3d;
 	}
-.scale (@arguments) {
-	-webkit-transform: scale(@arguments);
-	-moz-transform: scale(@arguments);
-	-ms-transform: scale(@arguments);
-	-o-transform: scale(@arguments);
-	transform: scale(@arguments);
+.scale (@scale) {
+	-webkit-transform: scale(@scale);
+	-moz-transform: scale(@scale);
+	-ms-transform: scale(@scale);
+	-o-transform: scale(@scale);
+	transform: scale(@scale);
 	}
-.scale (@argument1,@argument2) {
-	-webkit-transform: scale(@argument1,@argument2);
-	-moz-transform: scale(@argument1,@argument2);
-	-ms-transform: scale(@argument1,@argument2);
-	-o-transform: scale(@argument1,@argument2);
-	transform: scale(@argument1,@argument2);
+.scale (@scale1,@scale2) {
+	-webkit-transform: scale(@scale1,@scale2);
+	-moz-transform: scale(@scale1,@scale2);
+	-ms-transform: scale(@scale1,@scale2);
+	-o-transform: scale(@scale1,@scale2);
+	transform: scale(@scale1,@scale2);
 	}
-.scaleX (@arguments) {
-	-webkit-transform: scaleX(@arguments);
-	-moz-transform: scaleX(@arguments);
-	-ms-transform: scaleX(@arguments);
-	-o-transform: scaleX(@arguments);
-	transform: scaleX(@arguments);
+.scaleX (@scale) {
+	-webkit-transform: scaleX(@scale);
+	-moz-transform: scaleX(@scale);
+	-ms-transform: scaleX(@scale);
+	-o-transform: scaleX(@scale);
+	transform: scaleX(@scale);
 	}
-.scaleY (@arguments) {
-	-webkit-transform: scaleY(@arguments);
-	-moz-transform: scaleY(@arguments);
-	-ms-transform: scaleY(@arguments);
-	-o-transform: scaleY(@arguments);
-	transform: scaleY(@arguments);
+.scaleY (@scale) {
+	-webkit-transform: scaleY(@scale);
+	-moz-transform: scaleY(@scale);
+	-ms-transform: scaleY(@scale);
+	-o-transform: scaleY(@scale);
+	transform: scaleY(@scale);
 	}
-.skew (@arguments) {
-	-webkit-transform: skew(@arguments);
-	-moz-transform: skew(@arguments);
-	-ms-transform: skew(@arguments);
-	-o-transform: skew(@arguments);
-	transform: skew(@arguments);
+.skew (@skew) {
+	-webkit-transform: skew(@skew);
+	-moz-transform: skew(@skew);
+	-ms-transform: skew(@skew);
+	-o-transform: skew(@skew);
+	transform: skew(@skew);
 	}
-.skew (@argument1, @argument2) {
-	-webkit-transform: skew(@argument1, @argument2);
-	-moz-transform: skew(@argument1, @argument2);
-	-ms-transform: skew(@argument1, @argument2);
-	-o-transform: skew(@argument1, @argument2);
-	transform: skew(@argument1, @argument2);
+.skew (@skew1, @skew2) {
+	-webkit-transform: skew(@skew1, @skew2);
+	-moz-transform: skew(@skew1, @skew2);
+	-ms-transform: skew(@skew1, @skew2);
+	-o-transform: skew(@skew1, @skew2);
+	transform: skew(@skew1, @skew2);
 	}
-.skewX (@arguments) {
-	-webkit-transform: skewX(@arguments);
-	-moz-transform: skewX(@arguments);
-	-ms-transform: skewX(@arguments);
-	-o-transform: skewX(@arguments);
-	transform: skewX(@arguments);
+.skewX (@skew) {
+	-webkit-transform: skewX(@skew);
+	-moz-transform: skewX(@skew);
+	-ms-transform: skewX(@skew);
+	-o-transform: skewX(@skew);
+	transform: skewX(@skew);
 	}
-.skewY (@arguments) {
-	-webkit-transform: skewY(@arguments);
-	-moz-transform: skewY(@arguments);
-	-ms-transform: skewY(@arguments);
-	-o-transform: skewY(@arguments);
-	transform: skewY(@arguments);
+.skewY (@skew) {
+	-webkit-transform: skewY(@skew);
+	-moz-transform: skewY(@skew);
+	-ms-transform: skewY(@skew);
+	-o-transform: skewY(@skew);
+	transform: skewY(@skew);
 	}
-.translate (@arguments) {
-	-webkit-transform: translate(@arguments);
-	-moz-transform: translate(@arguments);
-	-ms-transform: translate(@arguments);
-	-o-transform: translate(@arguments);
-	transform: translate(@arguments);
+.translate (@translate) {
+	-webkit-transform: translate(@translate);
+	-moz-transform: translate(@translate);
+	-ms-transform: translate(@translate);
+	-o-transform: translate(@translate);
+	transform: translate(@translate);
 	}
-.translate (@argument1, @argument2) {
-	-webkit-transform: translate(@argument1, @argument2);
-	-moz-transform: translate(@argument1, @argument2);
-	-ms-transform: translate(@argument1, @argument2);
-	-o-transform: translate(@argument1, @argument2);
-	transform: translate(@argument1, @argument2);
+.translate (@translate1, @translate2) {
+	-webkit-transform: translate(@translate1, @translate2);
+	-moz-transform: translate(@translate1, @translate2);
+	-ms-transform: translate(@translate1, @translate2);
+	-o-transform: translate(@translate1, @translate2);
+	transform: translate(@translate1, @translate2);
 	}
-.translateX (@arguments) {
-	-webkit-transform: translateX(@arguments);
-	-moz-transform: translateX(@arguments);
-	-ms-transform: translateX(@arguments);
-	-o-transform: translateX(@arguments);
-	transform: translateX(@arguments);
+.translateX (@translate) {
+	-webkit-transform: translateX(@translate);
+	-moz-transform: translateX(@translate);
+	-ms-transform: translateX(@translate);
+	-o-transform: translateX(@translate);
+	transform: translateX(@translate);
 	}
-.translateY (@arguments) {
-	-webkit-transform: translateY(@arguments);
-	-moz-transform: translateY(@arguments);
-	-ms-transform: translateY(@arguments);
-	-o-transform: translateY(@arguments);
-	transform: translateY(@arguments);
+.translateY (@translate) {
+	-webkit-transform: translateY(@translate);
+	-moz-transform: translateY(@translate);
+	-ms-transform: translateY(@translate);
+	-o-transform: translateY(@translate);
+	transform: translateY(@translate);
 	}
-.transition (@arguments1) {
-	-webkit-transition: @arguments1;
-	-moz-transition: @arguments1;
-	-ms-transition: @arguments1;
-	-o-transition: @arguments1;
-	transition: @arguments1;
+.transition (@transition1) {
+	-webkit-transition: @transition1;
+	-moz-transition: @transition1;
+	-ms-transition: @transition1;
+	-o-transition: @transition1;
+	transition: @transition1;
 	}
-.transition (@arguments1, @arguments2) {
-	-webkit-transition: @arguments1, @arguments2;
-	-moz-transition: @arguments1, @arguments2;
-	-ms-transition: @arguments1, @arguments2;
-	-o-transition: @arguments1, @arguments2;
-	transition: @arguments1, @arguments2;
+.transition (@transition1, @transition2) {
+	-webkit-transition: @transition1, @transition2;
+	-moz-transition: @transition1, @transition2;
+	-ms-transition: @transition1, @transition2;
+	-o-transition: @transition1, @transition2;
+	transition: @transition1, @transition2;
 	}
-.transition (@arguments1, @arguments2, @arguments3) {
-	-webkit-transition: @arguments1, @arguments2, @arguments3;
-	-moz-transition: @arguments1, @arguments2, @arguments3;
-	-ms-transition: @arguments1, @arguments2, @arguments3;
-	-o-transition: @arguments1, @arguments2, @arguments3;
-	transition: @arguments1, @arguments2, @arguments3;
+.transition (@transition1, @transition2, @transition3) {
+	-webkit-transition: @transition1, @transition2, @transition3;
+	-moz-transition: @transition1, @transition2, @transition3;
+	-ms-transition: @transition1, @transition2, @transition3;
+	-o-transition: @transition1, @transition2, @transition3;
+	transition: @transition1, @transition2, @transition3;
 	}
-.transition (@arguments1, @arguments2, @arguments3, @arguments4) {
-	-webkit-transition: @arguments1, @arguments2, @arguments3, @arguments4;
-	-moz-transition: @arguments1, @arguments2, @arguments3, @arguments4;
-	-ms-transition: @arguments1, @arguments2, @arguments3, @arguments4;
-	-o-transition: @arguments1, @arguments2, @arguments3, @arguments4;
-	transition: @arguments1, @arguments2, @arguments3, @arguments4;
+.transition (@transition1, @transition2, @transition3, @transition4) {
+	-webkit-transition: @transition1, @transition2, @transition3, @transition4;
+	-moz-transition: @transition1, @transition2, @transition3, @transition4;
+	-ms-transition: @transition1, @transition2, @transition3, @transition4;
+	-o-transition: @transition1, @transition2, @transition3, @transition4;
+	transition: @transition1, @transition2, @transition3, @transition4;
 	}
-.transition (@arguments1, @arguments2, @arguments3, @arguments4, @arguments5) {
-	-webkit-transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-moz-transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-ms-transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-o-transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	transition: @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
+.transition (@transition1, @transition2, @transition3, @transition4, @transition5) {
+	-webkit-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
+	-moz-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
+	-ms-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
+	-o-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
+	transition: @transition1, @transition2, @transition3, @transition4, @transition5;
 	}
 .transition-transform (@transformArguments) {
 	-webkit-transition: -webkit-transform @transformArguments;
@@ -408,45 +408,45 @@
 	-ms-transition: -ms-transform @transformArguments;
 	-o-transition: -o-transform @transformArguments;
 	}
-.transition-transform (@transformArguments, @arguments1) {
-	-webkit-transition: -webkit-transform @transformArguments, @arguments1;
-	-moz-transition: -moz-transform @transformArguments, @arguments1;
-	-ms-transition: -ms-transform @transformArguments, @arguments1;
-	-o-transition: -o-transform @transformArguments, @arguments1;
+.transition-transform (@transformArguments, @transition1) {
+	-webkit-transition: -webkit-transform @transformArguments, @transition1;
+	-moz-transition: -moz-transform @transformArguments, @transition1;
+	-ms-transition: -ms-transform @transformArguments, @transition1;
+	-o-transition: -o-transform @transformArguments, @transition1;
 	}
-.transition-transform (@transformArguments, @arguments1, @arguments2) {
-	-webkit-transition: -webkit-transform @transformArguments, @arguments1, @arguments2;
-	-moz-transition: -moz-transform @transformArguments, @arguments1, @arguments2;
-	-ms-transition: -ms-transform @transformArguments, @arguments1, @arguments2;
-	-o-transition: -o-transform @transformArguments, @arguments1, @arguments2;
+.transition-transform (@transformArguments, @transition1, @transition2) {
+	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2;
+	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2;
+	-ms-transition: -ms-transform @transformArguments, @transition1, @transition2;
+	-o-transition: -o-transform @transformArguments, @transition1, @transition2;
 	}
-.transition-transform (@transformArguments, @arguments1, @arguments2, @arguments3) {
-	-webkit-transition: -webkit-transform @transformArguments, @arguments1, @arguments2, @arguments3;
-	-moz-transition: -moz-transform @transformArguments, @arguments1, @arguments2, @arguments3;
-	-ms-transition: -ms-transform @transformArguments, @arguments1, @arguments2, @arguments3;
-	-o-transition: -o-transform @transformArguments, @arguments1, @arguments2, @arguments3;
+.transition-transform (@transformArguments, @transition1, @transition2, @transition3) {
+	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3;
+	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3;
+	-ms-transition: -ms-transform @transformArguments, @transition1, @transition2, @transition3;
+	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3;
 	}
-.transition-transform (@transformArguments, @arguments1, @arguments2, @arguments3, @arguments4) {
-	-webkit-transition: -webkit-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4;
-	-moz-transition: -moz-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4;
-	-ms-transition: -ms-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4;
-	-o-transition: -o-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4;
+.transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4) {
+	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
+	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
+	-ms-transition: -ms-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
+	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
 	}
-.transition-transform (@transformArguments, @arguments1, @arguments2, @arguments3, @arguments4, @arguments5) {
-	-webkit-transition: -webkit-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-moz-transition: -moz-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-ms-transition: -ms-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
-	-o-transition: -o-transform @transformArguments, @arguments1, @arguments2, @arguments3, @arguments4, @arguments5;
+.transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5) {
+	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
+	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
+	-ms-transition: -ms-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
+	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
 	}
-.animation (@arguments) {
+.animation (...) {
 	-webkit-animation: @arguments;
 	-moz-animation: @arguments;
 	-ms-animation: @arguments;
 	-o-animation: @arguments;
 	animation: @arguments;
 	}
-.animate (@arguments) {.animation(@arguments);}
-.anime (@arguments) {.animation(@arguments);}
+.animate (...) {.animation(@arguments);}
+.anime (...) {.animation(@arguments);}
 .box () {
 	display: -webkit-box;
 	display: -moz-box;
