@@ -1,3 +1,7 @@
+1.2.0
+
+-- new debbuging rules: a[href="#"], div:empty, span:empty, li:empty, p:empty, td:empty, th:empty,	*[title=""], *[class=""] and *[id=""].
+
 1.1.1
 
 -- mixins updated to be compatible with new variadic arguments - https://gist.github.com/1933613,

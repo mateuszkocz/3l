@@ -1,5 +1,8 @@
 .seo-helper () {
-	img:not([alt]), img[alt=""], img[alt^=" "], a[href=""], a[href^=" "], a[rel*="nofollow"] {
+	img:not([alt]), img[alt=""], img[alt^=" "],
+	a[href=""], a[href^=" "], a[href="#"], a[rel*="nofollow"],
+	div:empty, span:empty, li:empty, p:empty, td:empty, th:empty,
+	*[title=""], *[class=""], *[id=""] {
 		outline: 2px solid red !important;
 		outline-offset: 3px !important;
 		}

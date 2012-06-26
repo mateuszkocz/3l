@@ -17,7 +17,7 @@
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Version: 1.1.1 (2012.04.05)
+ * Version: 1.2.0 (2012.06.26)
  *
  */
 
@@ -117,10 +117,16 @@
  * nofollow links might be useful in some situations. See here:
  * -> http://en.wikipedia.org/wiki/Nofollow#Control_internal_PageRank_flow)
  *
+ * Why div:empty, span:empty, li:empty, p:empty, td:empty, th:empty?
+ * It'll just check if you have some redundancy (empty elements) in you code.
+ *
  */
  
 .seo-helper () {
-	img:not([alt]), img[alt=""], img[alt^=" "], a[href=""], a[href^=" "], a[rel*="nofollow"] {
+	img:not([alt]), img[alt=""], img[alt^=" "],
+	a[href=""], a[href^=" "], a[href="#"], a[rel*="nofollow"],
+	div:empty, span:empty, li:empty, p:empty, td:empty, th:empty,
+	*[title=""], *[class=""], *[id=""] {
 		outline: 2px solid red !important;
 		outline-offset: 3px !important;
 		}
