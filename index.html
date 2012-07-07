@@ -61,9 +61,9 @@
 		<a id="button" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.2.0.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
 			Download 3L and make your CSS awesome!
 		</a>
-		<p class="version">version: 1.2.0 (<time datetime="2012-06.26">2012.06.26</time>)</p>
+		<p class="version">version: 1.2.0 (<time datetime="2012.06.26">2012.06.26</time>)</p>
 		<aside>
-			<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="85px" height="20px"></iframe>
+			<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="85" height="20"></iframe>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
 		</aside>
 		<h2>You will love it!</h2>
@@ -150,8 +150,8 @@
 		outline-offset: 3px !important;
 		}
 	head, title:empty, link, meta {display: block;}
-	title:empty:before {content: "You've left the &lt;title> empty!"}
-	link:before {content: "You don't have a &lt;title>!"}
+	title:empty:before {content: "You've left the &amp;lt;title> empty!"}
+	link:before {content: "You don't have a &amp;lt;title>!"}
 	title ~ link {display: none;}
 	meta[name="description"][content=""]:before, meta[name="description"][content=" "]:before {content: "You've left description empty!";}
 	}</code></pre>
@@ -160,9 +160,9 @@
 <pre><code>.ir () {display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; br {display: none;}}
 .hidden () { display: none !important; visibility: hidden; }
 .visuallyhidden () {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
-.focusable () {.visuallyhidden;&:active,&:focus{clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto;}}
+.focusable () {.visuallyhidden;&amp;:active,&amp;:focus{clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto;}}
 .invisible () { visibility: hidden; }
-.clearfix () {*zoom:1;&:before,&:after{content:"";display:table;}&:after{clear:both;}}</code></pre>
+.clearfix () {*zoom:1;&amp;:before,&amp;:after{content:"";display:table;}&amp;:after{clear:both;}}</code></pre>
 			</div>
 			<div class="feat-desc" id="feat-3-desc">
 <pre><code>.content-box-sizing(){-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
@@ -265,7 +265,7 @@
 .non-transparent() {.opacity(1);}
 .half-transparent () {.opacity(.5);}
 .opacity () {.non-transparent();}
-.opacity (@value) when (isnumber(@value)) and (@value =< 1){
+.opacity (@value) when (isnumber(@value)) and (@value =&lt; 1){
 	opacity: @value;
 	filter: ~"alpha(opacity="@value*100~")";
 	}
