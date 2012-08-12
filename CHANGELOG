@@ -2,6 +2,7 @@
 -- removed -webkit-background-clip, -webkit-background-size and -webkit-gradient. No longer required.
 -- removed flex-box mixins. The specification changed, but there's no browsers' support for now. Will be back in the future.
 -- in gradients, background property changed to background-image.
+-- gradients' syntax updated to the new specyfication.
 
 1.2.1
 
