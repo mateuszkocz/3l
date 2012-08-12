@@ -1,6 +1,7 @@
 1.3.0
--- removed -webkit-background-clip. No longer required.
---
+-- removed -webkit-background-clip and -webkit-background-size. No longer required.
+-- removed flex-box mixins. The specification changed, but there's no browsers' support for now. Will be back in the future.
+-- 
 
 1.2.1
 
