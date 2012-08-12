@@ -124,69 +124,69 @@
 	filter: ~"alpha(opacity="@integerValue~")";
 	}
 .gradient (@color1, @color2){
-	background: @color1;
-	background: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(top,  @color1 0%,@color2 100%);
-	background: linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: @color1;
+	background-image: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(top,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 );
 }
 .gradient (@color1, @color2, @color3){
-	background: @color3;
-	background: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(top,  @color1 0%,@color2 100%);
-	background: linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: @color3;
+	background-image: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(top,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(top,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 );
 }
 .vertical-gradient (@color1,@color2) {.gradient(@color1,@color2)}
 .vertical-gradient (@color1,@color2,@color3) {.gradient(@color1,@color2,@color3)}
 .horizontal-gradient (@color1, @color2) {
-	background: @color1;
-	background: -moz-linear-gradient(left,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(left,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(left,  @color1 0%,@color2 100%);
-	background: linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: @color1;
+	background-image: -moz-linear-gradient(left,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(left,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 }
 .horizontal-gradient (@color1, @color2,@color3) {
-	background: @color3;
-	background: -moz-linear-gradient(left,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(left,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(left,  @color1 0%,@color2 100%);
-	background: linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: @color3;
+	background-image: -moz-linear-gradient(left,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(left,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(left,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 }
 .diagonal-gradient (@color1, @color2) {
-	background: @color1;
-	background: -moz-linear-gradient(-45deg,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(-45deg,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(-45deg,  @color1 0%,@color2 100%);
-	background: linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: @color1;
+	background-image: -moz-linear-gradient(-45deg,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(-45deg,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .diagonal-gradient (@color1, @color2,@color3) {
-	background: @color3;
-	background: -moz-linear-gradient(-45deg,  @color1 0%, @color2 100%);
-	background: -webkit-linear-gradient(-45deg,  @color1 0%,@color2 100%);
-	background: -o-linear-gradient(-45deg,  @color1 0%,@color2 100%);
-	background: linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: @color3;
+	background-image: -moz-linear-gradient(-45deg,  @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(-45deg,  @color1 0%,@color2 100%);
+	background-image: linear-gradient(-45deg,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .radial-gradient (@color1, @color2) {
-	background: @color1;
-	background: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%);
-	background: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
-	background: -o-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
-	background: radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: @color1;
+	background-image: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%);
+	background-image: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: -o-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .radial-gradient (@color1, @color2,@color3) {
-	background: @color3;
-	background: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%);
-	background: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
-	background: -o-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
-	background: radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: @color3;
+	background-image: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%);
+	background-image: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: -o-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
+	background-image: radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .background-size (...) {
