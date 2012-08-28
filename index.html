@@ -58,10 +58,10 @@
 <section id="download" role="banner">
 	<div id="download-inside" class="inside">
 		<h2>Your Lovely Collection of Mixins for LESS</h2>
-		<a id="button" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.1.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
+		<a id="button" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.2.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
 			Download 3L and make your CSS awesome!
 		</a>
-		<p class="version">version: 1.3.1 (<time datetime="2012-08-20">2012.08.20</time>)</p>
+		<p class="version">version: 1.3.2 (<time datetime="2012-08-20">2012.08.20</time>)</p>
 		<aside>
 			<iframe src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
@@ -150,8 +150,8 @@
 		outline-offset: 3px !important;
 		}
 	head, title:empty, link, meta {display: block;}
-	title:empty:before {content: "You've left the &amp;lt;title> empty!"}
-	link:before {content: "You don't have a &amp;lt;title>!"}
+	title:empty:before {content: "You've left the &lt;title> empty!"}
+	link:before {content: "You don't have a &lt;title>!"}
 	title ~ link {display: none;}
 	meta[name="description"][content=""]:before, meta[name="description"][content=" "]:before {content: "You've left description empty!";}
 	}</code></pre>
@@ -282,17 +282,17 @@
 			<div class="feat-desc" id="feat-8-desc">
 <pre><code>.gradient (@color1, @color2){
 	background: @color1;
-	background-image: -moz-linear-gradient(to bottom, @color1 0%, @color2 100%);
-	background-image: -webkit-linear-gradient(to bottom, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(to bottom, @color1 0%,@color2 100%);
+	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(top, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to bottom, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 );
 }
 .gradient (@color1, @color2, @color3){
 	background: @color3;
-	background-image: -moz-linear-gradient(to bottom, @color1 0%, @color2 100%);
-	background-image: -webkit-linear-gradient(to bottom, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(to bottom, @color1 0%,@color2 100%);
+	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(top, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to bottom, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=0 );
 }
@@ -301,17 +301,17 @@
 .vertical-gradient (@color1,@color2,@color3) {.gradient(@color1,@color2,@color3)}
 .horizontal-gradient (@color1, @color2) {
 	background: @color1;
-	background-image: -moz-linear-gradient(to right, @color1 0%, @color2 100%);
-	background-image: -webkit-linear-gradient(to right, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(to right, @color1 0%,@color2 100%);
+	background-image: -moz-linear-gradient(left, @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(left, @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(left, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to right, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 }
 .horizontal-gradient (@color1, @color2, @color3) {
 	background: @color3;
-	background-image: -moz-linear-gradient(to right, @color1 0%, @color2 100%);
-	background-image: -webkit-linear-gradient(to right, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(to right, @color1 0%,@color2 100%);
+	background-image: -moz-linear-gradient(left, @color1 0%, @color2 100%);
+	background-image: -webkit-linear-gradient(left, @color1 0%,@color2 100%);
+	background-image: -o-linear-gradient(left, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to right, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 }
@@ -320,7 +320,7 @@
 	background-image: -moz-linear-gradient(-45deg, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(-45deg, @color1 0%,@color2 100%);
 	background-image: -o-linear-gradient(-45deg, @color1 0%,@color2 100%);
-	background-image: linear-gradient(-45deg, @color1 0%,@color2 100%);
+	background-image: linear-gradient(135deg, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .diagonal-gradient (@color1, @color2,@color3) {
@@ -328,29 +328,28 @@
 	background-image: -moz-linear-gradient(-45deg, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(-45deg, @color1 0%,@color2 100%);
 	background-image: -o-linear-gradient(-45deg, @color1 0%,@color2 100%);
-	background-image: linear-gradient(-45deg, @color1 0%,@color2 100%);
+	background-image: linear-gradient(135deg, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .radial-gradient (@color1, @color2) {
 	background: @color1;
-	background-image: -moz-radial-gradient(at center, @color1 0%, @color2 100%);
-	background-image: -webkit-radial-gradient(at center, @color1 0%,@color2 100%);
-	background-image: -o-radial-gradient(at center, @color1 0%,@color2 100%);
+	background-image: -moz-radial-gradient(center, @color1 0%, @color2 100%);
+	background-image: -webkit-radial-gradient(center, @color1 0%,@color2 100%);
+	background-image: -o-radial-gradient(center, @color1 0%,@color2 100%);
 	background-image: radial-gradient(at center, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}
 .radial-gradient (@color1, @color2,@color3) {
 	background: @color3;
-	background-image: -moz-radial-gradient(at center, @color1 0%, @color2 100%);
-	background-image: -webkit-radial-gradient(at center, @color1 0%,@color2 100%);
-	background-image: -o-radial-gradient(at center, @color1 0%,@color2 100%);
+	background-image: -moz-radial-gradient(center, @color1 0%, @color2 100%);
+	background-image: -webkit-radial-gradient(center, @color1 0%,@color2 100%);
+	background-image: -o-radial-gradient(center, @color1 0%,@color2 100%);
 	background-image: radial-gradient(at center, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 );
 	}</code></pre>
 			</div>
 			<div class="feat-desc" id="feat-9-desc">
 <pre><code>.background-size (...) {
-	-webkit-background-size: @arguments;
 	-moz-background-size: @arguments;
 	background-size: @arguments;
 	}
@@ -534,31 +533,37 @@
 	-webkit-transition: -webkit-transform @transformArguments;
 	-moz-transition: -moz-transform @transformArguments;
 	-o-transition: -o-transform @transformArguments;
+	transition: transform @transformArguments;
 	}
 .transition-transform (@transformArguments, @transition1) {
 	-webkit-transition: -webkit-transform @transformArguments, @transition1;
 	-moz-transition: -moz-transform @transformArguments, @transition1;
 	-o-transition: -o-transform @transformArguments, @transition1;
+	transition: transform @transformArguments, @transition1;
 	}
 .transition-transform (@transformArguments, @transition1, @transition2) {
 	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2;
 	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2;
 	-o-transition: -o-transform @transformArguments, @transition1, @transition2;
+	transition: transform @transformArguments, @transition1, @transition2;
 	}
 .transition-transform (@transformArguments, @transition1, @transition2, @transition3) {
 	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3;
 	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3;
 	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3;
+	transition: transform @transformArguments, @transition1, @transition2, @transition3;
 	}
 .transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4) {
 	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
 	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
 	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
+	transition: transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
 	}
 .transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5) {
 	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
 	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
 	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
+	transition: transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
 	}</code></pre>
 			</div>
 			<div class="feat-desc" id="feat-13-desc">
@@ -583,7 +588,7 @@ Will be back in the future updated to the specs.</code></pre>
 		<ol>
 			<li>
 				<h3>Download&hellip;</h3>
-				<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.1.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a> and unzip it. Inside you'll have:
+				<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.2.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a> and unzip it. Inside you'll have:
 				<ul>
 					<li>my-style.less &ndash; here you'll be writing you code,</li>
 					<li>3L-mini.less &ndash; the basic file with mixins,</li>
