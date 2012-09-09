@@ -58,10 +58,10 @@
 <section id="download" role="banner">
 	<div id="download-inside" class="inside">
 		<h2>Your Lovely Collection of Mixins for LESS</h2>
-		<a id="button" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.2.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
+		<a id="button" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
 			Download 3L and make your CSS awesome!
 		</a>
-		<p class="version">version: 1.3.2 (<time datetime="2012-08-20">2012.08.20</time>)</p>
+		<p class="version">version: 1.3.3 (<time datetime="2012-08-20">2012.09.09</time>)</p>
 		<aside>
 			<iframe src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
@@ -384,6 +384,7 @@
 <pre><code>.transform-origin (...) {
 	-webkit-transform-origin: @arguments;
 	-moz-transform-origin: @arguments;
+	-ms-transform-origin: @arguments;
 	-o-transform-origin: @arguments;
 	transform-origin: @arguments;
 	}
@@ -396,6 +397,7 @@
 .transform (...) {
 	-webkit-transform: @arguments;
 	-moz-transform: @arguments;
+	-ms-transform: @arguments;
 	-o-transform: @arguments;
 	transform: @arguments;
 	}
@@ -412,6 +414,7 @@
 .rotate (@rotate) {
 	-webkit-transform: rotate(@rotate);
 	-moz-transform: rotate(@rotate);
+	-ms-transform: rotate(@rotate);
 	-o-transform: rotate(@rotate);
 	transform: rotate(@rotate);
 	}
@@ -428,72 +431,84 @@
 .scale (@scale) {
 	-webkit-transform: scale(@scale);
 	-moz-transform: scale(@scale);
+	-ms-transform: scale(@scale);
 	-o-transform: scale(@scale);
 	transform: scale(@scale);
 	}
 .scale (@scale1,@scale2) {
 	-webkit-transform: scale(@scale1,@scale2);
 	-moz-transform: scale(@scale1,@scale2);
+	-ms-transform: scale(@scale1,@scale2);
 	-o-transform: scale(@scale1,@scale2);
 	transform: scale(@scale1,@scale2);
 	}
 .scaleX (@scale) {
 	-webkit-transform: scaleX(@scale);
 	-moz-transform: scaleX(@scale);
+	-ms-transform: scaleX(@scale);
 	-o-transform: scaleX(@scale);
 	transform: scaleX(@scale);
 	}
 .scaleY (@scale) {
 	-webkit-transform: scaleY(@scale);
 	-moz-transform: scaleY(@scale);
+	-ms-transform: scaleY(@scale);
 	-o-transform: scaleY(@scale);
 	transform: scaleY(@scale);
 	}
 .skew (@skew) {
 	-webkit-transform: skew(@skew);
 	-moz-transform: skew(@skew);
+	-ms-transform: skew(@skew);
 	-o-transform: skew(@skew);
 	transform: skew(@skew);
 	}
 .skew (@skew1, @skew2) {
 	-webkit-transform: skew(@skew1, @skew2);
 	-moz-transform: skew(@skew1, @skew2);
+	-ms-transform: skew(@skew1, @skew2);
 	-o-transform: skew(@skew1, @skew2);
 	transform: skew(@skew1, @skew2);
 	}
 .skewX (@skew) {
 	-webkit-transform: skewX(@skew);
 	-moz-transform: skewX(@skew);
+	-ms-transform: skewX(@skew);
 	-o-transform: skewX(@skew);
 	transform: skewX(@skew);
 	}
 .skewY (@skew) {
 	-webkit-transform: skewY(@skew);
 	-moz-transform: skewY(@skew);
+	-ms-transform: skewY(@skew);
 	-o-transform: skewY(@skew);
 	transform: skewY(@skew);
 	}
 .translate (@translate) {
 	-webkit-transform: translate(@translate);
 	-moz-transform: translate(@translate);
+	-ms-transform: translate(@translate);
 	-o-transform: translate(@translate);
 	transform: translate(@translate);
 	}
 .translate (@translate1, @translate2) {
 	-webkit-transform: translate(@translate1, @translate2);
 	-moz-transform: translate(@translate1, @translate2);
+	-ms-transform: translate(@translate1, @translate2);
 	-o-transform: translate(@translate1, @translate2);
 	transform: translate(@translate1, @translate2);
 	}
 .translateX (@translate) {
 	-webkit-transform: translateX(@translate);
 	-moz-transform: translateX(@translate);
+	-ms-transform: translateX(@translate);
 	-o-transform: translateX(@translate);
 	transform: translateX(@translate);
 	}
 .translateY (@translate) {
 	-webkit-transform: translateY(@translate);
 	-moz-transform: translateY(@translate);
+	-ms-transform: translateY(@translate);
 	-o-transform: translateY(@translate);
 	transform: translateY(@translate);
 	}</code></pre>
@@ -588,7 +603,7 @@ Will be back in the future updated to the specs.</code></pre>
 		<ol>
 			<li>
 				<h3>Download&hellip;</h3>
-				<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.2.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a> and unzip it. Inside you'll have:
+				<a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a> and unzip it. Inside you'll have:
 				<ul>
 					<li>my-style.less &ndash; here you'll be writing you code,</li>
 					<li>3L-mini.less &ndash; the basic file with mixins,</li>
