@@ -7,11 +7,26 @@ Keep up your good work!
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
 * [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip)
 
-Licensed under the Apache License v2.0
+3L is licensed under the Apache License v2.0
 http://www.apache.org/licenses/LICENSE-2.0
+
+[LESS](link) is made by ... and licensed under ...
+link
+
+[reset.css](link) is made by ... and licensed under ...
+link
+
+[normalize.css](link) is made by ... and licensed under ...
+link
+
+[animations.css](link) is made by ... and licensed under ...
+link
 
 Version: 1.3.3 (2012.09.09)
 LESS version: 1.3.1 (included in 3l's .zip)
+Reset.css version: 
+Normalize.css version:
+Animations.css version: 
 
 [Get your own LESS.js](http://lesscss.org/)
 
@@ -55,13 +70,13 @@ How to make 3L compatible with Bootstrap?
 
 It's easy! First you need to download pre-compiled Bootstrap (tested on v.2.0.2) with LESS files. Get it here -> https://github.com/twitter/bootstrap/ and unzip it. Then, in your downloaded 3L folder, you have a bootstrap folder with 2 files: bootstrap.less and mixins.less. Replace Bootstrap's original files in less folder with those two. After that just copy and paste 3l-mini.less (and all animations if you wish to use them) to the Bootstrap's less folder and create some awesome website!
 
-**********
+---
 
 Where are my grids?
 
 3L doesn't have a grid system implemented. It is not meant to have any style included. Of course grids are cool so create yours with Gridpak —> http://gridpak.com/ . Gridpak gives you a responsive grid in LESS file so you can use it together with 3L.
 
-**********
+---
 
 Compiler I use fail to compile 3L!
 
@@ -71,7 +86,7 @@ If you're on a Mac and compiler you use was able to deal with all the issues sta
 
 Other solution would be to delete the option to declare opacity in percentages (it's the biggest class in opacity block in 3L.less file and uses JavaScript). If it still doesn't help, you seriously need to consider getting a better compiler compatible with all LESS functionality!
 
-**********
+---
 
 I've found a bug (in your English)
 
@@ -79,7 +94,7 @@ That's great! Please, submit an issue via GitHub, so I'll get it fixed ASAP. -> 
 
 If you find an error in language — be it on this website or in 3L's documentation — do not hesitate to also point that out! 3L is learning English very hard!
 
-**********
+---
 
 After compilation I have many comments in my style sheet
 
