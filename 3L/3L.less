@@ -817,18 +817,14 @@
 	transform: scaleY(@scale);
 	}
 .skew (@skew) {
-	-webkit-transform: skew(@skew);
-	-moz-transform: skew(@skew);
-	-ms-transform: skew(@skew);
-	-o-transform: skew(@skew);
-	transform: skew(@skew);
+	.skewX(@skew);
 	}
 .skew (@skew1, @skew2) {
-	-webkit-transform: skew(@skew1, @skew2);
-	-moz-transform: skew(@skew1, @skew2);
-	-ms-transform: skew(@skew1, @skew2);
-	-o-transform: skew(@skew1, @skew2);
-	transform: skew(@skew1, @skew2);
+	-webkit-transform: skewX(@skew1), skewY(@skew2);
+	-moz-transform: skewX(@skew1), skewY(@skew2);
+	-ms-transform: skewX(@skew1), skewY(@skew2);
+	-o-transform: skewX(@skew1), skewY(@skew2);
+	transform: skewX(@skew1), skewY(@skew2);
 	}
 .skewX (@skew) {
 	-webkit-transform: skewX(@skew);
