@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.5.0
+* added option to include normalize.css or reset.css.
+* reorgnisation of the folder structure.
+
 ## 1.4.0
 
 ## 1.3.3
