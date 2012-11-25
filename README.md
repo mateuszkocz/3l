@@ -7,25 +7,22 @@ Keep up your good work!
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
 * [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip)
 
-3L is licensed under the Apache License v2.0
-http://www.apache.org/licenses/LICENSE-2.0
+3L is licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-[LESS](link) is made by ... and licensed under ...
-link
+[LESS](http://lesscss.org/) is made by Alexis Sellier and licensed under [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-[reset.css](link) is made by ... and licensed under ...
-link
+[reset.css](http://meyerweb.com/eric/tools/css/reset/) is made by Eric Meyer and is in public domain.
 
-[normalize.css](link) is made by ... and licensed under ...
+[normalize.css](http://necolas.github.com/normalize.css/) is made by Nicolas Gallagher and Jonathan Neal and licensed under MIT License.
 link
 
 [animations.css](link) is made by ... and licensed under ...
 link
 
 Version: 1.3.3 (2012.09.09)
-LESS version: 1.3.1 (included in 3l's .zip)
-Reset.css version: 
-Normalize.css version:
+LESS version: 1.3.1
+Reset.css version: 2.0
+Normalize.css version: 2.0.1
 Animations.css version: 
 
 [Get your own LESS.js](http://lesscss.org/)
