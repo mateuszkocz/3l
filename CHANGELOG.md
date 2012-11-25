@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 1.4.0
+
 ## 1.3.3
 * -ms-transform back to biznis since IE9 requires that.
 
@@ -7,7 +9,7 @@
 * added unprefixed transition: transform, since we now know it's safe and future-proof
 
 ## 1.3.1
-* fixed bug in gradients. Thanks to Daniel Garcia (https://github.com/zlapper) for pointing that out!
+* fixed bug in gradients. Thanks to [Daniel Garcia](https://github.com/zlapper) for pointing that out!
 
 ## 1.3.0
 * removed -webkit-background-clip, -webkit-background-size and -webkit-gradient. No longer required.
@@ -17,7 +19,7 @@
 
 ## 1.2.1
 
-* removed -ms- prefixed gradients, transform, transition and animation (together with @keyframes) since they're no longer required (-> http://blogs.msdn.com/b/ie/archive/2012/05/31/windows-release-preview-the-sixth-ie10-platform-preview.aspx)
+* removed -ms- prefixed gradients, transform, transition and animation (together with @keyframes) since [they're no longer required](http://blogs.msdn.com/b/ie/archive/2012/05/31/windows-release-preview-the-sixth-ie10-platform-preview.aspx)
 
 ## 1.2.0
 
@@ -25,7 +27,7 @@
 
 ## 1.1.1
 
-* mixins updated to be compatible with new variadic arguments - https://gist.github.com/1933613,
+* mixins updated to be compatible with new variadic arguments - (https://gist.github.com/1933613),
 * many @arguments changed to semantic names,
 
 ## 1.0.1
