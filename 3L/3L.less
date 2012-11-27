@@ -969,3 +969,105 @@
 	}
 .animate (...) {.animation(@arguments);}
 .anime (...) {.animation(@arguments);}
+
+/*
+ * Filter
+ * 
+ * Advanced image manipulation in your CSS!
+ * 
+ * Note: the filter property works only in Webkit for now. Will the prefixed version for other
+ * vendors be supported, is unknown, so the mixin might for now generate useles code.
+ * You might want to use just the -webkit-filter property without the help of .filter() mixin.
+ * 
+ * drop-shadow and opacity might be hardware accelerated.
+ * 
+ * Resources: http://www.html5rocks.com/en/tutorials/filters/understanding-css/
+ * 
+ * @todo: requires testing
+ */
+
+.filter(...) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.grayscale(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.sepia(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.saturate(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.hue-rotation(@angle) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.invert(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+// .opacity() already taken, hence the -filter suffix.
+.opacity-filter(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.brightness(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.contrast(@amount) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.blur(@radius) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.drop-shadow(@shadow) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
+.url(@url) {
+	-webkit-filter: @arguments;
+	-moz-filter: @arguments;
+	-ms-filter: @arguments;
+	-o-filter: @arguments;
+	filter: @arguments;
+}
