@@ -71,7 +71,7 @@
  * by this rule. You can also place it in any other container
  * class element in your code (body, div.wrapper, article and so on)
  * if you don't want for some reasons to check for bugs on whole page
- * but in single area.
+ * but in a single area.
  *
  * Caution! Do not forget to delete this class before finishing your
  * project, unless you want to keep it in continuous project (like blog)
@@ -288,37 +288,15 @@
  * .box-shadow(1px 1px black, inset 5px 5px 3px 1px fade(green,30%)) // fade(colour,XX%) is a LESS native function
  *																							// that adds alpha channel to colour. Instead of fade()
  *																							// you can also use rgba or hsla colours declaration.
- *
+ * Solution for multiple box-shadows in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
  */
-// One shadow:
-.box-shadow (@shadow: 0 1px 3px fade(#000,25%)){
-	-webkit-box-shadow: @arguments;
-	-moz-box-shadow: @arguments;
-	box-shadow: @arguments;
-}
-// Two shadows:
-.box-shadow (@shadow1, @shadow2){
-	-webkit-box-shadow: @shadow1, @shadow2;
-	-moz-box-shadow: @shadow1, @shadow2;
-	box-shadow: @shadow1, @shadow2;
-}
-// Three shadows:
-.box-shadow (@shadow1, @shadow2, @shadow3){
-	-webkit-box-shadow: @shadow1, @shadow2, @shadow3;
-	-moz-box-shadow: @shadow1, @shadow2, @shadow3;
-	box-shadow: @shadow1, @shadow2, @shadow3;
-}
-// Four shadows:
-.box-shadow (@shadow1, @shadow2, @shadow3, @shadow4){
-	-webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
-	-moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
-	box-shadow: @shadow1, @shadow2, @shadow3, @shadow4;
-}
-// Five shadows:
-.box-shadow (@shadow1, @shadow2, @shadow3, @shadow4, @shadow5){
-	-webkit-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
-	-moz-box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
-	box-shadow: @shadow1, @shadow2, @shadow3, @shadow4, @shadow5;
+
+.box-shadow(@shadow1, @shadow2:X, ...){
+	@shadows: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+    -webkit-box-shadow: @shadows;
+    -moz-box-shadow: @shadows;
+    -o-box-shadow: @shadows;
+    box-shadow: @shadows;
 }
 
 /* 
@@ -820,11 +798,11 @@
 	.skewX(@skew);
 	}
 .skew (@skew1, @skew2) {
-	-webkit-transform: skewX(@skew1), skewY(@skew2);
-	-moz-transform: skewX(@skew1), skewY(@skew2);
-	-ms-transform: skewX(@skew1), skewY(@skew2);
-	-o-transform: skewX(@skew1), skewY(@skew2);
-	transform: skewX(@skew1), skewY(@skew2);
+	-webkit-transform: skewX(@skew1) skewY(@skew2);
+	-moz-transform: skewX(@skew1) skewY(@skew2);
+	-ms-transform: skewX(@skew1) skewY(@skew2);
+	-o-transform: skewX(@skew1) skewY(@skew2);
+	transform: skewX(@skew1) skewY(@skew2);
 	}
 .skewX (@skew) {
 	-webkit-transform: skewX(@skew);
@@ -917,74 +895,24 @@
  * 																			 // and after 5s animate margin change for 1s.
  * 3. .transition-transform (2s linear, padding 3s) // Animate change of transform property (no "transform" declared!)
  * 																 // and padding property.
+ * 
+ * Solution for multiple transitions in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
  */
 
-.transition (@transition1) {
-	-webkit-transition: @transition1;
-	-moz-transition: @transition1;
-	-o-transition: @transition1;
-	transition: @transition1;
-	}
-.transition (@transition1, @transition2) {
-	-webkit-transition: @transition1, @transition2;
-	-moz-transition: @transition1, @transition2;
-	-o-transition: @transition1, @transition2;
-	transition: @transition1, @transition2;
-	}
-.transition (@transition1, @transition2, @transition3) {
-	-webkit-transition: @transition1, @transition2, @transition3;
-	-moz-transition: @transition1, @transition2, @transition3;
-	-o-transition: @transition1, @transition2, @transition3;
-	transition: @transition1, @transition2, @transition3;
-	}
-.transition (@transition1, @transition2, @transition3, @transition4) {
-	-webkit-transition: @transition1, @transition2, @transition3, @transition4;
-	-moz-transition: @transition1, @transition2, @transition3, @transition4;
-	-o-transition: @transition1, @transition2, @transition3, @transition4;
-	transition: @transition1, @transition2, @transition3, @transition4;
-	}
-.transition (@transition1, @transition2, @transition3, @transition4, @transition5) {
-	-webkit-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
-	-moz-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
-	-o-transition: @transition1, @transition2, @transition3, @transition4, @transition5;
-	transition: @transition1, @transition2, @transition3, @transition4, @transition5;
-	}
-.transition-transform (@transformArguments) {
+.transition(@transition1, @transition2:X, ...){
+	@transitions: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+    -webkit-transition: @transitions;
+    -moz-transition: @transitions;
+    -o-transition: @transitions;
+    transition: @transitions;
+}
+.transition-transform (@transformArguments1, @transformArguments2:X, ...) {
+	@transformArguments: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 	-webkit-transition: -webkit-transform @transformArguments;
 	-moz-transition: -moz-transform @transformArguments;
 	-o-transition: -o-transform @transformArguments;
 	transition: transform @transformArguments;
-	}
-.transition-transform (@transformArguments, @transition1) {
-	-webkit-transition: -webkit-transform @transformArguments, @transition1;
-	-moz-transition: -moz-transform @transformArguments, @transition1;
-	-o-transition: -o-transform @transformArguments, @transition1;
-	transition: transform @transformArguments, @transition1;
-	}
-.transition-transform (@transformArguments, @transition1, @transition2) {
-	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2;
-	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2;
-	-o-transition: -o-transform @transformArguments, @transition1, @transition2;
-	transition: transform @transformArguments, @transition1, @transition2;
-	}
-.transition-transform (@transformArguments, @transition1, @transition2, @transition3) {
-	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3;
-	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3;
-	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3;
-	transition: transform @transformArguments, @transition1, @transition2, @transition3;
-	}
-.transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4) {
-	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
-	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
-	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
-	transition: transform @transformArguments, @transition1, @transition2, @transition3, @transition4;
-	}
-.transition-transform (@transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5) {
-	-webkit-transition: -webkit-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
-	-moz-transition: -moz-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
-	-o-transition: -o-transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
-	transition: transform @transformArguments, @transition1, @transition2, @transition3, @transition4, @transition5;
-	}
+}
 
 /*
  * Animations
