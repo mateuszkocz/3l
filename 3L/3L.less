@@ -161,7 +161,7 @@
  */
 
 // For image replacement.
-.ir () {display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; br {display: none;}}
+.ir () {border: 0; overflow: hidden; background-color: transparent; *text-indent: -9999px; &:before {content: ""; display: block; width: 0; height: 100%;}}
 
 // Hide from both screenreaders and browsers: h5bp.com/u
 .hidden () {display: none !important; visibility: hidden;}
@@ -178,7 +178,7 @@
 .invisible () {visibility: hidden;}
 
 // Contain floats: h5bp.com/q
-.clearfix () {*zoom:1;&:before,&:after{content:"";display:table;}&:after{clear:both;}}
+.clearfix () {*zoom:1;&:before,&:after{content:" ";display:table;}&:after{clear:both;}}
 
 /*
  * Box-sizing

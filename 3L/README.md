@@ -14,15 +14,16 @@ Keep up your good work!
 [reset.css](http://meyerweb.com/eric/tools/css/reset/) is made by Eric Meyer and is in public domain.
 
 [normalize.css](http://necolas.github.com/normalize.css/) is made by Nicolas Gallagher and Jonathan Neal and licensed under MIT License.
-link
+
+[HTML5 Boiler Plate's default CSS](http://html5boilerplate.com/) is made by Nicolas Gallagher, Jonathan Neal, Kroc Camen, the H5BP dev community and other people and is licensed under MIT License.
 
 [animations.css](link) is made by ... and licensed under ...
-link
 
-Version: 1.3.3 (2012.09.09)
+3L version: 1.3.3 (2012.09.09)
 LESS version: 1.3.1
 Reset.css version: 2.0
 Normalize.css version: 2.0.1
+HTML5BP's CSS version: 4.0.1
 Animations.css version: 
 
 [Get your own LESS.js](http://lesscss.org/)

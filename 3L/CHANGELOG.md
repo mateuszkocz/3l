@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## 1.5.0
+* added filter property.
+* unlimited box-shadows and transitions.
 * skew is a non standard property, co the .skew() mixin has been changed so now when you use one argument the transformation will be skewX, and if you use two arguments it will be skewX and skewY (transform: skewX(), skewY()).
 * added option to include normalize.css or reset.css.
 * reorgnisation of the folder structure.
