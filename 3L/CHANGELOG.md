@@ -1,13 +1,12 @@
 # CHANGELOG
 
-## 1.5.0
+## 1.4.0
+* multi-purpose .gradient() mixin.
 * added filter property.
 * unlimited box-shadows and transitions.
 * skew is a non standard property, co the .skew() mixin has been changed so now when you use one argument the transformation will be skewX, and if you use two arguments it will be skewX and skewY (transform: skewX(), skewY()).
-* added option to include normalize.css or reset.css.
+* added option to include normalize.css, reset.css and HTML5 Boiler Plate's default stylesheet.
 * reorgnisation of the folder structure.
-
-## 1.4.0
 
 ## 1.3.3
 * -ms-transform back to biznis since IE9 requires that.

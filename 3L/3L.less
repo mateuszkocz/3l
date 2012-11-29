@@ -491,8 +491,37 @@
  * horizontal gradients. For the best experience in IE9 use gradient generator
  * mentioned above in the resources.
  *
+ * TODO: manual for .gradient(). Mention it's still compatible with previous versions of 3L since
+ * 		 you need to provide at least 4 values to use it. Anything less will use the old .gradient().
+ * 		 You can provide as much stop colors as you want.
  */
 
+// Multi-purpose gradient. BETA!
+/* 
+ * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
+ * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
+ */ 
+.gradient(@gradientType, @direction, @rest...) {
+	@valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
+	@directionProcessedOld: ~`"@{direction}".replace(/[\[\]]|\,/g,'').replace("to ","").replace("top","bottom").replace("bottom","top").replace("right","left").replace("left","right").replace("at ","").replace("cover", "farthest-corner")`;
+	@directionProcessedNew: ~`"@{direction}".replace(/[\[\]]|\,/g,'')`; 
+	
+	@webkit1: `"-webkit-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
+	@webkit2: ~`'@{webkit1}'.replace(/\"/g, '')`;
+	background-image: @webkit2;
+	
+	@moz1: `"-moz-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
+	@moz2: ~`'@{moz1}'.replace(/\"/g, '')`;
+	background-image: @moz2;
+	
+	@o1: `"-o-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
+	@o2: ~`'@{o1}'.replace(/\"/g, '')`;
+	background-image: @o2;
+	
+	@w3c1: `"@{gradientType}" + "-gradient(" + "@{directionProcessedNew}," + "@{valuesProcessed}" + ")"`;
+	@w3c2: ~`'@{w3c1}'.replace(/\"/g, '')`;
+	background-image: @w3c2;
+}
 .gradient (@color1, @color2){
 	background: @color1;
 	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
