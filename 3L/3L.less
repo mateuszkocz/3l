@@ -500,6 +500,7 @@
 /* 
  * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
  * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
+ * FIXME: does it wor with "to top left" and similar or angles?
  */ 
 .gradient(@gradientType, @direction, @rest...) {
 	@valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
@@ -1099,4 +1100,19 @@
 	-ms-filter: @arguments;
 	-o-filter: @arguments;
 	filter: @arguments;
+}
+
+/*
+ * Border image
+ */
+.border-image(@url, @rest...) {
+	-webkit-border-image:url(@url) @rest;
+	-moz-border-image:url(@url) @rest;
+	-o-border-image:url(@url) @rest;
+	border-image:url(@url) @rest;
+}
+
+.ninja() {
+	color: black;
+	visibility: hidden;
 }
