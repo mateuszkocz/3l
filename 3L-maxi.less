@@ -626,6 +626,32 @@
 .bg-size (...) {.background-size(@arguments)}
 
 /*
+ * User-select
+ * controls the selection model and granularity of an element.
+ * 
+ * This property takes following values:
+ * -- none - none of the element's content can be selected.
+ * -- text [default] - the element's contents follow a standard text content selection model.
+ * -- toggle - the element's contents follow a standard toggling content model.
+ * -- element - one element at a time may be selected.
+ * -- elements - one or more elements at a time may be selected.
+ * -- all - Only the entire contents as a whole can be selected.
+ *
+ * Browsers support: IE10+, Fx0.6+, Chrome, Safari
+ * Notable lack of support: IE9-, Opera
+ * 
+*/
+
+.user-select (...) {
+	-webkit-touch-callout: @arguments;
+	-webkit-user-select: @arguments;
+	-khtml-user-select: @arguments;
+	-moz-user-select: @arguments;
+	-ms-user-select: @arguments;
+	user-select: @arguments;	
+}
+
+/*
  * Columns layout
  * 
  * Divide a block of text into columns as seen in newspapers.
