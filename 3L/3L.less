@@ -771,6 +771,10 @@
 	-o-perspective: @arguments;
 	perspective: @arguments;
 	}
+.backface-visibility(@visibility){
+    -webkit-backface-visibility: @visibility;
+    backface-visibility: @visibility;
+}
 .transform (...) {
 	-webkit-transform: @arguments;
 	-moz-transform: @arguments;
@@ -944,13 +948,37 @@
     -moz-transition: @transitions;
     -o-transition: @transitions;
     transition: @transitions;
-}
+}
 .transition-transform (@transformArguments1, @transformArguments2:X, ...) {
 	@transformArguments: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 	-webkit-transition: -webkit-transform @transformArguments;
 	-moz-transition: -moz-transform @transformArguments;
 	-o-transition: -o-transform @transformArguments;
 	transition: transform @transformArguments;
+}
+.transition-property(...) {
+	-webkit-transition-property: @arguments;
+	-moz-transition-property: @arguments;
+	-o-transition-property: @arguments;
+	transition-property: @arguments;
+}
+.transition-duration(...) {
+	-webkit-transition-duration: @arguments;
+	-moz-transition-duration: @arguments;
+	-o-transition-duration: @arguments;
+	transition-duration: @arguments;
+}
+.transition-timing-function(...) {
+	-webkit-transition-timing-function: @arguments;
+	-moz-transition-timing-function: @arguments;
+	-o-transition-timing-function: @arguments;
+	transition-timing-function: @arguments;
+}
+.transition-delay(...) {
+	-webkit-transition-delay: @arguments;
+	-moz-transition-delay: @arguments;
+	-o-transition-delay: @arguments;
+	transition-delay: @arguments;
 }
 
 /*
@@ -1008,6 +1036,48 @@
 	}
 .animate (...) {.animation(@arguments);}
 .anime (...) {.animation(@arguments);}
+.animation-name(...) {
+	-webkit-animation-name: @arguments;
+	-moz-animation-name: @arguments;
+	-o-animation-name: @arguments;
+	animation-name: @arguments;
+}
+.animation-duration(...) {
+	-webkit-animation-duration: @arguments;
+	-moz-animation-duration: @arguments;
+	-o-animation-duration: @arguments;
+	animation-duration: @arguments;
+}
+.animation-timing-function(...) {
+	-webkit-animation-timing-function: @arguments;
+	-moz-animation-timing-function: @arguments;
+	-o-animation-timing-function: @arguments;
+	animation-timing-function: @arguments;
+}
+.animation-delay(...) {
+	-webkit-animation-delay: @arguments;
+	-moz-animation-delay: @arguments;
+	-o-animation-delay: @arguments;
+	animation-delay: @arguments;
+}
+.animation-iteration-count(...) {
+	-webkit-animation-iteration-count: @arguments;
+	-moz-animation-iteration-count: @arguments;
+	-o-animation-iteration-count: @arguments;
+	animation-iteration-count: @arguments;
+}
+.animation-direction(...) {
+	-webkit-animation-direction: @arguments;
+	-moz-animation-direction: @arguments;
+	-o-animation-direction: @arguments;
+	animation-direction: @arguments;
+}
+.animation-fill-mode(...) {
+	-webkit-animation-fill-mode: @arguments;
+	-moz-animation-fill-mode: @arguments;
+	-o-animation-fill-mode: @arguments;
+	animation-fill-mode: @arguments;
+}
 
 /*
  * User-select
@@ -1236,6 +1306,24 @@ user-select: @arguments;
 }
 
 /*
+ * Appearance
+ */
+
+.appearance (@appearance) {
+    -webkit-appearance: @appearance;
+    -moz-appearance: @appearance;
+}
+
+/*
+ * Selection
+ */
+
+.selection(@text-color, @background-color) {
+	&::-moz-selection {color: @text-color; background-color: @background-color;}
+	&::selection {color: @text-color; background-color: @background-color;}
+}
+
+/*
  * Normalize
  */
 
@@ -1253,7 +1341,13 @@ user-select: @arguments;
 .h5bp() {html,button,input,select,textarea{color:#222}body{font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}}
 .h5bp-print() {@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;} a,a:visited{text-decoration:underline;} a[href]:after{content:" (" attr(href) ")";} abbr[title]:after{content:" (" attr(title) ")";} .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";} pre,blockquote{border:1px solid #999;page-break-inside:avoid;} thead{display:table-header-group;} tr,img{page-break-inside:avoid;} img{max-width:100% !important;} @page {margin:0.5cm;}p,h2,h3{orphans:3;widows:3;} h2,h3{page-break-after:avoid;}}.przerwa{color:#ff0000;}}
 
+/*
+ * hasLayout
+ * 
+ * http://reference.sitepoint.com/css/haslayout
+ */
 
+.hasLayout() {*zoom: 1;}
 
 .ninja() {
 	color: black;

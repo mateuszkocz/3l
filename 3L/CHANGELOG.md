@@ -1,8 +1,13 @@
 # CHANGELOG
 
 ## 1.4.0
-* added flex-box's mixins
-* added .user-select() mixin - made by [Daniel Garcia](https://github.com/zlapper)
+* added animation's and transition's specyfic properties.
+* added hasLayout().
+* added .selection().
+* added .backface-visibility().
+* added .appearance() mixin.
+* added flex-box's mixins.
+* added .user-select() mixin - made by [Daniel Garcia](https://github.com/zlapper).
 * added .border-image().
 * multi-purpose .gradient() mixin [BETA].
 * added filter property.
@@ -15,7 +20,7 @@
 * -ms-transform back to biznis since IE9 requires that.
 
 ## 1.3.2
-* added unprefixed transition: transform, since we now know it's safe and future-proof
+* added unprefixed transition: transform, since we now know it's safe and future-proof.
 
 ## 1.3.1
 * fixed bug in gradients. Thanks to [Daniel Garcia](https://github.com/zlapper) for pointing that out!
@@ -32,12 +37,12 @@
 
 ## 1.2.0
 
-* new debbuging rules: a[href="#"], div:empty, span:empty, li:empty, p:empty, td:empty, th:empty,	*[title=""], *[class=""] and *[id=""].
+* new debbuging rules: a[href="#"], div:empty, span:empty, li:empty, p:empty, td:empty, th:empty, *[title=""], *[class=""] and *[id=""].
 
 ## 1.1.1
 
-* mixins updated to be compatible with new variadic arguments - (https://gist.github.com/1933613),
-* many @arguments changed to semantic names,
+* mixins updated to be compatible with new variadic arguments - (https://gist.github.com/1933613).
+* many @arguments changed to semantic names.
 
 ## 1.0.1
 
