@@ -5,7 +5,7 @@
  * Keep up your good work!
  *
  * Yours faithfully,
- * Mateusz ★ Kocz  			-> http://radiatingstar.com
+ * Mateusz Kocz  			-> http://radiatingstar.com
  *
  * 3L:							-> http://mateuszkocz.github.com/3l
  *
@@ -179,6 +179,15 @@
 
 // Contain floats: h5bp.com/q
 .clearfix () {*zoom:1;&:before,&:after{content:" ";display:table;}&:after{clear:both;}}
+
+/*
+ * Some other helper classes.
+ */
+
+.incomplete() {outline: 3px dotted green}
+.fixme() {outline: 3px dotted yellow}
+.todo() {outline: 3px dotted blue}
+.xxx() {outline: 3px dotted red}
 
 /*
  * Box-sizing
@@ -1001,6 +1010,32 @@
 .anime (...) {.animation(@arguments);}
 
 /*
+ * User-select
+ * controls the selection model and granularity of an element.
+ *
+ * This property takes following values:
+ * -- none - none of the element's content can be selected.
+ * -- text [default] - the element's contents follow a standard text content selection model.
+ * -- toggle - the element's contents follow a standard toggling content model.
+ * -- element - one element at a time may be selected.
+ * -- elements - one or more elements at a time may be selected.
+ * -- all - Only the entire contents as a whole can be selected.
+ *
+ * Browsers support: IE10+, Fx0.6+, Chrome, Safari
+ * Notable lack of support: IE9-, Opera
+ *
+*/
+
+.user-select (...) {
+-webkit-touch-callout: @arguments;
+-webkit-user-select: @arguments;
+-khtml-user-select: @arguments;
+-moz-user-select: @arguments;
+-ms-user-select: @arguments;
+user-select: @arguments;
+}
+
+/*
  * Filter
  * 
  * Advanced image manipulation in your CSS!
@@ -1013,7 +1048,7 @@
  * 
  * Resources: http://www.html5rocks.com/en/tutorials/filters/understanding-css/
  * 
- * @todo: requires testing
+ * TODO: requires testing
  */
 
 .filter(...) {
@@ -1104,12 +1139,100 @@
 
 /*
  * Border image
+ * 
+ * Browsers support: Chrome, Firefox, Safari, Opera, Chrome for Android, Android Browser, Opera Mobile, Firefox for Android
+ * Notable lack of support: IE, Opera Mini
  */
 .border-image(@url, @rest...) {
 	-webkit-border-image:url(@url) @rest;
-	-moz-border-image:url(@url) @rest;
 	-o-border-image:url(@url) @rest;
 	border-image:url(@url) @rest;
+}
+
+/*
+ * Flexible Box Model
+ * 
+ * Resources: https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes
+ * 
+ * Browsers Support: Chrome, Firefox 18*, Opera 12.1, Opera Mini 12.1
+ * Notable lack of support: IE, Firefox 17 (stable), Safari, Chrome for Android 
+ */
+
+// TODO: https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes?redirectlocale=en-US&redirectslug=CSS%2FFlexbox
+.display-flex() {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+}
+.display-inline-flex(){
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: inline-flex;
+}
+.flex-direction(@direction) {
+	-webkit-flex-direction: @direction;
+	-moz-flex-direction: @direction;
+	flex-direction: @direction;
+}
+.justify-content(@alignment) {
+	-webkit-justify-content: @alignment;
+	-moz-justify-content: @alignment;
+	justify-content: @alignment;
+}
+.align-content(@alignment) {
+	-webkit-align-content: @alignment;
+	-moz-align-content: @alignment;
+	align-content: @alignment;
+}
+.align-items(@alignment) {
+	-webkit-align-items: @alignment;
+	-moz-align-items: @alignment;
+	align-items: @alignment;
+}
+.align-self(@alignment) {
+	-webkit-align-self: @alignment;
+	-moz-align-self: @alignment;
+	align-self: @alignment;
+}
+.flex(@arguments){
+	-webkit-flex: @arguments;
+	-moz-flex: @arguments;
+	flex: @arguments;
+}
+.flex-basis(@basis) {
+	-webkit-flex-basis: @basis;
+	-moz-fles-basis: @basis;
+	flex-basis: @basis;
+}
+.flex-grow(@grow) {
+	-webkit-flex-grow: @grow;
+	-moz-flex-grow: @grow;
+	flex-grow: @grow;
+}
+.flex-shrink(@shrink) {
+	-webkit-flex-shrink: @shrink;
+	-moz-flex-shrink: @shrink;
+	flex-shrink: @shrink;
+}
+.flex-flow(@arguments) {
+	-webkit-flex-flow: @arguments;
+	-moz-flex-flow: @arguments;
+	flex-flow: @arguments;
+}
+.flex-direction(@direction) {
+	-webkit-flex-direction: @direction;
+	-moz-flex-direction: @direction;
+	flex-direction: @direction;
+}
+.flex-wrap(@wrap) {
+	-webkit-flex-wrap: @wrap;
+	-moz-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+.order(@order) {
+	-webkit-order: @order;
+	-moz-order: @order;
+	order: @order;
 }
 
 /*

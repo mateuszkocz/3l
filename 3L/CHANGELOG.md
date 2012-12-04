@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## 1.4.0
+* added flex-box's mixins
+* added .user-select() mixin - made by [Daniel Garcia](https://github.com/zlapper)
 * added .border-image().
 * multi-purpose .gradient() mixin [BETA].
 * added filter property.
