@@ -22,7 +22,6 @@ LESS version: 1.3.1
 Reset.css version: 2.0
 Normalize.css version: 2.0.1
 HTML5BP's CSS version: 4.0.1
-Animations.css version: 
 
 [Get your own LESS.js](http://lesscss.org/)
 
