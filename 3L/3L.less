@@ -956,6 +956,7 @@
 	-o-transition: -o-transform @transformArguments;
 	transition: transform @transformArguments;
 }
+// FIXME: The specyfic properties also require the unlimited arguments feature.
 .transition-property(...) {
 	-webkit-transition-property: @arguments;
 	-moz-transition-property: @arguments;
@@ -1018,7 +1019,7 @@
 // *			.animation(animation1 5s linear 3s infinite alternate);
 // *			}
 // * // Importing prefixed @keyframes for animation1.
-// * @import 'animation1';
+// * @import '3L/assets/animations/animation1';
 // *
 // * // Declaring @keyframes for animation. Only once! 
 // * .animation1() {
@@ -1036,6 +1037,7 @@
 	}
 .animate (...) {.animation(@arguments);}
 .anime (...) {.animation(@arguments);}
+// FIXME: The specyfic properties also require the unlimited arguments feature.
 .animation-name(...) {
 	-webkit-animation-name: @arguments;
 	-moz-animation-name: @arguments;
@@ -1120,7 +1122,7 @@ user-select: @arguments;
 // * 
 // * TODO: requires testing
 // */
-
+// FIXME: .filter() requires the unlimited arguments feature.
 .filter(...) {
 	-webkit-filter: @arguments;
 	-moz-filter: @arguments;
@@ -1228,7 +1230,6 @@ user-select: @arguments;
 // * Notable lack of support: IE, Firefox 17 (stable), Safari, Chrome for Android 
 // */
 
-// TODO: https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes?redirectlocale=en-US&redirectslug=CSS%2FFlexbox
 .display-flex() {
 	display: -webkit-flex;
 	display: -moz-flex;
