@@ -5,7 +5,7 @@ Keep up your good work!
 * Author: [Mateusz Kocz](http://radiatingstar.com)
 * [Watch 3L on Github](https://github.com/mateuszkocz/3l)
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
-* [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip)
+* [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.4.0-beta.zip)
 
 3L is licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
@@ -17,9 +17,7 @@ Keep up your good work!
 
 [HTML5 Boiler Plate's default CSS](http://html5boilerplate.com/) is made by Nicolas Gallagher, Jonathan Neal, Kroc Camen, the H5BP dev community and other people and is licensed under MIT License.
 
-[animations.css](link) is made by ... and licensed under ...
-
-3L version: 1.3.3 (2012.09.09)
+3L version: 1.4.0-beta (2012.12.06)
 LESS version: 1.3.1
 Reset.css version: 2.0
 Normalize.css version: 2.0.1

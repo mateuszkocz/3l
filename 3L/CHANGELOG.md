@@ -1,6 +1,8 @@
 # CHANGELOG
 
-## 1.4.0
+## 1.4.0-beta
+* all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.
+* bugfix for IE gradients (thanks to [Daniel Garcia](https://github.com/zlapper)).
 * added animation's and transition's specyfic properties.
 * added hasLayout().
 * added .selection().
