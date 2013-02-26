@@ -55,10 +55,13 @@
 .help() {background-color: lightblue}
 
 @dark: #424242;
+@black: #000;
+@white: #fff;
 @font: #000;
 
 body {
 	font-family: 'Dosis', 'HelveticaNeue', 'Arial', sans-serif;
+	line-height: 1.5;
 }
 a {
 	text-decoration: none;
@@ -85,7 +88,7 @@ a {
 }
 
 
-.brand {
+.heading {
 	font-size: 2.432em;
 	font-weight: 400;
 }
@@ -103,12 +106,73 @@ a {
 	font-size: 1.716em;
 }
 
-
-
-
-
-
-
+.btn {
+	position: relative;
+	
+	display: block;
+	width: 9.6154em;
+	height: 2.885em;
+	margin: 0 auto;
+	padding: .481em .481em .481em 3.3em;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-width: 1px;
+	border-bottom-width: 2px;
+	
+	font-size: 1.3em;
+	font-variant: small-caps;
+	color: #fff;
+	
+	.border-radius(5px);
+	.box-shadow(0 2px 2px fade(@black,50%), 0 0 40px 10px fade(@white,30%));
+	
+	// Not using mixin here since I want to support -webkit-box-shadow but the mixin
+	// would generate unnecessary code.
+	-webkit-transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+	-moz-transition: box-shadow 0.5s; // Don't need to support -moz-box-shadow here since Fx3.6 doesn't support transitions.
+	-o-transition: box-shadow 0.5s;
+	transition: box-shadow 0.5s;
+}
+.btn:hover {
+	.box-shadow(0 2px 2px fade(@black,50%), 0 0 40px 30px @white)
+}
+.btn:before {
+	content: "\2193";
+	position: absolute;
+	top: 7px; left: 17px;
+	display: block;
+	padding-right: .36em;
+	padding-bottom: .3em; 
+	border-right-style: solid;
+	border-right-width: 1px;
+	font-size: 2.404em;
+	line-height: 1;
+}
+.btn__main-version {
+	background-color: #ffae1a; 
+	border-top-color: #ffdb99;
+	border-bottom-color: #996300;
+	text-shadow: -1px -1px 0 #c0c0c0;
+}
+.btn__main-version:active,
+.btn__main-version:focus {
+	background-color: #e69500;
+}
+.btn__main-version:before {
+	border-right-color: #ffd280;
+}
+.btn__beta-version {
+	background-color: #381a49;
+	border-top-color: #997DAB;
+	border-bottom-color: #381A49;
+}
+.btn__beta-version:active,
+.btn__beta-version:focus {
+	background-color: #2a1336;
+}
+.btn__beta-version:before {
+	border-right-color: #997DAB;
+}
 
 
 
