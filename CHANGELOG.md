@@ -1,8 +1,5 @@
 # CHANGELOG
 
-## 1.4.1
-* removed -o-box-shadow (I don't even know why it was there in the first place!)
-
 ## 1.4.0-beta
 * all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.
 * bugfix for IE gradients (thanks to [Daniel Garcia](https://github.com/zlapper)).
