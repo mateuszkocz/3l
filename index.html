@@ -14,6 +14,7 @@
 	<meta name="description" content="Improve your CSS development with 3L - awesome collection of basic and advanced mixins for LESS.">
 	
 	<link href='http://fonts.googleapis.com/css?family=Dosis:500,400' rel='stylesheet' type='text/css'>
+	<!-- Readable stylsheet available at /styles.less -->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
@@ -21,7 +22,7 @@
 <body>
 	<header role="banner" class="b b__h">
 		<div id="headerInside" class="w w__header w__branding">
-			<h1 class="brand heading">♥ Lots of Love for LESS</h1>
+			<h1 class="heading heading__brand">♥ Lots of Love for LESS</h1>
 			<nav role="navigation" class="nav">
 				<ul>
 					<li><a href="#why">Why</a></li>
@@ -35,7 +36,7 @@
 	
 	<section id="download" class="b b__s b__d">
 		<div id="download-inside" class="w w__branding">
-			<h2 class="tite heading">Your Lovely Collection of Mixins for LESS</h2>
+			<h2 class="heading heading__slogan">Your Lovely Collection of Mixins for LESS</h2>
 			<div class="btns-cntnr">
 				<a class="btn btn__main-version" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
 					Download 3L and make your CSS awesome!
@@ -46,14 +47,14 @@
 				<iframe src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
 				<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
 			</aside>
-			<p class="slogan heading">You will love it!</p>
+			<p class="heading heading__slogan">You will love it!</p>
 		</div>
 	</section>
 	
 	<section role="main" class="b b__s b__m">
 		<section id="why" class="b b__s">
 			<div class="w w__section">
-				<h2 class="heading">Why you'll ♥ 3L</h2>
+				<h2 class="heading heading__general">Why you'll ♥ 3L</h2>
 				<div class="inside inside__section">
 					<section class="usp">
 						<h3 class="subheading">Really big collection of mixins</h3>
@@ -91,9 +92,79 @@
 			</div>
 		</section>
 		
+		<section id="features" class="b b__s">
+			<div class="w w__section">
+				<h2 class="heading heading__general">Features</h2>
+				<div class="inside inside__section">
+					<section class="feature">
+						<h3 class="subheading subheading__feature">Box shadow</h3>
+						<div class="feature-content">
+							<figure class="feature-fig">
+								<div class="demo demo__box-shadow"></div>
+							</figure>
+							<div class="feature-desc">
+								<p>Create a shadow behind or inside the element.</p>
+								<p>Usage:</p>
+								<p>In .box-shadow() brackets put arguments for every single shadow. Separate each shadows' arguments with comma. You can put up to five shadows by default but feel free to add a class with as many as you want. Just check how it is done.</p>
+								<p>You can use a default box-shadow which will create a shadow with 0px x and 1px y offsets, 3px of blur and in black colour with 25% transparency. Just place a .box-shadow class without any arguments.</p>
+								<p>Box-shadow property takes following arguments:</p>
+								<ol>
+									<li>inset [optional].</li>
+									<li>x-offset [required].</li>
+									<li>y-offset [required].</li>
+									<li>blur [optional].</li>
+									<li>spread [optional].</li>
+									<li>color [optional/required].</li>
+								</ol>
+								<p>Resources:</p>
+								<ul>
+									<li>-- developer.mozilla.org/en/CSS/box-shadow</li>
+								</ul>
+								<p>Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser</p>
+								<p>Notable lack of support: IE8-, Opera Mini</p>
+								<p>Example:</p>
+								<p>Two box-shadows: one is 1px offset, black, second one is green with 30% opacity, inset, with 5px offsets, 3px of blur and 1px spread.</p>
+								<p>.box-shadow(1px 1px black, inset 5px 5px 3px 1px fade(green,30%)) // fade(colour,XX%) is a LESS native function that adds alpha channel to colour. Instead of fade() you can also use rgba or hsla colours declaration.</p>
+								<p>Solution for multiple box-shadows in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/</p>
+							</div>
+						</div>
+						<h3 class="subheading subheading__feature">Border radius</h3>
+						<div class="feature-content">
+							<figure class="feature-fig">
+								<div class="demo demo__border-radius"></div>
+							</figure>
+							<div class="feature-desc">
+								<p>Round the element's corners.</p>
+								<p>Usage:</p>
+								<p>Border-radius property takes one to four arguments with px, em and % values and round the element's corners accordingly. You can make ellipticaly roundeded corners putting two sets of values separated with</p>
+								<p>comma using .elliptical-border-radius class. In order to round a single corner use .round-corner class. This class takes two sets of arguments. First one is a declaration of corner you want to round (top-left, top-right, bottom-right, bottom-left), second one (separated from the first with comma), is a set of values in px, em or % that round choosen corner. Second declaration can have one (for circle rounding) or two values (for elliptical rounding).</p>
+								<p>For further explanation of the border-radius property, refer to the resources section above.</p>
+								<p>Resources:</p>
+								<ul>
+									<li>-- developer.mozilla.org/en/CSS/border-radius</li>
+								</ul>
+
+								<p>Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser</p>
+								<p>Notable lack of support: IE8-, Opera Mini</p>
+								<p>Example:</p>
+								<p>Round every corner of the element with 10px radius. .border-radius(10px)</p>
+								<p>Round top-left and bottom-right corners by 10px, top-right and bottom-left corners by 20px. .border-radius(10px 20px)</p>
+								<p>Exemplary use of the .elliptical-border-radius class. .elliptical-border-radius(10px 20px 30px, 40px 50px 60px 70px)</p>
+								<p>Round top-right corner by 10px and 20px (elliptical). .round-corner(top-right, 10px 20px) .border-top-right-radius(10px 20px) // Alternate method.</p>
+								<p>Round similar corners. .border-top-radius(20px 10px); // top-left + top-right (elliptical) .border-left-radius(5px);		 // top-left + bottom-left</p>
+							</div>
+						</div>
+						
+						
+						<!-- h3.subheading.subheading__feature+.feature-content>.feature-desc+figure.feature-fig>.demo -->
+					</section>
+				</div>
+			</div>
+		</section>
+		
 		<section id="installation" class="b b__s">
 			<div class="w w__section">
-				<h2 class="heading">Installation</h2>
+				<h2 class="heading heading__general">Installation</h2>
 				<div class="inside inside__section">
 					<ol>
 						<li>
@@ -138,7 +209,7 @@
 		
 		<section id="faq" class="b b__s b__s--cut">
 			<div class="w w__section">
-				<h2 class="heading">FAQ and Issues</h2>
+				<h2 class="heading heading__general">FAQ and Issues</h2>
 				<div id="inside inside__section">
 					<h3 class="subheading">Where are my grids?</h3>
 					<p>3L doesn't have a grid system implemented. It is not meant to have any styles included. Of course grids are cool so create yours with <a href="http://gridpak.com/" target="_blank">Gridpak&mdash;a responsive grid generator</a>. Gridpak gives you a responsive grid in LESS file so you can use it together with 3L.</p>
@@ -167,7 +238,7 @@
 			<h2>3L links</h2>
 			<ul>
 				<li><a href="https://github.com/mateuszkocz/3l">Fork &amp; Watch on Github</a></li>
-				<li><a href="https://github.com/mateuszkocz/3l/issues?state=open">Submit an Issues</a></li>
+				<li><a href="https://github.com/mateuszkocz/3l/issues?state=open">Submit an Issue</a></li>
 			</ul>
 		</aside>
 		
@@ -199,6 +270,19 @@
 				}
 			});
 		});
+		
+		// Toggling features
+		$('.subheading__feature').addClass('subheading__feature--not-toggled');
+		
+		$('.subheading__feature').click(function(e){
+			if ($(this).hasClass('subheading__feature--not-toggled')) {
+				$(this).removeClass('subheading__feature--not-toggled')
+					   .addClass('subheading__feature--toggled');
+			} else {
+				$(this).removeClass('subheading__feature--toggled')
+					   .addClass('subheading__feature--not-toggled');
+			}
+		})
 		
 		// Twitter
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
