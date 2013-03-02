@@ -179,10 +179,31 @@ a {
 }
 .b__m {
   border-top: 10px solid #424242;
-  padding: 0 .5em;
+  padding: 0 2.5%;
 }
 .w__branding {
   text-align: center;
+}
+@media screen and (min-width: 44em) {
+  .w__cut {
+    float: left;
+    width: 100%;
+    margin-right: -221px;
+  }
+}
+@media screen and (min-width: 44em) {
+  .w__cut .inside__section {
+    margin-right: 251px;
+  }
+}
+@media screen and (min-width: 44em) {
+  .side-block {
+    float: left;
+    margin-top: 7em;
+    width: 200px;
+    padding-left: 20px;
+    border-left: 1px solid #424242;
+  }
 }
 .heading {
   font-size: 2.432em;
@@ -213,6 +234,11 @@ a {
 .nav a {
   display: block;
   margin: 0 .4em .5em;
+}
+@media screen and (min-width: 34em), screen and (orientation: landscape) {
+  .nav a {
+    font-size: 1.716em;
+  }
 }
 .btn {
   position: relative;
@@ -290,6 +316,33 @@ a {
 }
 .btn__beta-version:before {
   border-right-color: #997DAB;
+}
+@media screen and (min-width: 34em), screen and (orientation: landscape) {
+  .usps_container {
+    text-align: justify;
+    margin-bottom: -1.5em;
+  }
+  .usps_container:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 34em), screen and (orientation: landscape) {
+  .usp {
+    display: inline-block;
+    width: 48.5%;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+@media screen and (min-width: 44em) {
+  .usp {
+    width: 32%;
+  }
+  .usp:last-child {
+    margin-right: 34%;
+  }
 }
 .subheading__feature {
   cursor: pointer;
