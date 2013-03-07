@@ -38,7 +38,7 @@
 		<div id="download-inside" class="w w__branding">
 			<h2 class="heading heading__slogan">Your Lovely Collection of Mixins for LESS</h2>
 			<div class="btns-cntnr">
-				<a class="btn btn__main-version" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
+				<a id="downloadButton" class="btn btn__main-version" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
 					Download 3L and make your CSS awesome!
 				</a>
 			</div>
@@ -208,9 +208,9 @@
 		</section>
 		
 		<section id="faq" class="b b__s">
-			<div class="w w__section w__cut">
+			<div class="w w__section">
 				<h2 class="heading heading__general">FAQ and Issues</h2>
-				<div class="inside inside__section">
+				<div class="inside inside__section inside__faq">
 					<h3 class="subheading">Where are my grids?</h3>
 					<p>3L doesn't have a grid system implemented. It is not meant to have any styles included. Of course grids are cool so create yours with <a href="http://gridpak.com/" target="_blank">Gridpak&mdash;a responsive grid generator</a>. Gridpak gives you a responsive grid in LESS file so you can use it together with 3L.</p>
 					
@@ -225,7 +225,6 @@
 					<h3 class="subheading">After compilation I have many comments in my style sheet</h3>
 					<p>The reason is that you're using 3L-maxi.less with documentation included. Your compiler leaves the comments intact. Solution is pretty easy &mdash; use either 3L-mini.less (if you use my-style.less 3L-mini is the default) or minify your CSS. Actually you should always minify CSS files so even if you were using 3L-maxi.less, those comments will be deleted eventually.</p>
 				</div>
-			</div>
 				<aside class="side-block">
 					<h2>Links</h2>
 					<ul>
@@ -246,6 +245,7 @@
 						<p>Beautiful font: <a href="http://www.google.com/webfonts/specimen/Dosis">Dosis</a></p>
 					</footer>
 				</aside>
+			</div>
 		</section>
 	</section>
 	
@@ -280,7 +280,7 @@
 				$(this).removeClass('subheading__feature--toggled')
 					   .addClass('subheading__feature--not-toggled');
 			}
-		})
+		});
 		
 		// Twitter
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
