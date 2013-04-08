@@ -6,6 +6,7 @@
 * deleted -mox-animation[-*] properties and -moz-keyframes since they're no longer required.
 * deleted -khtml-user-select and -webkit-touch-callout from .user-select() mixin.
 * added -moz-border-image for Firefox 3.6.
+* deleted -moz- prefixed flex-box properties. Firefox supports the new syntax since version 22 (Aurora channel as for today).
 
 ## 1.4.0-beta
 * all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.
