@@ -1,3 +1,7 @@
+__Important notice__
+*As for today and for as long as the version 1.4 of 3L is in beta, many information in the README (this file) and [3L website](http://mateuszkocz.github.io/3l/) are not up to date and mostly refers to the previous 3L's version. Especially this holds true for the usage instructions and [Bootstrap](http://twitter.github.io/bootstrap/) integration.*
+*The previous version is still downloadable [on the site](http://mateuszkocz.github.io/3l/) and if you feel uncofortable with the lack of infromation, please use the version 1.3 of 3L. However I strongly recomend you to use the version 1.4, since 1.3 is not updated for a long time and is obsolete.*
+
 # 3L was made for YOU to help you create awesome websites and fill the Internet with excessive amount of Love! ♥
 
 Keep up your good work!
