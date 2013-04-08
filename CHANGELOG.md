@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.1-beta
+* transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.
+
 ## 1.4.0-beta
 * all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.
 * bugfix for IE gradients (thanks to [Daniel Garcia](https://github.com/zlapper)).

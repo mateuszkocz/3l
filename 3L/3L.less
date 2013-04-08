@@ -219,7 +219,8 @@
 // * Notable lack of support: IE7-
 // * 
 // */
- 
+
+// TODO: Most browser seems to not support padding-box. Is it for real? Delete unncecesary mixins then.
 .content-box-sizing(){-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
 .padding-box-sizing(){-moz-box-sizing:padding-box;-webkit-box-sizing:padding-box;box-sizing:padding-box;}
 .border-box-sizing(){-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
@@ -764,6 +765,12 @@
 	-o-transform-origin: @arguments;
 	transform-origin: @arguments;
 	}
+.transform-style(@style) {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
 .perspective (...) {
 	-webkit-perspective: @arguments;
 	-moz-perspective: @arguments;
@@ -782,14 +789,7 @@
 	transform: @arguments;
 	}
 .transform3d (...) {
-	-webkit-transform: @arguments;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform: @arguments;
-	-moz-transform-style: preserve-3d;
-	-o-transform: @arguments;
-	-o-transform-style: preserve-3d;
-	transform: @arguments;
-	transform-style: preserve-3d;
+	.transform(@arguments)
 }
 .rotate (@rotate) {
 	-webkit-transform: rotate(@rotate);
@@ -800,13 +800,9 @@
 	}
 .rotate3d (@deg1, @deg2:0, @deg3:0){
 	-webkit-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	-webkit-transform-style: preserve-3d;
 	-moz-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	-moz-transform-style: preserve-3d;
 	-o-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	-o-transform-style: preserve-3d;
 	transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	transform-style: preserve-3d;
 	}
 .scale (@scale) {
 	-webkit-transform: scale(@scale);
