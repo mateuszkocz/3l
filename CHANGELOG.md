@@ -4,6 +4,8 @@
 * transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.
 * deleted -mox-transition[-*] properties since they're no longer required.
 * deleted -mox-animation[-*] properties and -moz-keyframes since they're no longer required.
+* deleted -khtml-user-select and -webkit-touch-callout from .user-select() mixin.
+* added -moz-border-image for Firefox 3.6.
 
 ## 1.4.0-beta
 * all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.

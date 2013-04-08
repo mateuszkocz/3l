@@ -1080,9 +1080,7 @@
 // */
 
 .user-select (...) {
--webkit-touch-callout: @arguments;
 -webkit-user-select: @arguments;
--khtml-user-select: @arguments;
 -moz-user-select: @arguments;
 -ms-user-select: @arguments;
 user-select: @arguments;
@@ -1198,6 +1196,7 @@ user-select: @arguments;
 // */
 .border-image(@url, @rest...) {
 	-webkit-border-image:url(@url) @rest;
+	-moz-border-image:url(@url) @rest;
 	-o-border-image:url(@url) @rest;
 	border-image:url(@url) @rest;
 }
