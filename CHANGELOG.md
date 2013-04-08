@@ -2,6 +2,7 @@
 
 ## 1.4.1-beta
 * transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.
+* deleted -mox-transition[-*] properties since they're no longer required.
 
 ## 1.4.0-beta
 * all text blocks in 3L are now preceded by // so they won't appear in a compiled CSS even if you won't minimize your file.

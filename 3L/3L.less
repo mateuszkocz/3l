@@ -940,39 +940,33 @@
 .transition(@transition1, @transition2:X, ...){
 	@transitions: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transition: @transitions;
-    -moz-transition: @transitions;
     -o-transition: @transitions;
     transition: @transitions;
 }
 .transition-transform (@transformArguments1, @transformArguments2:X, ...) {
 	@transformArguments: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 	-webkit-transition: -webkit-transform @transformArguments;
-	-moz-transition: -moz-transform @transformArguments;
 	-o-transition: -o-transform @transformArguments;
 	transition: transform @transformArguments;
 }
 // FIXME: The specyfic properties also require the unlimited arguments feature.
 .transition-property(...) {
 	-webkit-transition-property: @arguments;
-	-moz-transition-property: @arguments;
 	-o-transition-property: @arguments;
 	transition-property: @arguments;
 }
 .transition-duration(...) {
 	-webkit-transition-duration: @arguments;
-	-moz-transition-duration: @arguments;
 	-o-transition-duration: @arguments;
 	transition-duration: @arguments;
 }
 .transition-timing-function(...) {
 	-webkit-transition-timing-function: @arguments;
-	-moz-transition-timing-function: @arguments;
 	-o-transition-timing-function: @arguments;
 	transition-timing-function: @arguments;
 }
 .transition-delay(...) {
 	-webkit-transition-delay: @arguments;
-	-moz-transition-delay: @arguments;
 	-o-transition-delay: @arguments;
 	transition-delay: @arguments;
 }
