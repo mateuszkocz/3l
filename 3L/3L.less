@@ -716,7 +716,7 @@
 // * 							   // width to the right from the top-left corner. 
 // * 	
 // * @BROWSERS SUPPORT
-// * IE9+, Fx3,5+ and every other (except for Opera Mini)
+// * IE9 (2D), IE10+ (3D), Fx3.5 (2D) and every other (except for Opera Mini)
 // * 
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/transform
@@ -754,9 +754,9 @@
 	transform: @arguments;
 	}
 .transform3d (...) {
-	.transform(@arguments)
+	-webkit-transform: @arguments;
+	transform: @arguments;
 }
-
 .rotate (@rotate) {
 	-webkit-transform: rotate(@rotate);
 	-moz-transform: rotate(@rotate);
@@ -839,8 +839,10 @@
 	
 ///*
 // * Transition
+// * 
 // * Animate a change between different object states.
 // * 
+// * @ABOUT
 // * You can use this class to animate change of up to 5 different properties.
 // * If you need more that that (wow!) it's easy to add more of these classes.
 // * 
@@ -850,10 +852,10 @@
 // * 	idea to explicitly write this value if you want to animate everything, though. We can't
 // * 	be sure if in the future default state won't change to "none", which will break the whole transition.
 // * -- transition-duration - specifies how long transition animation will have to take
-// *		until animation is finished. Put values in s (seconds) or ms (milliseconds).
+// *    until animation is finished. Put values in s (seconds) or ms (milliseconds).
 // * 	Required value, since default state is 0s (no animation occurs).
 // * -- transition-timing-function - this value describe an acceleration function. It can
-// *		really affect overall experience, so it's good idea to pay attention to that.
+// *    really affect overall experience, so it's good idea to pay attention to that.
 // * 	Timing function takes 4 number values of keywords: linear, ease, ease-in,
 // * 	ease-in-out, ease-out. For further explanation refer to ->developer.mozilla.org/en/CSS/timing-function
 // * 	Default value is "ease".
@@ -885,41 +887,33 @@
 // * 																			 // and after 5s animate margin change for 1s.
 // * 3. .transition-transform (2s linear, padding 3s) // Animate change of transform property (no "transform" declared!)
 // * 																 // and padding property.
-// * 
-// * Solution for multiple transitions in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
 // */
 
 .transition(@transition1, @transition2:X, ...){
 	@transitions: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
     -webkit-transition: @transitions;
-    -o-transition: @transitions;
     transition: @transitions;
 }
 .transition-transform (@transformArguments1, @transformArguments2:X, ...) {
 	@transformArguments: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 	-webkit-transition: -webkit-transform @transformArguments;
-	-o-transition: -o-transform @transformArguments;
 	transition: transform @transformArguments;
 }
 // FIXME: The specyfic properties also require the unlimited arguments feature.
 .transition-property(...) {
 	-webkit-transition-property: @arguments;
-	-o-transition-property: @arguments;
 	transition-property: @arguments;
 }
 .transition-duration(...) {
 	-webkit-transition-duration: @arguments;
-	-o-transition-duration: @arguments;
 	transition-duration: @arguments;
 }
 .transition-timing-function(...) {
 	-webkit-transition-timing-function: @arguments;
-	-o-transition-timing-function: @arguments;
 	transition-timing-function: @arguments;
 }
 .transition-delay(...) {
 	-webkit-transition-delay: @arguments;
-	-o-transition-delay: @arguments;
 	transition-delay: @arguments;
 }
 
