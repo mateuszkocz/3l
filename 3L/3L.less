@@ -21,29 +21,32 @@
 ///*
 // * SEO & HTML Debugging
 // *
-// * A useful supporting class that will help a bit with your SEO
+// * A useful supporting class that will help you a bit with your SEO
 // * and usability of your website.
 // *
+// * @ABOUT
 // * Creating a website is a serious business, but sometimes you may
 // * forget about some important details. This class will help you.
-// * It will let you know when you haven't put an alt attribute on image
-// * or kept that attribute empty, when you haven't typed a URL in anchor or when
-// * anchor link has rel=nofollow attribute. It will also show you an alert
-// * message if you don't have a <title> tag and description or left them empty*.
+// * It will let you know if you haven't put an alt attribute on an image
+// * or kept that attribute empty, when you haven't typed an URL in an anchor or when
+// * an anchor link has rel=nofollow attribute. It will also show you an alert
+// * message if you don't have a <title> tag and description or left them empty(*).
 // *
-// * If any of the errors described above happens, according element will
-// * get a red outline border drawing your attention and asking for some love
+// * If any of those errors happens, an element will get a red outline
+// * border drawing your attention and asking for some love
 // * or you will get a message with the same purpose.
 // *
-// * *** * The <title> reminder can alert you even if you have a <title> tag.
-// * ***	This happens if you have a <link> tag (usually used for style sheets)
-// * ***	before <title> in your HTML. Just change the order of <link> and
-// * ***	<title> and you're cool.
+// *    (*) The <title> reminder can alert you even if you have a <title> tag.
+// *        This happens if you have a <link> tag (usually used for style sheets)
+// *        before <title> in your HTML. Just change the order of <link> and
+// *        <title> and you're cool.
 // *
-// * How to:
+// * @USAGE
 // * Place the .seo-helper class in html element. That's it!
 // *
-// * *** Example: html {.seo-helper}
+// * 
+// * @EXAMPLE
+// * html {.seo-helper}
 // *
 // * That way every element on your page will be affected
 // * by this rule. You can also place it in any other container
@@ -62,22 +65,13 @@
 // * It's probably the only class you don't need to care about how
 // * your visitors will see it!
 // *
-// * *** Aside - How it works:
-// * *** Section only for people who don't know yet what attribute
-// * *** selectors and negation pseudo-class are.
-// * *** 
-// * *** Using negation pseudo-class is like saying "target every element x
-// * *** that doesn't have attribute y" or "target every element exept (but 'not') z".
-// * *** You can read more about that here ->www.w3.org/TR/selectors/#negation.
-// * *** 
-// * *** Attribute selectors are rules that target elements that have
-// * *** some specified attributes (rel, alt, href etc.) and/or specified
-// * *** value of this attributes. Read more on this topic here
-// * *** ->www.w3.org/TR/selectors/#selectors.
+// * @BROSERS SUPPORT
+// * (unknown / not important)
 // *
-// * For a further explanation and a demo, refer to:
-// * -> http://radiatingstar.com/how-to-improve-seo-with-css
+// * @LINKS
+// * * http://radiatingstar.com/how-to-improve-seo-with-css
 // *
+// * @ASIDE
 // * Why img:not([alt]), img[alt=""] and img[alt^=" "]?
 // * First targets images that don't have an alt attribute, second targets
 // * ones that have this attribute but it's left empty (probably left by
@@ -121,24 +115,24 @@
 // * Classes below help you create a better user experience for both users
 // * of browsers and screen readers. Oh, and there's also a clearfix! 
 // * 
+// * @ABOUT
 // * All the classes comes from HTML5 Boilerplate (-> html5boilerplate.com). Here though,
 // * they're changed so that they can be easily used in The LESS Way.
 // * They're called "non-semantic" in H5B, but here they become semantic if used well.
 // * (Actually they can't be used in any way than good in 3L.)
 // * (Actually II they can be semantic in H5B as well, but it's a bit pain to do that.)
 // * 
-// * Usage:
+// * @USAGE
 // * Just put them in your classes, id's or elements.
 // * 
-// * Example:
-// * .YOUR-AWESOME-CLASS-NAME {
-// *						// some rules 
-// *						.clearfix;
-// *						}
-// * 
+// * @EXAMPLE
+// * .class-selector {
+// *     .ir();
+// *     .clearfix();
+// * }
 // */
 
-// For image replacement.
+// Image replacement.
 .ir () {border: 0; overflow: hidden; background-color: transparent; *text-indent: -9999px; &:before {content: ""; display: block; width: 0; height: 100%;}}
 
 // Hide from both screenreaders and browsers: h5bp.com/u
@@ -148,7 +142,7 @@
 .visuallyhidden () {border: 0;clip: rect(0 0 0 0);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}
 	
 // Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
-// CAUTION! The .visuallyhidden class is included! If you want your object be both
+// CAUTION! The .visuallyhidden class is included! If you want your object to be both
 // .visuallyhidden and .focusabe use only .focusable class.
 .focusable () {.visuallyhidden;&:active,&:focus{clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto;}}
 
@@ -172,37 +166,37 @@
 // * 
 // * Change the basic box-model to the one you want.
 // * 
+// * @ABOUT
 // * Basic box-model defines the width and height of an object only as a size of
 // * object's content area. In order to know exactly how big is the object you need
 // * to add its padding and borders. This may result in many unwanted behaviours.
 // * That's why you can define how you want the browser to calculate the width/height:
 // * with or without padding, with or without borders.
 // * 
+// * @USAGE
 // * To use this feature just put a value you want:
 // * -- content-box ("content" works too) - it's default value from basic model.
 // * -- padding-box (also "padding") - width and height declarations will include paddings.
 // * -- border-box (and "border") - border and padding included.
 // * 
-// * Usage:
-// * 1. .box-sizing(content-box), .box-sizing(content) and .content-box-sizing* for box-sizing: content-box.
-// * 2. .box-sizing(padding-box), .box-sizing(padding) and .padding-box-sizing* for box-sizing: padding-box.
-// * 3. .box-sizing(border-box), .box-sizing(padding) and .border.box-sizing* for box-sizing: border-box.
+// * 1. .box-sizing(content-box), .box-sizing(content) and .content-box-sizing for box-sizing: content-box.
+// * 2. .box-sizing(padding-box), .box-sizing(padding) and .padding-box-sizing for box-sizing: padding-box.
+// * 3. .box-sizing(border-box), .box-sizing(padding) and .border.box-sizing for box-sizing: border-box.
 // *
-// * * Beware not to use those properties without -sizing suffix thus suffixless classes are for background-clip (see this class below).
-// *
-// * Resources:
-// * -- http://paulirish.com/2012/box-sizing-border-box-ftw/
+// * @BROWSERS SUPPORS
+// * IE8+ and every other.
+// * Only Firefox supports padding-box.
 // * 
-// * Browsers support: IE8+ and every other.
-// * Notable lack of support: IE7-
-// * 
+// * @LINKS
+// * * http://paulirish.com/2012/box-sizing-border-box-ftw/
+// * * https://developer.mozilla.org/en-US/docs/CSS/box-sizing
+// * * http://caniuse.com/#feat=css3-boxsizing
 // */
 
-// TODO: Most browser seems to not support padding-box. Is it for real? Delete unncecesary mixins then.
 .content-box-sizing(){-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
-.padding-box-sizing(){-moz-box-sizing:padding-box;-webkit-box-sizing:padding-box;box-sizing:padding-box;}
+.padding-box-sizing(){-moz-box-sizing:padding-box;}
 .border-box-sizing(){-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
-.box-sizing (padding) {.padding-box-sizing;}
+.box-sizing (padding){.padding-box-sizing;}
 .box-sizing (padding-box){.padding-box-sizing;}
 .box-sizing (border){.border-box-sizing;}
 .box-sizing (border-box){.border-box-sizing;}
@@ -214,6 +208,7 @@
 // * 
 // * Clips the object's background to the desired box according to the box-model.
 // * 
+// * @USAGE
 // * To use this class simply put into an object a .background-clip(box) class,
 // * where box means the desired box (see below). You can also use a shorter class
 // * .bg-clip or class that corresponds to the clipping you want to get (.content-clip,
@@ -225,9 +220,12 @@
 // * -- border-box or border for border clip.
 // * *** You can use values either with or without "-box" suffix.
 // *
-// * Browsers support: IE9+ and every other.
-// * Notable lack of support: IE8-
+// * @BROWSERS SUPPORT
+// * IE9+ and every other.
 // *
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/background-clip
+// * * http://caniuse.com/#feat=background-img-opts
 // */
 
 .content-box(){-moz-background-clip:content;background-clip:content-box;}
@@ -243,17 +241,12 @@
 
 ///* 
 // * Box-shadow
+// *
 // * Create a shadow behind or inside the element.
 // * 
-// * Usage:
+// * @USAGE
 // * In .box-shadow() brackets put arguments for every single shadow. Separate
-// * each shadows' arguments with comma. You can put up to five shadows
-// * by default but feel free to add a class with as many as you want.
-// * Just check how it is done.
-// *
-// * You can use a default box-shadow which will create a shadow with
-// * 0px x and 1px y offsets, 3px of blur and in black colour with 25% transparency.
-// * Just place a .box-shadow class without any arguments.
+// * each shadow's arguments with comma.
 // * 
 // * Box-shadow property takes following arguments:
 // *
@@ -264,19 +257,19 @@
 // * 5. spread [optional].
 // * 6. color [optional/required].
 // *
-// * Resources:
-// * -- developer.mozilla.org/en/CSS/box-shadow
-// *
-// * Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser
-// * Notable lack of support: IE8-, Opera Mini
-// *
-// * Example:
+// * @EXAMPLES
 // * Two box-shadows: one is 1px offset, black, second one is green with 30% opacity, inset,
 // * with 5px offsets, 3px of blur and 1px spread.
-// * .box-shadow(1px 1px black, inset 5px 5px 3px 1px fade(green,30%)) // fade(colour,XX%) is a LESS native function
-// *																							// that adds alpha channel to colour. Instead of fade()
-// *																							// you can also use rgba or hsla colours declaration.
-// * Solution for multiple box-shadows in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
+// *
+// * .box-shadow(1px 1px black, inset 5px 5px 3px 1px fade(green,30%))
+// *
+// * @BROWSERS SUPPORT
+// * IE9, Fx3.5 and every other.
+// *
+// * @LINKS
+// * * hhtp://developer.mozilla.org/en/CSS/box-shadow
+// * * http://caniuse.com/#feat=css-boxshadow
+// * * http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
 // */
 
 .box-shadow(@shadow1, @shadow2:X, ...){
@@ -288,48 +281,46 @@
 
 ///* 
 // * Border-radius
+// *
 // * Round the element's corners.
 // * 
-// * Usage: 
+// * @USAGE
 // * Border-radius property takes one to four arguments with px, em and %
 // * values and round the element's corners accordingly. You can make
-// * ellipticaly roundeded corners putting two sets of values separated with
+// * ellipticaly rounded corners putting two sets of values separated with
 // * comma using .elliptical-border-radius class. In order to round a single
 // * corner use .round-corner class. This class takes two sets of arguments.
 // * First one is a declaration of corner you want to round (top-left, top-right,
 // * bottom-right, bottom-left), second one (separated from the first with comma),
-// * is a set of values in px, em or % that round choosen corner. Second
+// * is a set of values in px, em or % that round chosen corner. Second
 // * declaration can have one (for circle rounding) or two values (for
 // * elliptical rounding).
-// *  
-// * For further explanation of the border-radius property, refer to the 
-// * resources section above.
-// * 
-// * Resources:
-// * -- developer.mozilla.org/en/CSS/border-radius
 // *
-// * Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser
-// * Notable lack of support: IE8-, Opera Mini
-// *
-// * Example:
+// * @EXAMPLES
 // * 1. Round every corner of the element with 10px radius.
 // *		.border-radius(10px)
 // * 2. Round top-left and bottom-right corners by 10px, top-right
 // *		and bottom-left corners by 20px.
 // *		.border-radius(10px 20px)
 // * 3	Exemplary use of the .elliptical-border-radius class.
-// * 	.elliptical-border-radius(10px 20px 30px, 40px 50px 60px 70px)
+// * 		.elliptical-border-radius(10px 20px 30px, 40px 50px 60px 70px)
 // * 4. Round top-right corner by 10px and 20px (elliptical).
-// * 	.round-corner(top-right, 10px 20px)
+// * 		.round-corner(top-right, 10px 20px)
 // *		.border-top-right-radius(10px 20px) // Alternate method.
 // * 5. Round similar corners.
-// * 	.border-top-radius(20px 10px); // top-left + top-right (elliptical)
+// * 		.border-top-radius(20px 10px); // top-left + top-right (elliptical)
 // *		.border-left-radius(5px);		 // top-left + bottom-left
 // *
+// * @BROWSERS SUPPORT
+// * IE9, Fx3.5 and every other
+// * 
+// * @LINKS
+// * * http://developer.mozilla.org/en/CSS/border-radius
+// * * http://caniuse.com/#feat=border-radius
 // */
 
-// If your rounded corners looks bad with borders add this class to your rounded element.
-// -> http://tumble.sneak.co.nz/post/928998513/fixing-the-background-bleed
+// If your rounded corners looks bad with borders, add this class to your rounded element.
+// * http://tumble.sneak.co.nz/post/928998513/fixing-the-background-bleed
 .border-radius-fix(){.background-clip(padding-box);}
 
 .border-radius (@radius:5px, ...) {
@@ -385,29 +376,35 @@
 
 ///* 
 // * Opacity
+// *
 // * Make an object transparent.
 // *
+// * @ABOUT
 // * Opacity takes values between 0.0 (invisible) to 1.0 (default - full
 // * visibility) but 3L lets you also use percentages and values from >1 to 100.
 // *
+// * @USAGE
 // * If you want an element with transparency 1, .5 or 0, use these classes:
 // * .not-transparent., .half-transparent, .transparent.
 // *
-// * Browsers support: full (IE6+)
-// * Caution! According to -> caniuse.com/#search=opacity, transparency doesn't
-// * work well with PNG images that are itself transparent (use alpha channel) in IE8-.
+// * @BROWSERS SUPPORT
+// * full (IE6+)
 // *
-// * Aside:
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/opacity
+// * * http://caniuse.com/#feat=css-opacity
+// * 
+// * @ASIDE
 // * Do we need the ability to set opacity in numbers from 1 to 100
 // * and in percentages? I think we do, because:
 // * 1. You need to use integer numbers in filter property for IE,
-// * 	so there is a possibility that someone will type this kind
-// *		of value, instead of [0,1].
-// *	2. LESS has a fade() function that uses percentages to makes
-// * 	colours (semi)transparent, so using percentages here will
-// *		result in more consistent code (same unit in similar situation).
-// *	3. Percentages are more intuitive when it comes to transparency and
-// * 	opacity since graphic editors like Photoshop and GIMP use them.
+// *    so there is a possibility that someone will type this kind
+// *    of value, instead of [0,1].
+// * 2. LESS has a fade() function that uses percentages to makes
+// *    colours (semi)transparent, so using percentages here will
+// *    result in more consistent code (same unit in similar situation).
+// * 3. Percentages are more intuitive when it comes to transparency and
+// *    opacity since graphic editors like Photoshop and GIMP use them.
 // *
 // */
 
@@ -444,8 +441,10 @@
 
 ///*
 // * Gradient
+// *
 // * Create a beautiful gradient without images.
 // *
+// * @USAGE
 // * Pick a type of a gradient you want to have and put colours in
 // * brackets. You can put either two or three colours. In the first case
 // * the default colour for old browsers will be the same as the first colour provided.
@@ -459,35 +458,24 @@
 // * 3. Diagonal - from top-left to bottom-right.
 // * 4. Radial - from the centre of an element to its borders.
 // *
-// * Gradients tend to be tricky. There's no support for this property
-// * in older IE, but "filter" comes to the rescue. It can generate
-// * only horizontal and vertical gradients, though. Also IE9 has some
-// * strange behaviour -> css3wizardry.com/2010/10/29/css-gradients-for-ie9/.
-// * To provide the best experience for your visitors you should use
-// * gradient generator (refer to resources above) with "IE9 Support" option checked.
+// * @BROWSERS SUPPORT
+// * IE10 and every other except Opera Mini.
+// * Some gradients can be achieved in older IE by using non-standard properties.
+// * 
+// * @LINKS
+// * * http://www.colorzilla.com/gradient-editor/ -- gradient generator with broad browsers support and some advanced options
+// * * http://lea.verou.me/css3patterns/ -- gradient is a powerful tool - you can generate shapes as a background!
+// * * https://developer.mozilla.org/en-US/docs/CSS/gradient
+// * * http://caniuse.com/#feat=css-gradients
 // *
-// * Resources:
-// * -- gradient generator with broad browsers support and some advanced options:
-// * 	-> www.colorzilla.com/gradient-editor/
-// * -- gradient is a powerful tool - you can generate shapes as a background!
-// * 	-> lea.verou.me/css3patterns/
-// *
-// * Browsers support: almost full
-// * Notable lack of support: Opera mini
-// * Caution! IE6 - IE8 use filter property that can generate only vertical and
-// * horizontal gradients. For the best experience in IE9 use gradient generator
-// * mentioned above in the resources.
-// *
-// * TODO: manual for .gradient(). Mention it's still compatible with previous versions of 3L since
-// * 		 you need to provide at least 4 values to use it. Anything less will use the old .gradient().
-// * 		 You can provide as much stop colors as you want.
+// * TODO: test if the beta-gradient is reverse-compatible with the old gradient.
 // */
 
 // Multi-purpose gradient is in a BETA stage! Uncomment for your own responsibility.
 ///* 
 // * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
 // * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
-// * FIXME: does it work with "to top left" and similar or angles?
+// * FIXME: does it work with "to top left" and similar or with angles?
 // */ 
 // .gradient(@gradientType, @direction, @rest...) {
 	// @valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
@@ -501,10 +489,6 @@
 	// @moz1: `"-moz-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
 	// @moz2: ~`'@{moz1}'.replace(/\"/g, '')`;
 	// background-image: @moz2;
-// 	
-	// @o1: `"-o-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
-	// @o2: ~`'@{o1}'.replace(/\"/g, '')`;
-	// background-image: @o2;
 // 	
 	// @w3c1: `"@{gradientType}" + "-gradient(" + "@{directionProcessedNew}," + "@{valuesProcessed}" + ")"`;
 	// @w3c2: ~`'@{w3c1}'.replace(/\"/g, '')`;
