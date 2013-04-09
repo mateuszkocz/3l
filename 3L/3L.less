@@ -472,11 +472,10 @@
 // */
 
 // Multi-purpose gradient is in a BETA stage! Uncomment for your own responsibility.
-///* 
 // * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
 // * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
 // * FIXME: does it work with "to top left" and similar or with angles?
-// */ 
+
 // .gradient(@gradientType, @direction, @rest...) {
 	// @valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
 	// @directionProcessedOld: ~`"@{direction}".replace(/[\[\]]|\,/g,'').replace("to ","").replace("top","bottom").replace("bottom","top").replace("right","left").replace("left","right").replace("at ","").replace("cover", "farthest-corner")`;
@@ -498,15 +497,13 @@
 	background: @color1;
 	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(top, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to bottom, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=0 );
-}
+}
 .gradient (@color1, @color2, @color3){
 	background: @color3;
 	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(top, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(top, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to bottom, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=0 );
 }
@@ -517,7 +514,6 @@
 	background: @color1;
 	background-image: -moz-linear-gradient(left, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(left, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(left, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to right, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 }
@@ -525,7 +521,6 @@
 	background: @color3;
 	background-image: -moz-linear-gradient(left, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(left, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(left, @color1 0%,@color2 100%);
 	background-image: linear-gradient(to right, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 }
@@ -533,7 +528,6 @@
 	background: @color1;
 	background-image: -moz-linear-gradient(-45deg, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(-45deg, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(-45deg, @color1 0%,@color2 100%);
 	background-image: linear-gradient(135deg, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
@@ -541,7 +535,6 @@
 	background: @color3;
 	background-image: -moz-linear-gradient(-45deg, @color1 0%, @color2 100%);
 	background-image: -webkit-linear-gradient(-45deg, @color1 0%,@color2 100%);
-	background-image: -o-linear-gradient(-45deg, @color1 0%,@color2 100%);
 	background-image: linear-gradient(135deg, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
@@ -549,7 +542,6 @@
 	background: @color1;
 	background-image: -moz-radial-gradient(center, @color1 0%, @color2 100%);
 	background-image: -webkit-radial-gradient(center, @color1 0%,@color2 100%);
-	background-image: -o-radial-gradient(center, @color1 0%,@color2 100%);
 	background-image: radial-gradient(at center, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
@@ -557,7 +549,6 @@
 	background: @color3;
 	background-image: -moz-radial-gradient(center, @color1 0%, @color2 100%);
 	background-image: -webkit-radial-gradient(center, @color1 0%,@color2 100%);
-	background-image: -o-radial-gradient(center, @color1 0%,@color2 100%);
 	background-image: radial-gradient(at center, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
