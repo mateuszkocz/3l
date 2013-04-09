@@ -555,28 +555,27 @@
 
 ///*
 // * Background-size
+// * 
 // * Scale (or not) your background image.
 // * 
+// * @ABOUT
 // * This property takes following values:
 // * -- auto [default] - it does nothing when used alone; when used with a value
-// * 	it makes sure that image will keep its aspect ratio while being stretched
-// * 	to the required size. (See: examples 3. and 4.)
+// *    it makes sure that image will keep its aspect ratio while being stretched
+// *    to the required size. (See: examples 3. and 4.)
 // * -- contain - scale image to the first border it meets;
-// *		it may leave some area uncovered but keeps image's aspect ratio,
+// *    it may leave some area uncovered but keeps image's aspect ratio,
 // * -- cover - scale image to the second border it meets;
-// * 	cover all area but part of an image may not be shown. The image keeps its aspect ratio.
+// *    cover all area but part of an image may not be shown. The image keeps its aspect ratio.
 // * -- px, em, % - scale image according to declared value;
-// * 	you can declare one value (x-size) or two values for each size.
-// *		Using (100%, 100%) stretch the image to cover full area but may not
-// *		keep its aspect ratio. When you use percentages keep in mind that XX%
-// * 	means XX% of the element size, not XX% of the background image. 
+// *    you can declare one value (x-size) or two values for each size.
+// *    Using (100%, 100%) stretch the image to cover full area but may not
+// *    keep its aspect ratio. When you use percentages keep in mind that XX%
+// *    means XX% of the element size, not XX% of the background image. 
 // * 
 // * Consider adding background-repeat property to avoid unwanted repetition of background.
-// * 
-// * Browsers support: IE9+, Fx3.6+, Chrome, Safari, Opera, Opera Mini, Opera Mobile, Android Browser
-// * Notable lack of support: IE8-
 // *
-// * Examples:
+// * @EXAMPLES
 // * 1. .background-size(contain);
 // * 2. .background-size(cover); 
 // * 3. .background-size(70%); 		 // = (70% auto). Image is scaled to take 70% of width
@@ -586,6 +585,12 @@
 // * 5. background-size(70px 7em);  // Size of the background image is now 70px (width) x 7em (height).
 // * 6. background-size(70px,7em);  // Same as above. Comma is fine too.
 // *
+// * @BROWSERS SUPPORT
+// * IE9+, Fx3.6+ and every other.
+// *
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/background-size
+// * * http://caniuse.com/#search=background-size
 // */
  
 .background-size (...) {
@@ -600,17 +605,17 @@
 // * 
 // * Divide a block of text into columns as seen in newspapers.
 // * 
-// * Basic usage:
-// * Use .columns() class providing in brackets arguments for columns.
-// * Non of those arguments are required, but unless you provide one, columns
+// * @USAGE
+// * Use .columns() class providing arguments in the brackets.
+// * None of those arguments are required, but unless you provide one, columns
 // * layout won't work. Available arguments:
-// * -- integer - declare a column-count. Unless declared, their width will 
-// * 	equal to division of the block's width minus column-gaps and declared integer.
-// * 	Default value is "auto" which means that width of columns will be determined
-// * 	by column-width value.
-// * -- width - declare every column width in px, em and % (of containing block).
-// * 	Default value is "auto" - column width will be equal to division of the 
-// *		block's width and declared column-count
+// * -- [integer] - declare a column-count. Unless declared, their width will 
+// *    equal to division of the block's width minus column-gaps and declared integer.
+// *    Default value is "auto" which means that width of columns will be determined
+// *    by column-width value.
+// * -- [width] - declare every column width in px, em and % (of containing block).
+// *    Default value is "auto" - column width will be equal to division of the 
+// *    block's width and declared column-count
 // * 
 // * Usage of supporting classes:
 // * You can declare the gaps between columns by .column-gap() class that takes
@@ -619,19 +624,22 @@
 // * Declare a vertical rule between columns using .column-rule(). It's the same
 // * type of declaration as in borders, that is width, style and colour. By default
 // * there is no rule.
-// *
-// * Browsers support: IE10+, Fx, Chrome, Safari, Opera, Opera Mobile, Android Browser
-// * Notable lack of support: IE9-, Opera Mini
 // * 
-// * Example:
+// * @EXAMPLES
 // * 1. .column(2, 20px) // Two columns with 20px width.
 // * 2. .column(5) // Five columns layout.
 // * 3. element {
-// * 		.column(100px);						// A 100px width columns
-// * 		.column-gap(10px);					// with 10px gap between
+// *        .column(100px);					// A 100px width columns
+// * 		.column-gap(10px);				// with 10px gap between
 // * 		.column-rule(1px solid black);	// and 1px thick, solid, black vertical rule.
-// *		}
+// *	}
 // *
+// * @BROWSERS SUPPORT
+// * IE10+ and every other (except for Opera Mini)
+// * 
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/columns
+// * * http://caniuse.com/#feat=multicolumn
 // */
 
 .columns (...) {
@@ -659,16 +667,11 @@
 .columns-fill (@fill) {.column-fill(@fill);}
 
 ///*
-// * Transform
-// * 2D and 3D transformation of an object.
+// * Transforms
 // * 
-// * You can use classes dedicated to specifics transformation, but if you plan
-// * to use multiple transformation on an object, use general classes .transform
-// * or .transform3d instead. Otherwise the latter transform will override the former.
-// * If you want to use some of the 3D transformations, use .transform3d class. It
-// * has a 3D specific property transform-style included. You can put both 3D and 2D
-// * transformations in .transform3D.
+// * 2D and 3D transformation of an object.
 // *
+// * @ABOUT
 // * Transforms don't affect an object's place in a document and its environment
 // * so there's no risk of crashing a layout.
 // * 
@@ -688,39 +691,47 @@
 // * You can use three types of values:
 // * -- pixels that place origin point in position according to the top-left corner of an element
 // * 	to its bottom-right corner. Negative values allowed - in that case position goes to the left
-// *		and top from the top-left corner,
+// *    and top from the top-left corner,
 // * -- percentages that are relative to object's width and height. As in px, the original position
-// *		is top-left corner (0% 0%), and goes to bottom-right (100% 100%). Negative values does the
-// *		same as in px.
+// *    is top-left corner (0% 0%), and goes to bottom-right (100% 100%). Negative values does the
+// *    same as in px.
 // * -- keywords: left / center / right for x-axis and top / center / bottom for y-axis.
 // *
 // * For 3D transformations you can set a perspective using .perspective() class and putting
 // * value in brackets .
-// * 	
-// * Browsers support: IE9+, Fx3,5+, Chrome, Safari, Opera, Opera Mobile, Android Browser
-// * Notable lack of support: IE8-*, Opera Mini
-// * * You can use some of the transformation in older IE through filter property.
-// *   To generate that property refer to -> css3please.com.
-// *   You can also emulate scale property with zoom property.
 // * 
-// * Examples:
+// * @USAGE
+// * You can use classes dedicated to specifics transformation, but if you plan
+// * to use multiple transformation on an object, use general classes .transform
+// * or .transform3d instead. Otherwise the latter transform will override the former.
+// * If you want to use some of the 3D transformations, use .transform3d class. It
+// * has a 3D specific property transform-style included. You can put both 3D and 2D
+// * transformations in .transform3D.
+// * 
+// * @EXAMPLES
 // * 1. .scale(2,.5) // Stretch an object two times and shrink in height by half.
 // * 2. .rotate(180deg) // Rotate an object by 180deg.
 // * 3. .transform(.scale(2,.5),rotate(180deg)) // Does the combined transformation from examples above.
 // * 4. .transform-origin(20% top) // Place the transformation origin at the top, 20% of the object's
-// * 										// width to the right from the top-left corner. 
+// * 							   // width to the right from the top-left corner. 
+// * 	
+// * @BROWSERS SUPPORT
+// * IE9+, Fx3,5+ and every other (except for Opera Mini)
+// * 
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/transform
+// * * http://caniuse.com/#feat=transforms2d
+// * * http://caniuse.com/#feat=transforms3d
 // */
 
 .transform-origin (...) {
 	-webkit-transform-origin: @arguments;
 	-moz-transform-origin: @arguments;
 	-ms-transform-origin: @arguments;
-	-o-transform-origin: @arguments;
 	transform-origin: @arguments;
 }
 .transform-style(@style) {
 	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	-o-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
@@ -740,7 +751,6 @@
 	-webkit-transform: @arguments;
 	-moz-transform: @arguments;
 	-ms-transform: @arguments;
-	-o-transform: @arguments;
 	transform: @arguments;
 	}
 .transform3d (...) {
@@ -751,41 +761,34 @@
 	-webkit-transform: rotate(@rotate);
 	-moz-transform: rotate(@rotate);
 	-ms-transform: rotate(@rotate);
-	-o-transform: rotate(@rotate);
 	transform: rotate(@rotate);
 	}
 .rotate3d (@deg1, @deg2:0, @deg3:0){
 	-webkit-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	-moz-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
-	-o-transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
 	transform: rotateX(@deg1) rotateY(@deg2) rotateZ(@deg3);
 	}
 .scale (@scale) {
 	-webkit-transform: scale(@scale);
 	-moz-transform: scale(@scale);
 	-ms-transform: scale(@scale);
-	-o-transform: scale(@scale);
 	transform: scale(@scale);
 	}
 .scale (@scale1,@scale2) {
 	-webkit-transform: scale(@scale1,@scale2);
 	-moz-transform: scale(@scale1,@scale2);
 	-ms-transform: scale(@scale1,@scale2);
-	-o-transform: scale(@scale1,@scale2);
 	transform: scale(@scale1,@scale2);
 	}
 .scaleX (@scale) {
 	-webkit-transform: scaleX(@scale);
 	-moz-transform: scaleX(@scale);
 	-ms-transform: scaleX(@scale);
-	-o-transform: scaleX(@scale);
 	transform: scaleX(@scale);
 	}
 .scaleY (@scale) {
 	-webkit-transform: scaleY(@scale);
 	-moz-transform: scaleY(@scale);
 	-ms-transform: scaleY(@scale);
-	-o-transform: scaleY(@scale);
 	transform: scaleY(@scale);
 	}
 .skew (@skew) {
@@ -795,49 +798,42 @@
 	-webkit-transform: skewX(@skew1) skewY(@skew2);
 	-moz-transform: skewX(@skew1) skewY(@skew2);
 	-ms-transform: skewX(@skew1) skewY(@skew2);
-	-o-transform: skewX(@skew1) skewY(@skew2);
 	transform: skewX(@skew1) skewY(@skew2);
 	}
 .skewX (@skew) {
 	-webkit-transform: skewX(@skew);
 	-moz-transform: skewX(@skew);
 	-ms-transform: skewX(@skew);
-	-o-transform: skewX(@skew);
 	transform: skewX(@skew);
 	}
 .skewY (@skew) {
 	-webkit-transform: skewY(@skew);
 	-moz-transform: skewY(@skew);
 	-ms-transform: skewY(@skew);
-	-o-transform: skewY(@skew);
 	transform: skewY(@skew);
 	}
 .translate (@translate) {
 	-webkit-transform: translate(@translate);
 	-moz-transform: translate(@translate);
 	-ms-transform: translate(@translate);
-	-o-transform: translate(@translate);
 	transform: translate(@translate);
 	}
 .translate (@translate1, @translate2) {
 	-webkit-transform: translate(@translate1, @translate2);
 	-moz-transform: translate(@translate1, @translate2);
 	-ms-transform: translate(@translate1, @translate2);
-	-o-transform: translate(@translate1, @translate2);
 	transform: translate(@translate1, @translate2);
 	}
 .translateX (@translate) {
 	-webkit-transform: translateX(@translate);
 	-moz-transform: translateX(@translate);
 	-ms-transform: translateX(@translate);
-	-o-transform: translateX(@translate);
 	transform: translateX(@translate);
 	}
 .translateY (@translate) {
 	-webkit-transform: translateY(@translate);
 	-moz-transform: translateY(@translate);
 	-ms-transform: translateY(@translate);
-	-o-transform: translateY(@translate);
 	transform: translateY(@translate);
 	}
 	
