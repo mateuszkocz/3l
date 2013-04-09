@@ -868,7 +868,7 @@
 // * but all at all using transitions on transform is very risky.
 // * -> http://radiatingstar.com/transition-with-transform-cant-be-future-proof
 // * 
-// * Usage:
+// * @USAGE
 // * For .transition class, put in brackets at least a time value. If you want to animate more than one
 // * property or animate everything with different functions, put up to 5 declarations separated with
 // * commas. If one of the property you want to animate is "transform" _and_ you want to animate every
@@ -876,17 +876,19 @@
 // * value put a time duration for transform property. Do not write this property though. It's auto-added
 // * for the first set of values. Add other properties after commas. Refer to the example 3.
 // * 
-// * Browsers support: IE10+, Fx4+, Chrome, Opera, Safari, Opera Mobile, Android Browser
-// * Notable lack of support: IE9-, Fx3.6-, Opera Mini
-// * *** Transition provides only a visual effects between states. It's perfectly
-// * *** safe to use. Users with older browser just won't see a phase of changing.
-// * 
-// * Examples:
+// * @EXAMPLES
 // * 1. .transition (all 1s); // Animate all properties for 1 second.
 // * 2. .transition (background-color 5s, margin 1s linear 5s) // Animate change of background-color for 5s
-// * 																			 // and after 5s animate margin change for 1s.
+// * 														   // and after 5s animate margin change for 1s.
 // * 3. .transition-transform (2s linear, padding 3s) // Animate change of transform property (no "transform" declared!)
-// * 																 // and padding property.
+// * 												  // and padding property.
+// * 
+// * @BROWSERS SUPPORT
+// * IE10+ and every other (except for Opera Mini)
+// * 
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/transition
+// * * http://caniuse.com/#feat=css-transitions
 // */
 
 .transition(@transition1, @transition2:X, ...){
@@ -925,6 +927,7 @@
 // * 
 // * Create an awesome animation!
 // * 
+// * @ABOUT
 // * This class takes from two to five properties:
 // * -- animation-name [required] - declare your @keyframes animation name. See below
 // * 	for an easy way to make @keyframes!
@@ -939,10 +942,8 @@
 // * 	for better explanation. To declare a direction use normal [default value],
 // * 	alternate, reverse or alternate-reverse keyword.
 // * 
-// * Resources:
-// * -- developer.mozilla.org/en/CSS/animation
-// *
-// * Creating @keyframes:
+// * @USAGE
+// * Creating @keyframes
 // * Write in your .less file:
 // * *** @import 'animationX.less';
 // * where X stands for a number between 1 and 5. Then create a class
@@ -951,25 +952,30 @@
 // * Then just put an .animation(animationX [other animation properties]) class in your element.
 // * That's all!
 // *
-// * Example:
+// * @EXAMPLES
 // * .toBeAnimated {
-// * 		// Animation with every possible value declared. //
-// *			.animation(animation1 5s linear 3s infinite alternate);
-// *			}
+// * 	// Animation with every possible value declared. //
+// *	.animation(animation1 5s linear 3s infinite alternate);
+// * }
 // * // Importing prefixed @keyframes for animation1.
 // * @import '3L/assets/animations/animation1';
 // *
 // * // Declaring @keyframes for animation. Only once! 
 // * .animation1() {
-// *			from {margin-top: 3px;}
-// *			to {margin-top: 333px;}
-// *			}
+// *	from {margin-top: 3px;}
+// *	to {margin-top: 333px;}
+// * }
 // *
+// * @BROWSERS SUPPORT
+// * IE10+ and every other (except for Opera Mini)
+// *
+// * @LINKS
+// * * http://developer.mozilla.org/en/CSS/animation
+// * * http://caniuse.com/#feat=css-animation
 // */
 
 .animation (...) {
 	-webkit-animation: @arguments;
-	-o-animation: @arguments;
 	animation: @arguments;
 	}
 .animate (...) {.animation(@arguments);}
@@ -977,37 +983,30 @@
 // FIXME: The specyfic properties also require the unlimited arguments feature.
 .animation-name(...) {
 	-webkit-animation-name: @arguments;
-	-o-animation-name: @arguments;
 	animation-name: @arguments;
 }
 .animation-duration(...) {
 	-webkit-animation-duration: @arguments;
-	-o-animation-duration: @arguments;
 	animation-duration: @arguments;
 }
 .animation-timing-function(...) {
 	-webkit-animation-timing-function: @arguments;
-	-o-animation-timing-function: @arguments;
 	animation-timing-function: @arguments;
 }
 .animation-delay(...) {
 	-webkit-animation-delay: @arguments;
-	-o-animation-delay: @arguments;
 	animation-delay: @arguments;
 }
 .animation-iteration-count(...) {
 	-webkit-animation-iteration-count: @arguments;
-	-o-animation-iteration-count: @arguments;
 	animation-iteration-count: @arguments;
 }
 .animation-direction(...) {
 	-webkit-animation-direction: @arguments;
-	-o-animation-direction: @arguments;
 	animation-direction: @arguments;
 }
 .animation-fill-mode(...) {
 	-webkit-animation-fill-mode: @arguments;
-	-o-animation-fill-mode: @arguments;
 	animation-fill-mode: @arguments;
 }
 
