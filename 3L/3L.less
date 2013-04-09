@@ -764,19 +764,21 @@
 	-ms-transform-origin: @arguments;
 	-o-transform-origin: @arguments;
 	transform-origin: @arguments;
-	}
+}
 .transform-style(@style) {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-o-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
-.perspective (...) {
-	-webkit-perspective: @arguments;
-	-moz-perspective: @arguments;
-	-o-perspective: @arguments;
-	perspective: @arguments;
-	}
+.perspective (@perspective) {
+	-webkit-perspective: @perspective;
+	perspective: @perspective;
+}
+.perspective-origin (...) {
+	-webkit-perspective-origin: @arguments;
+	perspective-origin: @arguments;
+}
 .backface-visibility(@visibility){
     -webkit-backface-visibility: @visibility;
     backface-visibility: @visibility;

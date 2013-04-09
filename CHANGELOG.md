@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.4.2-beta
+* deleted -moz- and -o-perspective.
+* added perspective origin.
+
 ## 1.4.1-beta (aka Lots of Love for Firefox)
 * transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.
 * deleted -mox-transition[-*] properties since they're no longer required.
