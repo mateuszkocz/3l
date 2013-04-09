@@ -10,6 +10,7 @@
 * multiple specyfic transition properties.
 * deleted -o- animations.
 * updates and changes in documentation.
+* transform-perspective added.
 
 ## 1.4.1-beta (aka Lots of Love for Firefox)
 * transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.
