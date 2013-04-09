@@ -7,6 +7,7 @@
 * deleted -o- in transforms - Opera either doesn't require prefix for 2D or doesn't support transformations 3D.
 * deleted -moz- for 3D transforms.
 * deleted -o- transitions.
+* multiple spesyfic transition properties.
 
 ## 1.4.1-beta (aka Lots of Love for Firefox)
 * transform style with value preserve-3d is no longer included in 3D transformation and is moved to its own mixin.

@@ -899,22 +899,25 @@
 	-webkit-transition: -webkit-transform @transformArguments;
 	transition: transform @transformArguments;
 }
-// FIXME: The specyfic properties also require the unlimited arguments feature.
-.transition-property(...) {
-	-webkit-transition-property: @arguments;
-	transition-property: @arguments;
+.transition-property(@property1, @property2:X, ...) {
+	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+	-webkit-transition-property: @properties;
+	transition-property: @@properties;
 }
-.transition-duration(...) {
-	-webkit-transition-duration: @arguments;
-	transition-duration: @arguments;
+.transition-duration(@property1, @property2:X, ...) {
+	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+	-webkit-transition-duration: @properties;
+	transition-duration: @properties;
 }
-.transition-timing-function(...) {
-	-webkit-transition-timing-function: @arguments;
-	transition-timing-function: @arguments;
+.transition-timing-function(@property1, @property2:X, ...) {
+	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+	-webkit-transition-timing-function: @properties;
+	transition-timing-function: @properties;
 }
-.transition-delay(...) {
-	-webkit-transition-delay: @arguments;
-	transition-delay: @arguments;
+.transition-delay(@property1, @property2:X, ...) {
+	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+	-webkit-transition-delay: @properties;
+	transition-delay: @properties;
 }
 
 ///*
