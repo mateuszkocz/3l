@@ -980,7 +980,6 @@
 	}
 .animate (...) {.animation(@arguments);}
 .anime (...) {.animation(@arguments);}
-// FIXME: The specyfic properties also require the unlimited arguments feature.
 .animation-name(...) {
 	-webkit-animation-name: @arguments;
 	animation-name: @arguments;
@@ -1012,8 +1011,10 @@
 
 ///*
 // * User-select
-// * controls the selection model and granularity of an element.
 // *
+// * Controls the selection model and granularity of an element.
+// *
+// * @ABOUT
 // * This property takes following values:
 // * -- none - none of the element's content can be selected.
 // * -- text [default] - the element's contents follow a standard text content selection model.
@@ -1022,16 +1023,19 @@
 // * -- elements - one or more elements at a time may be selected.
 // * -- all - Only the entire contents as a whole can be selected.
 // *
-// * Browsers support: IE10+, Fx0.6+, Chrome, Safari
-// * Notable lack of support: IE9-, Opera
+// * @BROWSERS SUPPORT
+// * IE10+, Firefox, Chrome, Safari (not Opera)
 // *
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/user-select
+// * * http://caniuse.com/#search=user-select
 // */
 
 .user-select (...) {
--webkit-user-select: @arguments;
--moz-user-select: @arguments;
--ms-user-select: @arguments;
-user-select: @arguments;
+	-webkit-user-select: @arguments;
+	-moz-user-select: @arguments;
+	-ms-user-select: @arguments;
+	user-select: @arguments;
 }
 
 ///*
