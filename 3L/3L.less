@@ -1016,7 +1016,7 @@
 ///*
 // * User-select
 // *
-// * Controls the selection model and granularity of an element.
+// * Controls the selection model of an element.
 // *
 // * @ABOUT
 // * This property takes following values:
@@ -1047,100 +1047,103 @@
 // * 
 // * Advanced image manipulation in your CSS!
 // * 
-// * Note: the filter property works only in Webkit for now. Will the prefixed version for other
-// * vendors be supported, is unknown, so the mixin might for now generate useles code.
-// * You might want to use just the -webkit-filter property without the help of .filter() mixin.
+// * @NOTE
+// * The filter property currently works only in Webkit browsers. You might want to 
+// * just use the -webkit-filter property without the help of .filter() mixins to
+// * avoid generating useless code.
 // * 
-// * drop-shadow and opacity might be hardware accelerated.
+// * @BROWSERS SUPPORT
+// * Newest Webkit browsers.
 // * 
-// * Resources: http://www.html5rocks.com/en/tutorials/filters/understanding-css/
-// * 
-// * TODO: requires testing
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/filter
+// * * http://www.html5rocks.com/en/tutorials/filters/understanding-css/
 // */
-// FIXME: .filter() requires the unlimited arguments feature.
-.filter(...) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+
+.filter(@filter1, @filter2:X, ...) {
+	@filters: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+	-webkit-filter: @filters;
+	-moz-filter: @filters;
+	-ms-filter: @filters;
+	-o-filter: @filters;
+	filter: @filters;
 }
 .grayscale(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: grayscale(@arguments);
+	-moz-filter: grayscale(@arguments);
+	-ms-filter: grayscale(@arguments);
+	-o-filter: grayscale(@arguments);
+	filter: grayscale(@arguments);
 }
 .sepia(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: sepia(@arguments);
+	-moz-filter: sepia(@arguments);
+	-ms-filter: sepia(@arguments);
+	-o-filter: sepia(@arguments);
+	filter: sepia(@arguments);
 }
 .saturate(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: saturate(@arguments);
+	-moz-filter: saturate(@arguments);
+	-ms-filter: saturate(@arguments);
+	-o-filter: saturate(@arguments);
+	filter: saturate(@arguments);
 }
 .hue-rotation(@angle) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: hue-rotate(@arguments);
+	-moz-filter: hue-rotate(@arguments);
+	-ms-filter: hue-rotate(@arguments);
+	-o-filter: hue-rotate(@arguments);
+	filter: hue-rotate(@arguments);
 }
 .invert(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: invert(@arguments);
+	-moz-filter: invert(@arguments);
+	-ms-filter: invert(@arguments);
+	-o-filter: invert(@arguments);
+	filter: invert(@arguments);
 }
 // .opacity() already taken, hence the -filter suffix.
 .opacity-filter(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: opacity(@arguments);
+	-moz-filter: opacity(@arguments);
+	-ms-filter: opacity(@arguments);
+	-o-filter: opacity(@arguments);
+	filter: opacity(@arguments);
 }
 .brightness(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: brightness(@arguments);
+	-moz-filter: brightness(@arguments);
+	-ms-filter: brightness(@arguments);
+	-o-filter: brightness(@arguments);
+	filter: brightness(@arguments);
 }
 .contrast(@amount) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: contrast(@arguments);
+	-moz-filter: contrast(@arguments);
+	-ms-filter: contrast(@arguments);
+	-o-filter: contrast(@arguments);
+	filter: contrast(@arguments);
 }
 .blur(@radius) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: blur(@arguments);
+	-moz-filter: blur(@arguments);
+	-ms-filter: blur(@arguments);
+	-o-filter: blur(@arguments);
+	filter: blur(@arguments);
 }
 .drop-shadow(@shadow) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
-	filter: @arguments;
+	-webkit-filter: drop-shadow(@arguments);
+	-moz-filter: drop-shadow(@arguments);
+	-ms-filter: drop-shadow(@arguments);
+	-o-filter: drop-shadow(@arguments);
+	filter: drop-shadow(@arguments);
 }
 .url(@url) {
-	-webkit-filter: @arguments;
-	-moz-filter: @arguments;
-	-ms-filter: @arguments;
-	-o-filter: @arguments;
+	-webkit-filter: (@arguments);
+	-moz-filter: (@arguments);
+	-ms-filter: (@arguments);
+	-o-filter: (@arguments);
 	filter: @arguments;
 }
 

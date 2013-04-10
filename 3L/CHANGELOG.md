@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.4.3-beta
+* filter with unlimited arguments.
+* specyfic filter functions now done right.
+
 ## 1.4.2-beta (aka Lots of Love for Opera)
 * deleted -moz- and -o-perspective.
 * added perspective origin.
