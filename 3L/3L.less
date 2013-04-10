@@ -1147,27 +1147,81 @@
 	filter: @arguments;
 }
 
-///*
+///**
 // * Border image
+// *
+// * Use images as your borders.
+// *
+// * @ABOUT
+// * Border image lets you use an image as borders for an element. It takes at least 3 arguments:
+// * -- an URL of an imge that will be used as a border,
+// * -- image-slice (number) that tells the browser how to cut the image,
+// * -- image-repeat (keywords: repeat, round or stretch)
+// *    and optionally:
+// * -- image-width for defining an offset of border parts in an image provided in url,
+// * -- offset that the border-image will extend beyond a box.
+// *
+// * A layout of a page isn't affected by border-image. It's calculated only based
+// * on border-width property. That means you can use even a very wide image and
+// * still the surrounding content won't move a pixel.
+// *
+// * @USAGE
+// * In .border-image() provide at least required arguments with the first being the URL path (without "url()").
 // * 
-// * Browsers support: Chrome, Firefox, Safari, Opera, Chrome for Android, Android Browser, Opera Mobile, Firefox for Android
-// * Notable lack of support: IE, Opera Mini
-// */
+// * @BROWSERS SUPPORT
+// * All except IE
+// * 
+// * @LINKS
+// * * https://developer.mozilla.org/pl/docs/CSS/border-image
+// * * http://caniuse.com/#feat=border-image
+// * * http://dev.w3.org/csswg/css-backgrounds/#border-image
+// **/
+
 .border-image(@url, @rest...) {
 	-webkit-border-image:url(@url) @rest;
 	-moz-border-image:url(@url) @rest;
 	-o-border-image:url(@url) @rest;
 	border-image:url(@url) @rest;
 }
+.border-image-source(@url) {
+	-webkit-border-image-source: url(@url);
+	-moz-border-image-source: url(@url);
+	-o-border-image-source: url(@url);
+	border-image-source: url(@url);
+}
+.border-image-slice(@slice) {
+	-webkit-border-image-slice: @slice;
+	-moz-border-image-slice: @slice;
+	-o-border-image-slice: @slice;
+	border-image-slice: @slice;
+}
+.border-image-width(@width) {
+	-webkit-border-image-width: @width;
+	-moz-border-image-width: @width;
+	-o-border-image-width: @width;
+	border-image-width: @width;
+}
+.border-image-outset(@outset) {
+	-webkit-border-image-outset: @outset;
+	-moz-border-image-outset: @outset;
+	-o-border-image-outset: @outset;
+	border-image-outset: @outset;
+}
+.border-image-repeat(@repeat) {
+	-webkit-border-image-repeat: @repeat;
+	-moz-border-image-repeat: @repeat;
+	-o-border-image-repeat: @repeat;
+	border-image-repeat: @repeat;
+}
 
-///*
+///**
 // * Flexible Box Model
 // * 
 // * Resources: https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes
 // * 
 // * Browsers Support: Chrome, Firefox 18*, Opera 12.1, Opera Mini 12.1
 // * Notable lack of support: IE, Firefox 17 (stable), Safari, Chrome for Android 
-// */
+// **/
 
 .display-flex() {
 	display: -webkit-flex;
