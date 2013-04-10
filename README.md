@@ -9,7 +9,7 @@ Keep up your good work!
 * Author: [Mateusz Kocz](http://radiatingstar.com)
 * [Watch 3L on Github](https://github.com/mateuszkocz/3l)
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
-* [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.4.0-beta.zip)
+* [Download .zip](https://github.com/mateuszkocz/3l/archive/master.zip)
 
 3L is MIT licensed.
 
