@@ -1,4 +1,4 @@
-///*
+///**
 // * 3L was made for YOU to help you create awesome websites
 // * and fill the Internet with excessive amount of Love! ♥
 // *
@@ -16,9 +16,9 @@
 // * To compile all of the code you need to use a compiler
 // * that supports JavaScript code and guarder mixins.
 // * For Windows user WinLess (winless.org) would be a good choice.
-// */
+// **/
 
-///*
+///**
 // * SEO & HTML Debugging
 // *
 // * A useful supporting class that will help you a bit with your SEO
@@ -92,7 +92,7 @@
 // * Why div:empty, span:empty, li:empty, p:empty, td:empty, th:empty?
 // * It'll just check if you have some redundancy (empty elements) in you code.
 // *
-// */
+// **/
  
 .seo-helper () {
 	img:not([alt]), img[alt=""], img[alt^=" "],
@@ -109,7 +109,7 @@
 	meta[name="description"][content=""]:before, meta[name="description"][content=" "]:before {content: "You've left description empty!";}
 	}
 	
-///*
+///**
 // * Helper classes from HTML5 Boilerplate
 // * 
 // * Classes below help you create a better user experience for both users
@@ -130,7 +130,7 @@
 // *     .ir();
 // *     .clearfix();
 // * }
-// */
+// **/
 
 // Image replacement.
 .ir () {border: 0; overflow: hidden; background-color: transparent; *text-indent: -9999px; &:before {content: ""; display: block; width: 0; height: 100%;}}
@@ -152,16 +152,16 @@
 // Contain floats: h5bp.com/q
 .clearfix () {*zoom:1;&:before,&:after{content:" ";display:table;}&:after{clear:both;}}
 
-///*
+///**
 // * Some other helper classes.
-// */
+// **/
 
 .incomplete() {outline: 3px dotted green}
 .fixme() {outline: 3px dotted yellow}
 .todo() {outline: 3px dotted blue}
 .xxx() {outline: 3px dotted red}
 
-///*
+///**
 // * Box-sizing
 // * 
 // * Change the basic box-model to the one you want.
@@ -191,7 +191,7 @@
 // * * http://paulirish.com/2012/box-sizing-border-box-ftw/
 // * * https://developer.mozilla.org/en-US/docs/CSS/box-sizing
 // * * http://caniuse.com/#feat=css3-boxsizing
-// */
+// **/
 
 .content-box-sizing(){-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
 .padding-box-sizing(){-moz-box-sizing:padding-box;}
@@ -203,7 +203,7 @@
 .box-sizing (content){.content-box-sizing;}
 .box-sizing (content-box){.content-box-sizing;}
 
-///*
+///**
 // * Background-clip
 // * 
 // * Clips the object's background to the desired box according to the box-model.
@@ -226,7 +226,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/background-clip
 // * * http://caniuse.com/#feat=background-img-opts
-// */
+// **/
 
 .content-box(){-moz-background-clip:content;background-clip:content-box;}
 .padding-box(){-moz-background-clip:padding;background-clip:padding-box;}
@@ -239,7 +239,7 @@
 .background-clip (content-box){.content-box;}
 .bg-clip(@arguments){.background-clip(@arguments);}
 
-///* 
+///**
 // * Box-shadow
 // *
 // * Create a shadow behind or inside the element.
@@ -270,7 +270,7 @@
 // * * hhtp://developer.mozilla.org/en/CSS/box-shadow
 // * * http://caniuse.com/#feat=css-boxshadow
 // * * http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
-// */
+// **/
 
 .box-shadow(@shadow1, @shadow2:X, ...){
 	@shadows: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
@@ -279,7 +279,7 @@
     box-shadow: @shadows;
 }
 
-///* 
+///**
 // * Border-radius
 // *
 // * Round the element's corners.
@@ -317,7 +317,7 @@
 // * @LINKS
 // * * http://developer.mozilla.org/en/CSS/border-radius
 // * * http://caniuse.com/#feat=border-radius
-// */
+// **/
 
 // If your rounded corners looks bad with borders, add this class to your rounded element.
 // * http://tumble.sneak.co.nz/post/928998513/fixing-the-background-bleed
@@ -374,7 +374,7 @@
 .round-left-corners (...) {.border-left-radius(@arguments);}
 .round-right-corners (...) {.border-right-radius(@arguments);}
 
-///* 
+///**
 // * Opacity
 // *
 // * Make an object transparent.
@@ -406,7 +406,7 @@
 // * 3. Percentages are more intuitive when it comes to transparency and
 // *    opacity since graphic editors like Photoshop and GIMP use them.
 // *
-// */
+// **/
 
 .transparent() {.opacity(0);}
 .non-transparent() {.opacity(1);}
@@ -439,7 +439,7 @@
 	// aren't doubled, though.
 	}
 
-///*
+///**
 // * Gradient
 // *
 // * Create a beautiful gradient without images.
@@ -469,7 +469,7 @@
 // * * http://caniuse.com/#feat=css-gradients
 // *
 // * TODO: test if the beta-gradient is reverse-compatible with the old gradient.
-// */
+// **/
 
 // Multi-purpose gradient is in a BETA stage! Uncomment for your own responsibility.
 // * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
@@ -553,7 +553,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
 
-///*
+///**
 // * Background-size
 // * 
 // * Scale (or not) your background image.
@@ -591,7 +591,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/background-size
 // * * http://caniuse.com/#search=background-size
-// */
+// **/
  
 .background-size (...) {
 	-moz-background-size: @arguments;
@@ -600,7 +600,7 @@
 // A shorthand class.
 .bg-size (...) {.background-size(@arguments)}
 
-///*
+///**
 // * Columns layout
 // * 
 // * Divide a block of text into columns as seen in newspapers.
@@ -640,7 +640,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/columns
 // * * http://caniuse.com/#feat=multicolumn
-// */
+// **/
 
 .columns (...) {
 	-webkit-columns: @arguments;
@@ -666,7 +666,7 @@
 }
 .columns-fill (@fill) {.column-fill(@fill);}
 
-///*
+///**
 // * Transforms
 // * 
 // * 2D and 3D transformation of an object.
@@ -722,7 +722,7 @@
 // * * https://developer.mozilla.org/en-US/docs/CSS/transform
 // * * http://caniuse.com/#feat=transforms2d
 // * * http://caniuse.com/#feat=transforms3d
-// */
+// **/
 
 .transform-origin (...) {
 	-webkit-transform-origin: @arguments;
@@ -841,7 +841,7 @@
 	transform: translateY(@translate);
 	}
 	
-///*
+///**
 // * Transition
 // * 
 // * Animate a change between different object states.
@@ -893,7 +893,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/transition
 // * * http://caniuse.com/#feat=css-transitions
-// */
+// **/
 
 .transition(@transition1, @transition2:X, ...){
 	@transitions: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
@@ -926,7 +926,7 @@
 	transition-delay: @properties;
 }
 
-///*
+///**
 // * Animations
 // * 
 // * Create an awesome animation!
@@ -976,7 +976,7 @@
 // * @LINKS
 // * * http://developer.mozilla.org/en/CSS/animation
 // * * http://caniuse.com/#feat=css-animation
-// */
+// **/
 
 .animation (...) {
 	-webkit-animation: @arguments;
@@ -1013,7 +1013,7 @@
 	animation-fill-mode: @arguments;
 }
 
-///*
+///**
 // * User-select
 // *
 // * Controls the selection model of an element.
@@ -1033,7 +1033,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/user-select
 // * * http://caniuse.com/#search=user-select
-// */
+// **/
 
 .user-select (...) {
 	-webkit-user-select: @arguments;
@@ -1042,7 +1042,7 @@
 	user-select: @arguments;
 }
 
-///*
+///**
 // * Filter
 // * 
 // * Advanced image manipulation in your CSS!
@@ -1058,7 +1058,7 @@
 // * @LINKS
 // * * https://developer.mozilla.org/en-US/docs/CSS/filter
 // * * http://www.html5rocks.com/en/tutorials/filters/understanding-css/
-// */
+// **/
 
 .filter(@filter1, @filter2:X, ...) {
 	@filters: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
@@ -1217,10 +1217,12 @@
 ///**
 // * Flexible Box Model
 // * 
-// * Resources: https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes
+// * @BROWSERS SUPPORT
+// * Firefox 22+, Chrome, Opera
 // * 
-// * Browsers Support: Chrome, Firefox 18*, Opera 12.1, Opera Mini 12.1
-// * Notable lack of support: IE, Firefox 17 (stable), Safari, Chrome for Android 
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes
+// * * http://caniuse.com/#search=flex
 // **/
 
 .display-flex() {
@@ -1284,55 +1286,74 @@
 	order: @order;
 }
 
-///*
+///**
 // * Appearance
-// */
+// *
+// * @LINKS
+// * * https://developer.mozilla.org/en-US/docs/CSS/-moz-appearance
+// **/
 
 .appearance (@appearance) {
     -webkit-appearance: @appearance;
     -moz-appearance: @appearance;
 }
 
-///*
+///**
 // * Selection
+// *
+// * Style a visual representtion of selecting elements and objects.
 // * 
-// * You can use it on the root of your CSS or inside a specyfic element.
+// * @USAGE
+// * You can use it on the root of your CSS to make the selection style global
+// * or inside a specyfic element. Provide two arguments: font color and background-color.
 // * 
-// * Examples:
+// * @EXAMPLES
 // * 1. .selection(red, blue);
-// * 2. p{
-// * 		.selection(red, blue)
-// * 		}
-// */
+// * 2. p {
+// *        .selection(red, blue)
+// *    }
+// **/
 
 .selection(@text-color, @background-color) {
 	&::-moz-selection {color: @text-color; background-color: @background-color;}
 	&::selection {color: @text-color; background-color: @background-color;}
 }
 
-///*
+///**
 // * hasLayout
 // * 
-// * http://reference.sitepoint.com/css/haslayout
-// */
+// * A hack for IE.
+// *
+// * @LINKS
+// * * http://reference.sitepoint.com/css/haslayout
+// **/
 
 .hasLayout() {*zoom: 1;}
 
-///*
-// * Normalize
-// */
+///**
+// * Normalize or reset CSS
+// * 
+// * @USAGE
+// * Just write chosen method in your CSS.
+// *
+// * @EXAMLPES
+// * /* In CSS */
+// * .normalize()
+// **/
 
 .normalize(){article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}}
-
-///*
-// * Reset
-// */
-
 .reset() {html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}}
 
-///*
+///**
 // * HTML5 Boiler Plate's default stylesheets.
-// */
+// * 
+// * @USAGE
+// * Just write chosen method in your CSS.
+// *
+// * @EXAMLPES
+// * /* In CSS */
+// * .h5bp()
+// **/
 .h5bp() {html,button,input,select,textarea{color:#222}body{font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}}
 .h5bp-print() {@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important;} a,a:visited{text-decoration:underline;} a[href]:after{content:" (" attr(href) ")";} abbr[title]:after{content:" (" attr(title) ")";} .ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:"";} pre,blockquote{border:1px solid #999;page-break-inside:avoid;} thead{display:table-header-group;} tr,img{page-break-inside:avoid;} img{max-width:100% !important;} @page {margin:0.5cm;}p,h2,h3{orphans:3;widows:3;} h2,h3{page-break-after:avoid;}}.przerwa{color:#ff0000;}}
 
