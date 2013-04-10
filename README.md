@@ -11,7 +11,7 @@ Keep up your good work!
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
 * [Download .zip](https://github.com/downloads/mateuszkocz/3l/3l-v1.4.0-beta.zip)
 
-3L is licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
+3L is MIT licensed.
 
 [LESS](http://lesscss.org/) is made by Alexis Sellier and licensed under [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
@@ -21,7 +21,7 @@ Keep up your good work!
 
 [HTML5 Boiler Plate's default CSS](http://html5boilerplate.com/) is made by Nicolas Gallagher, Jonathan Neal, Kroc Camen, the H5BP dev community and other people and is licensed under MIT License.
 
-3L version: 1.4.0-beta (2012.12.06)
+3L version: 1.4.3-beta (2013.04.10)
 LESS version: 1.3.1
 Reset.css version: 2.0
 Normalize.css version: 2.0.1

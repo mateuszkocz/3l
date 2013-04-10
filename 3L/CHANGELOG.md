@@ -4,6 +4,7 @@
 * filter with unlimited arguments.
 * specyfic filter functions now done right.
 * border-image and its specyfic properties.
+* updates in documentation.
 
 ## 1.4.2-beta (aka Lots of Love for Opera)
 * deleted -moz- and -o-perspective.
