@@ -163,6 +163,11 @@ a {
   text-decoration: none;
   color: #000000;
 }
+a:focus,
+a:active {
+  outline: none;
+  color: #ffa500;
+}
 .b__m a {
   border-bottom: 1px solid #000000;
 }
@@ -279,11 +284,46 @@ a {
 }
 .nav a {
   display: block;
-  margin: 0 .4em .5em;
+  padding: 0 .4em .5em;
 }
 @media screen and (min-width: 34em), screen and (orientation: landscape) {
   .nav a {
     font-size: 1.716em;
+  }
+}
+@media screen and (min-width: 34em), screen and (orientation: landscape) {
+  .nav li:last-child {
+    position: relative;
+  }
+  .nav li:last-child:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -325px;
+    right: 505px;
+    height: 1px;
+    background-color: #ffa500;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .nav li:nth-child(1):hover ~ li:last-child:after {
+    left: -324px;
+    right: 433px;
+  }
+  .nav li:nth-child(2):hover ~ li:last-child:after {
+    left: -253px;
+    right: 319px;
+  }
+  .nav li:nth-child(3):hover ~ li:last-child:after {
+    left: -139px;
+    right: 180px;
+  }
+  li:last-child:hover:after {
+    left: 0;
+    right: 0;
   }
 }
 .btn {
@@ -399,9 +439,9 @@ a {
 .subheading__feature--not-toggled:after {
   content: '\2193';
 }
-.subheading__feature--not-toggled + .feature-content {
-  height: 0;
-  overflow: hidden;
+.subheading__feature--not-toggled + .feature-fig,
+.subheading__feature--not-toggled ~ .feature-syntax {
+  display: none;
 }
 .subheading__feature--toggled:after {
   content: '\2191';
@@ -425,4 +465,9 @@ a {
   -webkit-border-radius: 10px 40px;
   -moz-border-radius: 10px 40px;
   border-radius: 10px 40px;
+}
+.feature-syntax {
+  display: block;
+  padding: 1em 2em;
+  background-color: rgba(211, 211, 211, 0.7);
 }

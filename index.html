@@ -98,66 +98,20 @@
 				<div class="inside inside__section">
 					<section class="feature">
 						<h3 class="subheading subheading__feature">Box shadow</h3>
-						<div class="feature-content">
-							<figure class="feature-fig">
-								<div class="demo demo__box-shadow"></div>
-							</figure>
-							<div class="feature-desc">
-								<p>Create a shadow behind or inside the element.</p>
-								<p>Usage:</p>
-								<p>In .box-shadow() brackets put arguments for every single shadow. Separate each shadows' arguments with comma. You can put up to five shadows by default but feel free to add a class with as many as you want. Just check how it is done.</p>
-								<p>You can use a default box-shadow which will create a shadow with 0px x and 1px y offsets, 3px of blur and in black colour with 25% transparency. Just place a .box-shadow class without any arguments.</p>
-								<p>Box-shadow property takes following arguments:</p>
-								<ol>
-									<li>inset [optional].</li>
-									<li>x-offset [required].</li>
-									<li>y-offset [required].</li>
-									<li>blur [optional].</li>
-									<li>spread [optional].</li>
-									<li>color [optional/required].</li>
-								</ol>
-								<p>Resources:</p>
-								<ul>
-									<li>-- developer.mozilla.org/en/CSS/box-shadow</li>
-								</ul>
-								<p>Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser</p>
-								<p>Notable lack of support: IE8-, Opera Mini</p>
-								<p>Example:</p>
-								<p>Two box-shadows: one is 1px offset, black, second one is green with 30% opacity, inset, with 5px offsets, 3px of blur and 1px spread.</p>
-								<p>.box-shadow(1px 1px black, inset 5px 5px 3px 1px fade(green,30%)) // fade(colour,XX%) is a LESS native function that adds alpha channel to colour. Instead of fade() you can also use rgba or hsla colours declaration.</p>
-								<p>Solution for multiple box-shadows in a single mixin taken from http://www.toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/</p>
-							</div>
-						</div>
-						<h3 class="subheading subheading__feature">Border radius</h3>
-						<div class="feature-content">
-							<figure class="feature-fig">
-								<div class="demo demo__border-radius"></div>
-							</figure>
-							<div class="feature-desc">
-								<p>Round the element's corners.</p>
-								<p>Usage:</p>
-								<p>Border-radius property takes one to four arguments with px, em and % values and round the element's corners accordingly. You can make ellipticaly roundeded corners putting two sets of values separated with</p>
-								<p>comma using .elliptical-border-radius class. In order to round a single corner use .round-corner class. This class takes two sets of arguments. First one is a declaration of corner you want to round (top-left, top-right, bottom-right, bottom-left), second one (separated from the first with comma), is a set of values in px, em or % that round choosen corner. Second declaration can have one (for circle rounding) or two values (for elliptical rounding).</p>
-								<p>For further explanation of the border-radius property, refer to the resources section above.</p>
-								<p>Resources:</p>
-								<ul>
-									<li>-- developer.mozilla.org/en/CSS/border-radius</li>
-								</ul>
-
-								<p>Browsers support: IE9, Fx3.5, Chrome, Opera, Safari, Opera Mobile, Android Browser</p>
-								<p>Notable lack of support: IE8-, Opera Mini</p>
-								<p>Example:</p>
-								<p>Round every corner of the element with 10px radius. .border-radius(10px)</p>
-								<p>Round top-left and bottom-right corners by 10px, top-right and bottom-left corners by 20px. .border-radius(10px 20px)</p>
-								<p>Exemplary use of the .elliptical-border-radius class. .elliptical-border-radius(10px 20px 30px, 40px 50px 60px 70px)</p>
-								<p>Round top-right corner by 10px and 20px (elliptical). .round-corner(top-right, 10px 20px) .border-top-right-radius(10px 20px) // Alternate method.</p>
-								<p>Round similar corners. .border-top-radius(20px 10px); // top-left + top-right (elliptical) .border-left-radius(5px);		 // top-left + bottom-left</p>
-							</div>
-						</div>
-						
-						
-						<!-- h3.subheading.subheading__feature+.feature-content>.feature-desc+figure.feature-fig>.demo -->
+						<figure class="feature-fig">
+							<div class="demo demo__box-shadow"></div>
+						</figure>
+						<code class="feature-syntax">.box-shadow((inset) x-offset y-offset blur spread color [, (inset) x-offset y-offset blur spread color] * n)</code>
 					</section>
+					<section class="feature">
+						<h3 class="subheading subheading__feature">Border radius</h3>
+						<figure class="feature-fig">
+							<div class="demo demo__border-radius"></div>
+						</figure>
+						<code class="feature-syntax">.border-radius(radius ([radius] * 3) ( / radius [radius] * 3))</code>
+					</section>
+					
+					<!-- h3.subheading.subheading__feature++figure.feature-fig>.demo^code.feature-syntax -->
 				</div>
 			</div>
 		</section>
@@ -252,6 +206,7 @@
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script type="text/javascript">
+		// DECIDE: Should this function stay? jQuery isn't critical.
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>');
 		
 		// Fluid scroll
@@ -281,6 +236,17 @@
 					   .addClass('subheading__feature--not-toggled');
 			}
 		});
+		
+		//TEMP
+		// document.addEventListener("keydown", keyup, false);
+		// function keyup(e) {
+			// var key = e.keyCode;
+			// e.preventDefault();
+			// if (key === 38) {
+				// console.log("asa");
+			// }
+		// }
+		
 		
 		// Twitter
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

@@ -53,7 +53,7 @@
 // * 
 // */
 
-.help() {background-color: lightblue}
+.help(@color:lightblue) {background-color: @color}
 
 @dark: #424242;
 @black: #000;
@@ -75,6 +75,10 @@ body {
 a {
 	text-decoration: none;
 	color: @font;
+	&:focus, &:active {
+		outline: none;
+		color: @orange;
+	}
 }
 .b__m a {
 	border-bottom: 1px solid @font;
@@ -189,11 +193,40 @@ a {
 	}
 	.nav a {
 		display: block;
-		margin: 0 .4em .5em;
+		padding: 0 .4em .5em;
 		@media @mq550 {
 			font-size: 1.716em;
 		}
 	}
+	
+	@media @mq550 {
+		// Hover effect for the navigation's elements.
+		.nav li:last-child {
+			position: relative;
+		}
+		.nav li:last-child:after {
+			content: '';
+			position: absolute;
+			bottom: 0; left: -325px; right: 505px;
+			height: 1px;
+			background-color: @orange;
+			.transition(all .3s);
+			pointer-events: none; // Prevents this element from being hovered what will result in flickering due to applying hover rules of the last li element.
+		}
+		.nav li:nth-child(1):hover ~ li:last-child:after {
+			left: -324px; right: 433px;
+		}
+		.nav li:nth-child(2):hover ~ li:last-child:after {
+			left: -253px; right: 319px;
+		}
+		.nav li:nth-child(3):hover ~ li:last-child:after {
+			left: -139px; right: 180px;
+		}
+		li:last-child:hover:after {
+			left: 0; right: 0;
+		}
+	}
+	
 
 .btn {
 	position: relative;
@@ -307,32 +340,36 @@ a {
 			&:after {
 				content: '\2193';
 			}
-			+ .feature-content {
-				height: 0;
-				overflow: hidden;
+			+ .feature-fig, ~ .feature-syntax {
+				// height: 0;
+				// overflow: hidden;
+				display: none;
 			}
 		}
 		.subheading__feature--toggled:after {
 			content: '\2191';
 		}
-	.feature-content {}
-		.feature-desc {}
-		.feature-fig {
-			padding: 1em 0;
-			background-color: @grey;
+	.feature-fig {
+		padding: 1em 0;
+		background-color: @grey;
+	}
+		.demo {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: @dark;
 		}
-			.demo {
-				width: 100px;
-				height: 100px;
-				margin: 0 auto;
-				background-color: @dark;
+			.demo__box-shadow {
+				.box-shadow(2px 2px 1px black, 4px 4px 1px @orange, 6px 6px 1px darkgrey);
 			}
-				.demo__box-shadow {
-					.box-shadow(2px 2px 1px black, 4px 4px 1px @orange, 6px 6px 1px darkgrey);
-				}
-				.demo__border-radius {
-					.border-radius(10px 40px);
-				}
+			.demo__border-radius {
+				.border-radius(10px 40px);
+			}
+	.feature-syntax {
+		display: block;
+		padding: 1em 2em;
+		background-color: fade(@grey, 70%);
+	}
 
 
 
