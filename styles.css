@@ -304,8 +304,6 @@ a:active {
     height: 1px;
     background-color: #ffa500;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
     pointer-events: none;
   }
@@ -361,7 +359,6 @@ a:active {
   -webkit-transform: translate(0, 2px);
   -moz-transform: translate(0, 2px);
   -ms-transform: translate(0, 2px);
-  -o-transform: translate(0, 2px);
   transform: translate(0, 2px);
   border-bottom-color: transparent;
 }
