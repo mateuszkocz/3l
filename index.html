@@ -20,100 +20,66 @@
 	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
 </head>
 <body>
-	<header role="banner" class="header">
+	<header role="banner" class="header" id="mainHeader">
 		<div class="bar bar__main">
-			<a href="">Download</a>
-			<a href="">GIT</a>
-			<span>ver 1.4.2-beta (<time datetime="2012-08-20">2012.09.09</time>)</span>
-			<nav>
-				<ul>
-					<li><a href="#features">Features</a></li>
-					<li><a href="#use">Use</a></li>
+			<a href="" class="btn btn__secondary-download btn__top">Download</a>
+			<a href="" class="btn btn__git btn__top">git</a>
+			<span class="meta"><span class="version">ver 1.4.2-beta</span> (<time datetime="2012-08-20" class="time" title="9th September">2012.09.09</time>)</span>
+			<nav role="navigation" class="nav nav__main">
+				<ul class="nav-list nav-list__main">
+					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav" href="#features">Features</a></li>
+					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav" href="#use">Use</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="intro">
-			<h1>Lots of Love for LESS</h1>
-			
-			<!-- USPs should probably go here -->
-			<p>up to date, clean output, documentation, optional namespace</p>
-			<a id="downloadButton" class="btn btn__main-version" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);">
+			<h1 id="brandHeading" class="heading heading-1 heading-branding">Lots of Love for LESS</h1>
+			<p>saves you time developing CSS with the newest CSS3 features. It's the most up-to-date mixins library for LESS preprocessor. It comes with the full set of vendor-prefixed CSS properties, documentation, clean output, optional napespacing, normalize, reset and many other time-saving bonuses.</p>
+			<p>3L was made with love for beautiful CSS</p>
+			<a id="downloadButton" class="btn btn__main-download" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);"><!-- TODO: remove onClick, addEventListener -->
 				Download &amp; Use
 			</a>
 		</div>
 		<div class="bar bar__social">
-			<iframe src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+			<a href="https://twitter.com/share" class="social-iframe twitter-share-button" data-count="none">Tweet</a>
 		</div>
 	</header>
 	
-	<main role="main">
-		<!-- UPS -->
-		<!-- <section id="why" class="b b__s">
-			<div class="w w__section">
-				<h2 class="heading heading__general">Why you'll ♥ 3L</h2>
-				<div class="inside inside__section usps_container">
-					<section class="usp">
-						<h3 class="subheading">Really big collection of mixins</h3>
-						<p>All broadly used properties that require vendor prefixes are included. There are even some that you might not know.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">SEO &amp; debugging helpers</h3>
-						<p>Supporting classes that will help you make your HTML better. They will notify you about some easy to fix bugs in your code.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">CSS animations with LESS</h3>
-						<p>Create the most sophisticated animations easily. You no longer need to multiply your @keyframes. 3L will do it for you.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">Great functionality</h3>
-						<p>3L has some unique functionality. You can easily declare multiple box-shadows, set opacity in percentages, create eliptical border-radius and much more.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">No more vendor prefixes</h3>
-						<p>Simplify your code and save your time. With 3L you don't need to think about vendor prefixes in all cool CSS3 properties.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">Compatible with Twitter's Bootstrap</h3>
-						<p>Don't like the default Bootstrap's style? Make your own easily by combining 3L and Bootstrap.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">Helper Classes from HTML5 Boilerplate</h3>
-						<p>Don't use non-semantic classes in your HTML. Keep them all in your CSS using 3L.</p>
-					</section>
-					<section class="usp">
-						<h3 class="subheading">Documentation &amp; knowledge</h3>
-						<p>If you don't know how to use some properties or you want to learn something knew about them just refer to the 3L's documentation.</p>
-					</section>
-				</div>
-			</div>
-		</section>-->
-		
+	<main role="main">		
 		<section id="features" class="b b__s">
 			<h2 class="heading heading__general">Features</h2>
 			<!-- LIST OF FEATURES -->
-			<ul class="features-list">
-				<li class="feature-item"><a href="" class="feature-link">SEO</a></li>
-				<li class="feature-item"><a href="" class="feature-link">Normalization, resets and similar</a></li>
-				<li class="feature-item"><a href="" class="feature-link">Helper classes</a></li>
-				<li class="feature-item"><a href="" class="feature-link">@font-face</a></li>
-				<li class="feature-item"><a href="" class="feature-link">box-sizing</a></li>
-				<li class="feature-item"><a href="" class="feature-link">background-clip</a></li>
-				<li class="feature-item"><a href="" class="feature-link">box-shadow (multiple)</a></li>
-				<li class="feature-item"><a href="" class="feature-link">border-radius</a></li>
-				<li class="feature-item"><a href="" class="feature-link">opacity</a></li>
-				<li class="feature-item"><a href="" class="feature-link">gradients</a></li>
-				<li class="feature-item"><a href="" class="feature-link">background-size</a></li>
-				<li class="feature-item"><a href="" class="feature-link">columns</a></li>
-				<li class="feature-item"><a href="" class="feature-link">transformations</a></li>
-				<li class="feature-item"><a href="" class="feature-link">transitions</a></li>
-				<li class="feature-item"><a href="" class="feature-link">animations</a></li>
-				<li class="feature-item"><a href="" class="feature-link">user-select</a></li>
-				<li class="feature-item"><a href="" class="feature-link">filters</a></li>
-				<li class="feature-item"><a href="" class="feature-link">border-image</a></li>
-				<li class="feature-item"><a href="" class="feature-link">flex-box</a></li>
-			</ul>
-			<!-- AJAX CONTAINER -->
+			<nav class="nav nav__features">
+				<ul class="nav-list nav-list__features">
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">SEO</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">Normalization, resets and similar</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">Helper classes</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">@font-face</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">box-sizing</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">background-clip</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">box-shadow (multiple)</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">border-radius</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">opacity</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">gradients</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">background-size</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">columns</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">transformations</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">transitions</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">animations</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">user-select</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">filters</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">border-image</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="feature-link">flex-box</a></li>
+				</ul>
+			</nav>
+			<section class="feature">
+				<h3>Box Sizing</h3>
+				<p>Change the basic box-model to the one you want.</p>
+				type -> generate
+				other properties
+				aside->b.support? link to dox on github wiki
+			</section>
 		</section>
 		
 		<section id="installation" class="b b__s">
@@ -138,7 +104,7 @@
 		</section>
 	</main>
 	
-	<footer>
+	<footer role="contentinfo">
 		<p>Links</p>
 		<ul>
 			<li><a href="http://lesscss.org">LESS</a></li>

@@ -11,38 +11,92 @@
 @grey: lightgrey;
 
 //mq
-//@mq550: ~"screen and (min-width: 34em), screen and (orientation: landscape)";
+@mq550: ~"screen and (min-width: 34em), screen and (orientation: landscape)";
 //@mq550-699: ~"screen and (min-width: 34em) and (max-width: 43.99em)";
 //@mq700: ~"screen and (min-width: 44em)";
 //@mq900: ~"screen and (min-width: 56em)";
 
-body {
-	//font-family: 'Dosis', 'HelveticaNeue', 'Arial', sans-serif;
-	//line-height: 1.5;
-	
-	width: 1000px;
-	margin: 0 auto;
-}
-a {
-	//text-decoration: none;
-	//color: @font;
-	// &:focus, &:active {
-		// outline: none;
-		// color: @orange;
-	// }
-}
+/*var*/ @left-right-margin_MQsmall: 1em;
 
+body {
+	font-family: 'Dosis', 'HelveticaNeue', 'Arial', sans-serif;
+}
 .bar {
-	border-bottom: 1px solid black;
+	background-color: rgb(205,8,22);
+	.gradient(rgb(170,0,0),rgb(205,8,22));
 }
 	.bar__main {
 		
 	}
 	.bar__social {
-		border-top: 1px solid black;
+		padding: 0 @left-right-margin_MQsmall;
+		line-height: 3; //Instead of padding to easily center.
+		
+		&:after {
+			content: "♥";
+			float: right; // Not sure if the float is the best solution.
+			color: #fff;
+			font-size: 2em;
+			line-height: 1.5; // Hurr-Durr.
+		}
+	}
+		.social-iframe {vertical-align: middle;}
+		
+
+.btn {
+	
+}
+	/*var*/ @btn-font-size: 1.2em;
+	.btn__top {
+		display: inline-block;
+		margin-top: 1/1.2em; // = 1 body em
+		padding: 2px 7px;
+		
+		.border-radius(5px);
+		
+		font-size: @btn-font-size;
+		color: #111;
+		text-decoration: none;
+		text-shadow: 1px 0 1px fade(#fff,50%);
+	}
+	.btn__top:hover {
+		
+	}
+		.btn__secondary-download {
+			margin-right: @left-right-margin_MQsmall/@btn-font-size;
+			margin-left: @left-right-margin_MQsmall/@btn-font-size;
+			background-color: @orange;
+			.gradient(@orange,#ef9500);
+		}
+		.btn__git {
+			margin-right: @left-right-margin_MQsmall/@btn-font-size;
+			margin-left: -(@left-right-margin_MQsmall/@btn-font-size)/2;
+			background-color: #fff;
+			.gradient(#fafafa,#eaeaea);
+		}
+
+.meta {
+	margin-left: -.1em;
+	color: darken(#fff,10%);
+	font-size: .8em;
+}
+
+
+.nav {}
+	.nav__main {
+		padding: 1em 1em 1em 0;
+		display: inline-block;
 	}
 
+.nav-list {
+	margin: 0;
+	padding-left: 0;
+}
 
 
-
-
+.nav-item {}
+	.nav-item__main {
+		display: inline-block;
+		margin-left: @left-right-margin_MQsmall;
+	}
+	/*temp*/ .nav-item a {color: #fff}
