@@ -15,65 +15,101 @@
 //@mq550-699: ~"screen and (min-width: 34em) and (max-width: 43.99em)";
 //@mq700: ~"screen and (min-width: 44em)";
 //@mq900: ~"screen and (min-width: 56em)";
+@mq1050: ~"screen and (min-width: 65em)";
+
+//fonts
+/*
+ Ubuntu:400,500,400italic,500italic,700,700italic,300,300italic
+ Ubuntu+Mono:400,400italic,700,700italic
+ */
 
 /*var*/ @left-right-margin_MQsmall: 1em;
-
+html {
+	background-color: #101010;
+	//background-image: url(img/blue-noise.png);
+	background-image: url(img/low_contrast_linen.png);
+	background-attachment: fixed;
+}
 body {
-	font-family: 'Dosis', 'HelveticaNeue', 'Arial', sans-serif;
+	font-family: 'Ubuntu';
+	font-weight: 300;
+	line-height: 1.5;background-color: #222222;
+	.transition(width .3s, margin .3s); overflow: visible;
+	@media @mq1050 {
+		width: 62.5em;
+		margin: 2em auto;
+		.box-shadow(0 0 30px rgba(0,0,0,.8))
+	}
 }
 .bar {
-	background-color: rgb(205,8,22);
-	.gradient(rgb(170,0,0),rgb(205,8,22));
+	background-color: rgb(40,40,40);
 }
 	.bar__main {
 		
 	}
 	.bar__social {
-		padding: 0 @left-right-margin_MQsmall;
-		line-height: 3; //Instead of padding to easily center.
+		padding: 1em @left-right-margin_MQsmall;
 		
 		&:after {
 			content: "♥";
 			float: right; // Not sure if the float is the best solution.
 			color: #fff;
 			font-size: 2em;
-			line-height: 1.5; // Hurr-Durr.
+			line-height: .7; // Hurr-Durr.
 		}
 	}
-		.social-iframe {vertical-align: middle;}
+		.social-iframe {
+			margin-right: .5em;
+			vertical-align: middle;
+		}
 		
 
 .btn {
-	
+	.border-radius(5px);
+	border-bottom: 2px solid #303030;
 }
-	/*var*/ @btn-font-size: 1.2em;
+
 	.btn__top {
 		display: inline-block;
-		margin-top: 1/1.2em; // = 1 body em
 		padding: 2px 7px;
 		
-		.border-radius(5px);
-		
-		font-size: @btn-font-size;
-		color: #111;
 		text-decoration: none;
-		text-shadow: 1px 0 1px fade(#fff,50%);
 	}
 	.btn__top:hover {
 		
 	}
-		.btn__secondary-download {
-			margin-right: @left-right-margin_MQsmall/@btn-font-size;
-			margin-left: @left-right-margin_MQsmall/@btn-font-size;
-			background-color: @orange;
-			.gradient(@orange,#ef9500);
-		}
 		.btn__git {
-			margin-right: @left-right-margin_MQsmall/@btn-font-size;
-			margin-left: -(@left-right-margin_MQsmall/@btn-font-size)/2;
+			margin-right: @left-right-margin_MQsmall;
+			margin-left: -.1em;
 			background-color: #fff;
 			.gradient(#fafafa,#eaeaea);
+			color: #555;
 		}
+		
+	.btn__download {
+		background-color: @orange;
+		.gradient(@orange,#ef9500);
+		
+	}
+		.btn__main-download {
+			display: block;
+			width: 10em;
+			margin: 2em/1.2em auto;
+			padding: .5em;
+			
+			text-decoration: none;
+			text-align: center;
+			
+			font-size: 1.2em;
+			font-weight: 700;
+			color: #000;
+		}
+		.btn__secondary-download {
+			margin-right: @left-right-margin_MQsmall;
+			margin-left: @left-right-margin_MQsmall;
+			color: #000;
+		}
+	
 
 .meta {
 	margin-left: -.1em;
@@ -91,6 +127,7 @@ body {
 .nav-list {
 	margin: 0;
 	padding-left: 0;
+	list-style: none;
 }
 
 
@@ -99,4 +136,43 @@ body {
 		display: inline-block;
 		margin-left: @left-right-margin_MQsmall;
 	}
-	/*temp*/ .nav-item a {color: #fff}
+
+.nav-link {}
+	.nav-link__main-nav {
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 1px solid #fff;
+		
+		&:hover {
+			border-bottom-color: @orange;
+		}
+	}
+
+.header {
+	background-image: url(img/stressed_linen.png);
+	background-attachment: fixed;
+	}
+.intro {
+	max-width: 35em;
+	margin: 0 auto;
+	padding: 1.5em @left-right-margin_MQsmall 0;
+	//text-align: justify;
+	color: #cccccc;
+}
+.heading-branding {
+	display: inline;
+	font-size: 1.1em;
+	color: @orange;
+}
+.lead-copy {
+	display: inline;
+}
+.lead-copy-strong {
+	color: @orange;
+}
+
+.test-footer {
+	//margin-bottom: -30px;
+	position: absolute;
+	bottom: -10px; z-index: 10000;
+}
