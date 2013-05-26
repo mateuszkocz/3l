@@ -40,7 +40,7 @@
 		</a>
 		<div class="bar bar__social">
 			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="50" height="20"></iframe>
-			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="55" height="20"></iframe>
 			<a href="https://twitter.com/share" class="social-iframe twitter-share-button" data-count="none">Tweet</a>
 		</div>
 	</header>
@@ -51,54 +51,71 @@
 			<!-- LIST OF FEATURES -->
 			<nav class="nav nav__features">
 				<ul class="nav-list nav-list__features">
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">SEO</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">Normalization, resets and similar</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">Helper classes</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">@font-face</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">box-sizing</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">background-clip</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">box-shadow (multiple)</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">border-radius</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">opacity</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">gradients</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">background-size</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">columns</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">transformations</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">transitions</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">animations</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">user-select</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">filters</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">border-image</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="feature-link">flex-box</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">SEO</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Normalization, resets and similar</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Helper classes</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">@font-face</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">box-sizing</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">background-clip</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">box-shadow (multiple)</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">border-radius</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">opacity</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">gradients</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">background-size</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">columns</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">transformations</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">transitions</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">animations</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">user-select</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">filters</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">border-image</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">flex-box</a></li>
 				</ul>
 			</nav>
 			<section class="feature">
 				<h3>Box Sizing</h3>
 				<p>Change the basic box-model to the one you want.</p>
-				type -> generate
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+						<span class="code-line">.box-sizing(border-box);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+						<span class="code-line">-moz-box-sizing:border-box;</span>
+						<span class="code-line">-webkit-box-sizing:border-box;</span>
+						<span class="code-line">box-sizing:border-box;</span>
+					}
+				</code>
 				other properties
 				aside->b.support? link to dox on github wiki
 			</section>
 		</section>
 		
 		<section id="installation" class="b b__s">
-			<h2 class="heading heading__general">Installation</h2>
+			<h2 class="heading heading__general">How to use?</h2>
 			<section>
 				<h3 class="subheading">Basic use</h3>
-				<p><a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a>, unzip it and place it in your project. You can start editing style.less file or @import 3L.less into your previously created LESS stylesheet. Use .normalize() or .reset() classes if you want.</p>
+				<p><a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a>, unzip it and place it in your project. You can start editing <span class="code code-span">style.less</span> file or <span class="code code-span">@import 3L.less</span> into your previously created LESS stylesheet. Use <span class="code code-span">.normalize()</span> or <span class="code code-span">.reset()</span> classes if you want.</p>
 				</ul>
 			</section>
 			<section>
 				<h3 class="subheading">Namespacing</h3>
-				<p>If you're using anoter mixins library you might want to put 3L into a namespace so the two libraries won't clash. Just type #3L {@import '3L/3L';} and the 3L will be fully contained in its namespace. Access the mixins with #3L > .mixin().</p>
+				<p>If you're using anoter mixins library you might want to put 3L into a namespace so the two libraries won't clash. Just type <span class="code code-span">#3L {@import '3L/3L';}</span> and the 3L will be fully contained in its namespace. Access the mixins with <span class="code code-span">#3L > .mixin()</span>.</p>
 			</section>
 			<section>
 				<h3 class="subheading">Animations</h3>
-				<p>@import "animation[1-5]" (they're in 3L/assets/animationsins) to your stylesheet, create a class .animation[1-5]() {/*animation properties*/} and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with .animation() mixin.</p>
+				<p><span class="code code-span">@import "animation[1-5]"</span> (they're in 3L/assets/animationsins) to your stylesheet, create a class <span class="code code-span">.animation[1-5]() {/*animation properties*/}</span> and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with <span class="code code-span">.animation()</span> mixin.</p>
 			</section>
 			<section>
-				<h3 class="subheading">Additional resources</h3>
-				<p>It's easy! First you need to download pre-compiled Bootstrap (tested on v.2.0.2) with LESS files. <a href="https://github.com/twitter/bootstrap/" target="_blank">Get it here</a> and unzip it. Then in your previously downloaded 3L folder you have a bootstrap folder with 2 files: bootstrap.less and mixins.less. Replace Bootstrap's original files in less folder with those two. After that just copy and paste 3l-mini.less (and all animations if you wish to use them) to the Bootstrap's less folder and create some awesome website!</p>
+				<h3 class="subheading">Refer to the documentation</h3>
+				<p>The 3L.less file has all documentation included. If you want to know more how to use a mixin, what parameters it takes, what browsers it supports or where you could find more information about a CSS property just find the corresponding section in the file.</p>
+			</section>
+			<section>
+				<h3 class="subheading">Compile</h3>
+				<p>All .less files should be compiled to .css. You can use native LESS compiler or you can try <a href="http://winless.org/">Winless</a>, <a href="http://alphapixels.com/prepros/">Prepross</a> and <a href="http://incident57.com/codekit/">CodeKit</a>. Your output CSS file will be clean. Only the used mixins from 3L will be included, nothing else.</p>
 			</section>
 		</section>
 	</main>

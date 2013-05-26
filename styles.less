@@ -1,16 +1,28 @@
 @import '3L/3L';
 .normalize();
 
-.help(@color:lightblue) {background-color: @color}
-
-@dark: #424242;
+// Colours
 @black: #000;
 @white: #fff;
 @orange: #ffa500;
-@font: #000;
-@grey: lightgrey;
 
-//mq
+@grey1: #fafafa;
+@grey2: #eaeaea;
+
+@light1: #cccccc;
+
+@dark1: #424242;
+@dark2: #282828;
+@dark3: #222222;
+@dark4: #303030;
+
+// Colours usage
+@copyColor: @light1;
+@attentionColor: @orange;
+@mainColor: @dark3;
+@supportingColor: @dark2;
+
+// Media Queries
 @mq550: ~"screen and (min-width: 34em), screen and (orientation: landscape)";
 //@mq550-699: ~"screen and (min-width: 34em) and (max-width: 43.99em)";
 //@mq700: ~"screen and (min-width: 44em)";
@@ -23,37 +35,64 @@
  Ubuntu+Mono:400,400italic,700,700italic
  */
 
-/*var*/ @left-right-margin_MQsmall: 1em;
+/*var*/ @main-margin: 1em;
 html {
 	background-color: #101010;
-	//background-image: url(img/blue-noise.png);
 	background-image: url(img/low_contrast_linen.png);
 	background-attachment: fixed;
 }
 body {
-	font-family: 'Ubuntu';
+	font-family: 'Ubuntu', sans-serif;
 	font-weight: 300;
-	line-height: 1.5;background-color: #222222;
-	.transition(width .3s, margin .3s); overflow: visible;
+	line-height: 1.5;
+	background-color: @mainColor;
+	.transition(width .3s, margin .3s);
 	@media @mq1050 {
 		width: 62.5em;
 		margin: 2em auto;
 		.box-shadow(0 0 30px rgba(0,0,0,.8))
 	}
 }
+
+.code {
+	font-family: 'Ubuntu Mono', sans-serif;
+		.border-radius(2px);
+}
+	.code-span {
+		padding: .1em;
+		background-color: @dark1;
+		color: #fff;
+	}
+	.code-box {
+		display: block;
+		margin: 1em @main-margin;
+		padding: @main-margin/2 @main-margin;
+		background-color: @light1;
+	}
+	.code-line {
+		display: block;
+		padding-left: @main-margin*2;
+	}
+	.code-type {
+		display: block;
+		margin-bottom: .5em;
+		//border-bottom: 2px solid;
+		font-weight: 700;
+	}
+
 .bar {
-	background-color: rgb(40,40,40);
+	background-color: @supportingColor;
 }
 	.bar__main {
 		
 	}
 	.bar__social {
-		padding: 1em @left-right-margin_MQsmall;
+		padding: 1em @main-margin;
 		
 		&:after {
 			content: "♥";
 			float: right; // Not sure if the float is the best solution.
-			color: #fff;
+			color: @white;
 			font-size: 2em;
 			line-height: .7; // Hurr-Durr.
 		}
@@ -66,12 +105,13 @@ body {
 
 .btn {
 	.border-radius(5px);
-	border-bottom: 2px solid #303030;
+	border-bottom: 2px solid @dark4;
 }
 
 	.btn__top {
 		display: inline-block;
-		padding: 2px 7px;
+		padding: .125em .45em;
+		margin-top: .875em; // 1em - padding-top. 1em is top/bottom space in the bar.
 		
 		text-decoration: none;
 	}
@@ -79,17 +119,17 @@ body {
 		
 	}
 		.btn__git {
-			margin-right: @left-right-margin_MQsmall;
+			margin-right: @main-margin;
 			margin-left: -.1em;
-			background-color: #fff;
-			.gradient(#fafafa,#eaeaea);
-			color: #555;
+			background-color: @white;
+			.gradient(@grey1,@grey2);
+			color: @dark4;
 		}
 		
 	.btn__download {
-		background-color: @orange;
-		.gradient(@orange,#ef9500);
-		
+		background-color: @attentionColor;
+		.gradient(@attentionColor,lighten(@attentionColor, 5%));
+		color: @black;
 	}
 		.btn__main-download {
 			display: block;
@@ -102,18 +142,16 @@ body {
 			
 			font-size: 1.2em;
 			font-weight: 700;
-			color: #000;
 		}
 		.btn__secondary-download {
-			margin-right: @left-right-margin_MQsmall;
-			margin-left: @left-right-margin_MQsmall;
-			color: #000;
+			margin-right: @main-margin;
+			margin-left: @main-margin;
 		}
 	
 
 .meta {
 	margin-left: -.1em;
-	color: darken(#fff,10%);
+	color: @copyColor;
 	font-size: .8em;
 }
 
@@ -134,17 +172,34 @@ body {
 .nav-item {}
 	.nav-item__main {
 		display: inline-block;
-		margin-left: @left-right-margin_MQsmall;
+		margin-left: @main-margin;
+	}
+	.nav-item__feature {
+		border-bottom: 1px solid @dark1;
+		&:first-child {
+			border-top: 1px solid @dark1;
+		}
 	}
 
-.nav-link {}
+.nav-link {
+	text-decoration: none;
+}
 	.nav-link__main-nav {
-		color: #fff;
-		text-decoration: none;
-		border-bottom: 1px solid #fff;
+		color: @white;
+		border-bottom: 1px solid @white;
 		
 		&:hover {
-			border-bottom-color: @orange;
+			border-bottom-color: @attentionColor;
+		}
+	}
+	.nav-link__feature-link {
+		display: block;
+		padding: .5em 0 .5em @main-margin;
+		color: @white;
+		
+		&:hover {
+			background-color: @attentionColor;
+			color: @black;
 		}
 	}
 
@@ -155,24 +210,30 @@ body {
 .intro {
 	max-width: 35em;
 	margin: 0 auto;
-	padding: 1.5em @left-right-margin_MQsmall 0;
-	//text-align: justify;
-	color: #cccccc;
-}
-.heading-branding {
-	display: inline;
-	font-size: 1.1em;
-	color: @orange;
+	padding: 1.5em @main-margin 0;
+	color: @copyColor;
 }
 .lead-copy {
 	display: inline;
 }
 .lead-copy-strong {
-	color: @orange;
+	color: @attentionColor;
 }
 
-.test-footer {
-	//margin-bottom: -30px;
-	position: absolute;
-	bottom: -10px; z-index: 10000;
-}
+.heading{}
+	.heading-branding {
+		display: inline;
+		font-size: 1.1em;
+		color: @attentionColor;
+	}
+	/* var */ @heading2-font-size: 1.618em;
+	.heading__general {
+		padding-left: @main-margin/@heading2-font-size;
+		
+		color: @attentionColor;
+		font-size: @heading2-font-size;
+		font-weight: 400;
+		
+		text-shadow: 1px 1px 2px black;
+	}
+
