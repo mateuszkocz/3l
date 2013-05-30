@@ -13,7 +13,8 @@
 	<title>3L - Lots of Love for LESS ♥ Awesome collection of mixins for LESS</title>
 	<meta name="description" content="Improve your CSS development with 3L - awesome collection of basic and advanced mixins for LESS.">
 	
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,400italic,500italic,700,700italic,300,300italic|Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,400italic,500italic,700,700italic,300,300italic|Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
@@ -32,27 +33,26 @@
 			</nav>
 		</div>
 		<div class="intro">
-			<h1 id="brandHeading" class="heading heading-1 heading-branding">Lots of Love for LESS</h1>
-			<p class="lead-copy"> will save you time developing the CSS with the newest CSS3 features. It's the up-to-date <strong class="lead-copy-strong">mixins library for the LESS preprocessor</strong>. It comes with the full set of vendor-prefixed CSS properties, documentation, clean output, optional napespacing, normalize, reset and many other time-saving bonuses. <strong class="lead-copy-strong">&hearts;</strong></p>
+			<h1 id="brandHeading" class="heading heading-1 heading__branding">Lots of Love for LESS</h1>
+			<p class="lead-copy"> will save you time developing the CSS with the newest CSS3 features. It's the up-to-date <strong class="lead-copy-strong">mixins library for the LESS preprocessor</strong>. It comes with the full set of vendor-prefixed CSS properties, documentation, clean output, <code class="code">optional</code> napespacing, normalize, reset and many other time-saving bonuses. <strong class="lead-copy-strong">&hearts;</strong></p>
 		</div>
 		<a id="downloadButton" class="btn btn__download btn__main-download" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);"><!-- TODO: remove onClick, addEventListener -->
 			Download &amp; Use
 		</a>
 		<div class="bar bar__social">
 			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="50" height="20"></iframe>
-			<iframe class="social-iframe github-star-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="55" height="20"></iframe>
+			<iframe class="social-iframe github-fork-button" src="http://ghbtns.com/github-btn.html?user=mateuszkocz&repo=3l&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="55" height="20"></iframe>
 			<a href="https://twitter.com/share" class="social-iframe twitter-share-button" data-count="none">Tweet</a>
 		</div>
 	</header>
 	
 	<main role="main">		
-		<section id="features" class="b b__s">
+		<section id="features" class="b b__features">
 			<h2 class="heading heading__general">Features</h2>
-			<!-- LIST OF FEATURES -->
 			<nav class="nav nav__features">
 				<ul class="nav-list nav-list__features">
 					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">SEO</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Normalization, resets and similar</a></li>
+					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Normalize, reset, html5bp</a></li>
 					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Helper classes</a></li>
 					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">@font-face</a></li>
 					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">box-sizing</a></li>
@@ -73,7 +73,116 @@
 				</ul>
 			</nav>
 			<section class="feature">
-				<h3>Box Sizing</h3>
+				<h3 class="heading heading__feature">SEO Helper</h3>
+				<p>Some usefull CSS properties to warn you if there're some SEO issues on your website. It's a development code only so make sure you remove it from the code when deploying to production.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.seo-helper();
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					img:not([alt]), img[alt=""], img[alt^=" "],
+					a[href=""], a[href^=" "], a[href="#"], a[rel*="nofollow"],
+					div:empty, span:empty, li:empty, p:empty, td:empty, th:empty,
+					*[title=""], *[class=""], *[id=""] {
+						<span class="code-line">outline: 2px solid red !important;</span>
+						<span class="code-line">outline-offset: 3px !important;</span>
+					}<br />
+					head, title:empty, link, meta {
+						<span class="code-line">display: block;</span>
+					}<br />
+					title:empty:before {
+						<span class="code-line">content: "You've left the &lt;title> empty!"</span>
+					}<br />
+					link:before {
+						<span class="code-line">content: "You don't have a &lt;title>!"</span>
+					}<br />
+					title ~ link {
+						<span class="code-line">display: none;</span>
+					}<br />
+					meta[name="description"][content=""]:before, meta[name="description"][content=" "]:before {
+						<span class="code-line">content: "You've left description empty!";</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">SEO helper full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Normalize, reset, html5bp</h3>
+				<p>Convenient way to use normalize.css, reset.css or HTML5 Boilerplate rules in your stylesheet.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.normalize();<br /><br />
+					/* OR */<br />
+					.reset();<br /><br />
+					/* OR */<br />
+					.h5bp();
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					/* normalize.css, reset.css or HTML 5 Boilerplate rules */
+				</code>
+				<p><a href="" class="link doc-link">Normalize, reset and html5bp full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Helper Classes</h3>
+				<p>Usefull mixins made from HTML5 Boilerplate helper classes.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.logo {
+					<span class="code-line">.ir();</span>
+					}<br />
+					.content-block {
+					<span class="code-line">.clearfix();</span>
+					}<br />
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.logo {
+					<span class="code-line">border: 0;</span>
+					<span class="code-line">overflow: hidden;</span>
+					<span class="code-line">background-color: transparent;</span>
+					<span class="code-line">*text-indent: -9999px;</span>
+					}<br />
+					.logo:before {
+					<span class="code-line">content: "";</span>
+					<span class="code-line">display: block;</span>
+					<span class="code-line">width: 0;</span>
+					<span class="code-line">height: 100%;</span>
+					}<br />
+					.content-block {
+					<span class="code-line">*zoom: 1;</span>
+					}<br />
+					.content-block:before, .content-block:after{
+					<span class="code-line">content:" ";</span>
+					<span class="code-line">display:table;</span>
+					}<br />
+					.content-block:after {
+					<span class="code-line">clear:both;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Helper classes full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">@font-face</h3>
+				<p>Shortcut mixin for @font-face declaration.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.font-face('Ubuntu','Ubuntu-R-webfont','fonts/',400,normal);
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					@font-face {
+					<span class="code-line">font-family: 'Ubuntu';</span>
+					<span class="code-line">src: url('fonts/Ubuntu-R-webfont.eot');</span>
+					<span class="code-line">src: local('☺'), url('fonts/Ubuntu-R-webfont.woff') format('woff'), url('fonts/Ubuntu-R-webfont.ttf') format('truetype'), url('fonts/Ubuntu-R-webfont.svg') format('svg');</span>
+					<span class="code-line">font-weight: 400;</span>
+					<span class="code-line">font-style: normal;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">@font-face full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Box Sizing</h3>
 				<p>Change the basic box-model to the one you want.</p>
 				<code class="code code-box feature-input">
 					<span class="code-type">Write</span>
@@ -89,32 +198,302 @@
 						<span class="code-line">box-sizing:border-box;</span>
 					}
 				</code>
-				other properties
-				aside->b.support? link to dox on github wiki
+				<p><a href="#" class="link doc-link">Box sizing full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Background clip</h3>
+				<p></p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.background-clip(padding);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-moz-background-clip:padding;</span>
+					<span class="code-line">background-clip:padding-box;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Background clip full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Box shadow</h3>
+				<p>Create shadow behind or inside elements. Multiple shadow supported.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.box-shadow(1px 2px 3px black, inset 10px 20px 30px 40px rgba(0,0,0,.5))</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-box-shadow: 1px 2px 3px black, inset 10px 20px 30px 40px rgba(0,0,0,.5);</span>
+					<span class="code-line">-moz-box-shadow: 1px 2px 3px black, inset 10px 20px 30px 40px rgba(0,0,0,.5);</span>
+					<span class="code-line">box-shadow: 1px 2px 3px black, inset 10px 20px 30px 40px rgba(0,0,0,.5);</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Box shadow full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Border radius</h3>
+				<p>Make your edges roundy. Mixins support elliptical radiuses and also there're mixins for specyfic corners.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.border-radius(10px);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-border-radius: 10px;</span>
+					<span class="code-line">-moz-border-radius: 10px;</span>
+					<span class="code-line">border-radius: 10px;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Border radius full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Opacity</h3>
+				<p>Make your elements transparent. This mixin includes old IE filter property and lets you use percentages and integers to declare the level of opacity.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.opacity(.5);</span>
+					<span class="code-line">/* OR */</span>
+					<span class="code-line">.opacity(50);</span>
+					<span class="code-line">/* OR */</span>
+					<span class="code-line">.opacity(50%);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class{
+					<span class="code-line">opacity: 0.5;</span>
+					<span class="code-line">filter: alpha(opacity=50);</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Opacity full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Gradients</h3>
+				<p>Use gradient as a background-image.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.gradient(orange,black);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">background: orange;</span>
+					<span class="code-line">background-image: -moz-linear-gradient(top, orange 0%, black 100%);</span>
+					<span class="code-line">background-image: -webkit-linear-gradient(top, orange 0%,black 100%);</span>
+					<span class="code-line">background-image: linear-gradient(to bottom, orange 0%,black 100%);</span>
+					<span class="code-line">filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='orange', endColorstr='black',GradientType=0 );</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Gradients full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Background size</h3>
+				<p>Define the size of a background image.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.background-size(cover);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-moz-background-size: cover;</span>
+					<span class="code-line">background-size: cover;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Background size full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Columns</h3>
+				<p>Divide the content into columns. There are also mixins for all specyfic columns properties.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.columns(2, 20px);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-columns: 2 20px;</span>
+					<span class="code-line">-mox-columns: 2 20px;</span>
+					<span class="code-line">columns: 2 20px;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Columns full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Transformations</h3>
+				<p>CSS3 2D and 3D transformations with mixins for all types of transformations and similar properties (transform-style, transform-origin, perspective, perspective-origin and backface-visibilty).</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.transform(translate3d(20%, 20%, 20%) scale(2));</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-transform: translate3d(20%, 20%, 20%) scale(2);</span>
+					<span class="code-line">-moz-transform: translate3d(20%, 20%, 20%) scale(2);</span>
+					<span class="code-line">transform: translate3d(20%, 20%, 20%) scale(2);</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Transformations full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Transitions</h3>
+				<p>Animate the change in CSS properies' values. Mixin supports multiple transitions. There're also mixins for spesyfic transition properties.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.transition(color .3s, height .5s);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-transition: color .3s, height .5s;</span>
+					<span class="code-line">transition: color .3s, height .5s;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Transitions full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Animations</h3>
+				<p>Animate your elements.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.animation(animation 5s linear 0s infinite alternate);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-animation: animation 5s linear 0s infinite alternate;</span>
+					<span class="code-line">animation: animation 5s linear 0s infinite alternate;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Animations and @keyframes full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">User Select</h3>
+				<p>Controls the selection model of an element.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.user-select(none);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-user-select: none;</span>
+					<span class="code-line">-moz-user-select: none;</span>
+					<span class="code-line">-ms-user-select: none;</span>
+					<span class="code-line">user-select: none;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">User select full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Filter</h3>
+				<p>Advanced graphic filters in CSS. Supports multiple filters.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.filter(blur(10px) brightness(.5));</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-filter: blur(10px) brightness(.5);</span>
+					<span class="code-line">-moz-filter: blur(10px) brightness(.5);</span>
+					<span class="code-line">-ms-filter: blur(10px) brightness(.5);</span>
+					<span class="code-line">filter: blur(10px) brightness(.5);</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Filter full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Border image</h3>
+				<p>Use images as box borders.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.border-image('/img/border.png', 50, 50, repeat);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">-webkit-border-image: url('/img/border.png') 50 50 repeat;</span>
+					<span class="code-line">-moz-border-image: url('/img/border.png') 50 50 repeat;</span>
+					<span class="code-line">-o-border-image: url('/img/border.png') 50 50 repeat;</span>
+					<span class="code-line">border-image: url('/img/border.png') 50 50 repeat;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Border image full documentation</a></p>
+			</section>
+			<section class="feature">
+				<h3 class="heading heading__feature">Flexible Box Model</h3>
+				<p>Modern way to create layouts.</p>
+				<code class="code code-box feature-input">
+					<span class="code-type">Write</span>
+					.class {
+					<span class="code-line">.display-flex();</span>
+					<span class="code-line">.flex-direction(row);</span>
+					}
+				</code>
+				<code class="code code-box feature-outcome">
+					<span class="code-type">Get</span>
+					.class {
+					<span class="code-line">display: -webkit-flex</span>
+					<span class="code-line">display: flex</span>
+					<span class="code-line">-webkit-flex-direction: row;</span>
+					<span class="code-line">flex-direction: row;</span>
+					}
+				</code>
+				<p><a href="" class="link doc-link">Flex-box full documentation</a></p>
 			</section>
 		</section>
 		
-		<section id="installation" class="b b__s">
-			<h2 class="heading heading__general">How to use?</h2>
-			<section>
-				<h3 class="subheading">Basic use</h3>
+		<section id="installation" class="b b__installation">
+			<h2 class="heading heading-2 heading__general">How to use?</h2>
+			<section class="installation-point">
+				<h3 class="subheading heading-3">Basic use</h3>
 				<p><a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a>, unzip it and place it in your project. You can start editing <span class="code code-span">style.less</span> file or <span class="code code-span">@import 3L.less</span> into your previously created LESS stylesheet. Use <span class="code code-span">.normalize()</span> or <span class="code code-span">.reset()</span> classes if you want.</p>
-				</ul>
 			</section>
-			<section>
-				<h3 class="subheading">Namespacing</h3>
+			<section class="installation-point">
+				<h3 class="subheading heading-3">Namespacing</h3>
 				<p>If you're using anoter mixins library you might want to put 3L into a namespace so the two libraries won't clash. Just type <span class="code code-span">#3L {@import '3L/3L';}</span> and the 3L will be fully contained in its namespace. Access the mixins with <span class="code code-span">#3L > .mixin()</span>.</p>
 			</section>
-			<section>
-				<h3 class="subheading">Animations</h3>
+			<section class="installation-point">
+				<h3 class="subheading heading-3">Animations</h3>
 				<p><span class="code code-span">@import "animation[1-5]"</span> (they're in 3L/assets/animationsins) to your stylesheet, create a class <span class="code code-span">.animation[1-5]() {/*animation properties*/}</span> and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with <span class="code code-span">.animation()</span> mixin.</p>
 			</section>
-			<section>
-				<h3 class="subheading">Refer to the documentation</h3>
+			<section class="installation-point">
+				<h3 class="subheading heading-3">Refer to the documentation</h3>
 				<p>The 3L.less file has all documentation included. If you want to know more how to use a mixin, what parameters it takes, what browsers it supports or where you could find more information about a CSS property just find the corresponding section in the file.</p>
 			</section>
-			<section>
-				<h3 class="subheading">Compile</h3>
+			<section class="installation-point">
+				<h3 class="subheading heading-3">Compile</h3>
 				<p>All .less files should be compiled to .css. You can use native LESS compiler or you can try <a href="http://winless.org/">Winless</a>, <a href="http://alphapixels.com/prepros/">Prepross</a> and <a href="http://incident57.com/codekit/">CodeKit</a>. Your output CSS file will be clean. Only the used mixins from 3L will be included, nothing else.</p>
 			</section>
 		</section>

@@ -1,40 +1,8 @@
 @import '3L/3L';
+@import 'less/font-face';
+@import 'less/colors';
+@import 'less/media-queries';
 .normalize();
-
-// Colours
-@black: #000;
-@white: #fff;
-@orange: #ffa500;
-
-@grey1: #fafafa;
-@grey2: #eaeaea;
-
-@light1: #cccccc;
-
-@dark1: #424242;
-@dark2: #282828;
-@dark3: #222222;
-@dark4: #303030;
-
-// Colours usage
-@copyColor: @light1;
-@attentionColor: @orange;
-@mainColor: @dark3;
-@supportingColor: @dark2;
-
-// Media Queries
-@mq550: ~"screen and (min-width: 34em), screen and (orientation: landscape)";
-//@mq550-699: ~"screen and (min-width: 34em) and (max-width: 43.99em)";
-//@mq700: ~"screen and (min-width: 44em)";
-//@mq900: ~"screen and (min-width: 56em)";
-@mq1050: ~"screen and (min-width: 65em)";
-
-//fonts
-/*
- Ubuntu:400,500,400italic,500italic,700,700italic,300,300italic
- Ubuntu+Mono:400,400italic,700,700italic
- */
-
 /*var*/ @main-margin: 1em;
 html {
 	background-color: #101010;
@@ -53,33 +21,16 @@ body {
 		.box-shadow(0 0 30px rgba(0,0,0,.8))
 	}
 }
-
-.code {
-	font-family: 'Ubuntu Mono', sans-serif;
-		.border-radius(2px);
+.link {
+	color: @white;
+	text-decoration: none;
+	border-bottom: 1px solid;
 }
-	.code-span {
-		padding: .1em;
-		background-color: @dark1;
-		color: #fff;
+.b__installation {
+	@media @mq700 {
+		clear: both;
 	}
-	.code-box {
-		display: block;
-		margin: 1em @main-margin;
-		padding: @main-margin/2 @main-margin;
-		background-color: @light1;
-	}
-	.code-line {
-		display: block;
-		padding-left: @main-margin*2;
-	}
-	.code-type {
-		display: block;
-		margin-bottom: .5em;
-		//border-bottom: 2px solid;
-		font-weight: 700;
-	}
-
+}
 .bar {
 	background-color: @supportingColor;
 }
@@ -161,6 +112,12 @@ body {
 		padding: 1em 1em 1em 0;
 		display: inline-block;
 	}
+	.nav__features {
+		@media @mq700 {
+			float: left;
+			width: 25%;
+		}
+	}
 
 .nav-list {
 	margin: 0;
@@ -218,13 +175,15 @@ body {
 }
 .lead-copy-strong {
 	color: @attentionColor;
+	font-weight: 300;
 }
 
 .heading{}
-	.heading-branding {
+	.heading__branding {
 		display: inline;
 		font-size: 1.1em;
 		color: @attentionColor;
+	font-weight: 300;
 	}
 	/* var */ @heading2-font-size: 1.618em;
 	.heading__general {
@@ -235,5 +194,50 @@ body {
 		font-weight: 400;
 		
 		text-shadow: 1px 1px 2px black;
+	}
+	.heading__feature {
+		color: @attentionColor;
+	}
+
+.feature {
+	padding: 0 @main-margin;
+	color: @copyColor;
+	@media @mq700 {
+		.box-sizing(border-box);
+		width: 75%;
+		float: right;
+		
+		&:first-of-type .heading__feature {
+			margin-top: 0;
+		}
+	}
+}
+
+.code {
+	.border-radius(2px);
+	font-family: 'Ubuntu Mono', monospace;
+	font-weight: 400;
+}
+	.code-span {
+		padding: .1em;
+		background-color: @dark1;
+		color: #fff;
+	}
+	.code-box {
+		display: block;
+		margin: 1em 0;
+		padding: @main-margin/2 @main-margin;
+		background-color: @light1;
+		color: @supportingColor;
+	}
+	.code-line {
+		display: block;
+		padding-left: @main-margin*2;
+	}
+	.code-type {
+		display: block;
+		margin-bottom: .5em;
+		//border-bottom: 2px solid;
+		font-weight: 700;
 	}
 

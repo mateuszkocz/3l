@@ -204,11 +204,11 @@
 // * Font's formats you need to use: EOT, WOFF, TTF and SVG.
 // **/
 
-.font-face(@name, @url, @weight:normal, @style:normal) {
+.font-face(@name, @filename, @path, @weight:normal, @style:normal) {
 	@font-face {
 		font-family: @name;
-		src: url('@{url}/@{name}.eot');
-		src: local('☺'), url('@{url}/@{name}.woff') format('woff'), url('@{url}/@{name}.ttf') format('truetype'), url('@{url}/@{name}.svg') format('svg');
+		src: url('@{path}@{filename}.eot');
+		src: local('☺'), url('@{path}@{filename}.woff') format('woff'), url('@{path}@{filename}.ttf') format('truetype'), url('@{path}@{filename}.svg') format('svg');
 		font-weight: @weight;
 		font-style: @style;
 	}
