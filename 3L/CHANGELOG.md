@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.
+* @font-face has the new parameter - 'filename'. Previously the filename was the same as font-name. 
+
 ## 1.4.3-beta
 * filter with unlimited arguments.
 * specyfic filter functions now done right.
