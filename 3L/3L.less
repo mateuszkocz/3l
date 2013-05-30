@@ -42,11 +42,10 @@
 // *        <title> and you're cool.
 // *
 // * @USAGE
-// * Place the .seo-helper class in html element. That's it!
+// * Just place .seo-helper() class in the stylesheet.
 // *
-// * 
 // * @EXAMPLE
-// * html {.seo-helper}
+// * .seo-helper()
 // *
 // * That way every element on your page will be affected
 // * by this rule. You can also place it in any other container
@@ -113,7 +112,7 @@
 // * Normalize or reset CSS
 // * 
 // * @USAGE
-// * Just write chosen method in your CSS.
+// * Just write chosen method in your stylesheet.
 // *
 // * @EXAMLPES
 // * /* In CSS */
@@ -545,7 +544,8 @@
 	// @w3c1: `"@{gradientType}" + "-gradient(" + "@{directionProcessedNew}," + "@{valuesProcessed}" + ")"`;
 	// @w3c2: ~`'@{w3c1}'.replace(/\"/g, '')`;
 	// background-image: @w3c2;
-// }
+// }
+// TODO: fallback shouldn't be default. Maybe gradient-fb class?
 .gradient (@color1, @color2){
 	background: @color1;
 	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
