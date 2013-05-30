@@ -1,7 +1,8 @@
 # CHANGELOG
 
 ## 1.4.
-* @font-face has the new parameter - 'filename'. Previously the filename was the same as font-name. 
+* @font-face has the new parameter - 'filename'. Previously the filename was the same as font-name.
+* .hue-rotation() changed to .hue-rotate() since it's the valid name of the filter.
 
 ## 1.4.3-beta
 * filter with unlimited arguments.
