@@ -25,6 +25,9 @@ body {
 	color: @white;
 	text-decoration: none;
 	border-bottom: 1px solid;
+	&:hover {
+		border-bottom-color: @attentionColor;
+	}
 }
 .b__installation {
 	@media @mq700 {
@@ -57,18 +60,15 @@ body {
 .btn {
 	.border-radius(5px);
 	border-bottom: 2px solid @dark4;
+	text-decoration: none;
 }
-
-	.btn__top {
+	.btn__secondary {
 		display: inline-block;
 		padding: .125em .45em;
+	}
+	.btn__top {
 		margin-top: .875em; // 1em - padding-top. 1em is top/bottom space in the bar.
-		
-		text-decoration: none;
-	}
-	.btn__top:hover {
-		
-	}
+		}
 		.btn__git {
 			margin-right: @main-margin;
 			margin-left: -.1em;
@@ -88,15 +88,17 @@ body {
 			margin: 2em/1.2em auto;
 			padding: .5em;
 			
-			text-decoration: none;
 			text-align: center;
 			
 			font-size: 1.2em;
 			font-weight: 700;
 		}
-		.btn__secondary-download {
+		.btn__top-download {
 			margin-right: @main-margin;
 			margin-left: @main-margin;
+		}
+		.btn__footer-download {
+			float: left;
 		}
 	
 
@@ -138,21 +140,13 @@ body {
 		}
 	}
 
-.nav-link {
-	text-decoration: none;
-}
-	.nav-link__main-nav {
-		color: @white;
-		border-bottom: 1px solid @white;
-		
-		&:hover {
-			border-bottom-color: @attentionColor;
-		}
-	}
+.nav-link {}
+	.nav-link__main-nav {}
 	.nav-link__feature-link {
 		display: block;
 		padding: .5em 0 .5em @main-margin;
 		color: @white;
+		text-decoration: none;
 		
 		&:hover {
 			background-color: @attentionColor;
@@ -213,6 +207,13 @@ body {
 	}
 }
 
+.footer {
+	padding: @main-margin;
+	border-top: 1px solid @copyColor;
+	color: @copyColor;
+	text-align: right;
+}
+
 .code {
 	.border-radius(2px);
 	font-family: 'Ubuntu Mono', monospace;
@@ -241,3 +242,8 @@ body {
 		font-weight: 700;
 	}
 
+.installation-point {
+	margin-left: @main-margin;
+	margin-right: @main-margin;
+	color: @copyColor;
+}

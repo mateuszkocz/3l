@@ -266,6 +266,9 @@ body {
   text-decoration: none;
   border-bottom: 1px solid;
 }
+.link:hover {
+  border-bottom-color: #ffa500;
+}
 @media screen and (min-width: 43.75em) {
   .b__installation {
     clear: both;
@@ -293,12 +296,14 @@ body {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border-bottom: 2px solid #303030;
+  text-decoration: none;
 }
-.btn__top {
+.btn__secondary {
   display: inline-block;
   padding: .125em .45em;
+}
+.btn__top {
   margin-top: .875em;
-  text-decoration: none;
 }
 .btn__git {
   margin-right: 1em;
@@ -325,14 +330,16 @@ body {
   width: 10em;
   margin: 1.6666666666666667em auto;
   padding: .5em;
-  text-decoration: none;
   text-align: center;
   font-size: 1.2em;
   font-weight: 700;
 }
-.btn__secondary-download {
+.btn__top-download {
   margin-right: 1em;
   margin-left: 1em;
+}
+.btn__footer-download {
+  float: left;
 }
 .meta {
   margin-left: -0.1em;
@@ -364,20 +371,11 @@ body {
 .nav-item__feature:first-child {
   border-top: 1px solid #424242;
 }
-.nav-link {
-  text-decoration: none;
-}
-.nav-link__main-nav {
-  color: #ffffff;
-  border-bottom: 1px solid #ffffff;
-}
-.nav-link__main-nav:hover {
-  border-bottom-color: #ffa500;
-}
 .nav-link__feature-link {
   display: block;
   padding: 0.5em 0 0.5em 1em;
   color: #ffffff;
+  text-decoration: none;
 }
 .nav-link__feature-link:hover {
   background-color: #ffa500;
@@ -432,6 +430,12 @@ body {
     margin-top: 0;
   }
 }
+.footer {
+  padding: 1em;
+  border-top: 1px solid #cccccc;
+  color: #cccccc;
+  text-align: right;
+}
 .code {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -459,4 +463,9 @@ body {
   display: block;
   margin-bottom: .5em;
   font-weight: 700;
+}
+.installation-point {
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #cccccc;
 }

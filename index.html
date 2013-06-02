@@ -13,8 +13,6 @@
 	<title>3L - Lots of Love for LESS ♥ Awesome collection of mixins for LESS</title>
 	<meta name="description" content="Improve your CSS development with 3L - awesome collection of basic and advanced mixins for LESS.">
 	
-	<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,400italic,500italic,700,700italic,300,300italic|Ubuntu+Mono:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	
 	<meta name="google-site-verification" content="YvfwF3_zOw6T1dtC6BdBZCkCY4iRn94o9IDOOQY-SAA" />
@@ -22,21 +20,21 @@
 <body>
 	<header role="banner" class="header" id="mainHeader">
 		<div class="bar bar__main">
-			<a href="" class="btn btn__download btn__secondary-download btn__top">Download</a>
-			<a href="" class="btn btn__git btn__top">git</a>
+			<a href="" class="btn btn__secondary btn__download btn__secondary-download btn__top btn__top-download" id="topDownload" data-virtualPage="/download-top">Download</a>
+			<a href="" class="btn btn__secondary btn__git btn__top" id="topGit" data-virtualPage="/git">git</a>
 			<span class="meta"><span class="version">v 1.4.2</span> (<time datetime="2012-08-20" class="time" title="9th September">2012.09.09</time>)</span>
 			<nav role="navigation" class="nav nav__main">
 				<ul class="nav-list nav-list__main">
-					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav" href="#features">Features</a></li>
-					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav" href="#use">Use</a></li>
+					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav link" href="#features">Features</a></li>
+					<li class="nav-item nav-item__main"><a class="nav-link nav-link__main-nav link" href="#use">Use</a></li>
 				</ul>
 			</nav>
 		</div>
 		<div class="intro">
 			<h1 id="brandHeading" class="heading heading-1 heading__branding">Lots of Love for LESS</h1>
-			<p class="lead-copy"> will save you time developing the CSS with the newest CSS3 features. It's the up-to-date <strong class="lead-copy-strong">mixins library for the LESS preprocessor</strong>. It comes with the full set of vendor-prefixed CSS properties, documentation, clean output, <code class="code">optional</code> napespacing, normalize, reset and many other time-saving bonuses. <strong class="lead-copy-strong">&hearts;</strong></p>
+			<p class="lead-copy"> will save you time developing the CSS with the newest CSS3 features. It's the up-to-date <strong class="lead-copy-strong">mixins library for the LESS preprocessor</strong>. It comes with the full set of vendor-prefixed CSS properties, documentation, clean output, optional napespacing, normalize, reset and many other time-saving bonuses. <strong class="lead-copy-strong">&hearts;</strong></p>
 		</div>
-		<a id="downloadButton" class="btn btn__download btn__main-download" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-main']);"><!-- TODO: remove onClick, addEventListener -->
+		<a id="mainDownload" class="btn btn__main btn__download btn__main-download" href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip"  data-virtualPage="/download-main">
 			Download &amp; Use
 		</a>
 		<div class="bar bar__social">
@@ -51,28 +49,28 @@
 			<h2 class="heading heading__general">Features</h2>
 			<nav class="nav nav__features">
 				<ul class="nav-list nav-list__features">
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">SEO</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Normalize, reset, html5bp</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">Helper classes</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">@font-face</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">box-sizing</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">background-clip</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">box-shadow (multiple)</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">border-radius</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">opacity</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">gradients</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">background-size</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">columns</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">transformations</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">transitions</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">animations</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">user-select</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">filters</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">border-image</a></li>
-					<li class="nav-item nav-item__feature"><a href="" class="nav-link nav-link__feature-link">flex-box</a></li>
+					<li class="nav-item nav-item__feature"><a href="#seo" class="nav-link nav-link__feature-link">SEO</a></li>
+					<li class="nav-item nav-item__feature"><a href="#normalize" class="nav-link nav-link__feature-link">Normalize, reset, html5bp</a></li>
+					<li class="nav-item nav-item__feature"><a href="#helper" class="nav-link nav-link__feature-link">Helper classes</a></li>
+					<li class="nav-item nav-item__feature"><a href="#font-face" class="nav-link nav-link__feature-link">@font-face</a></li>
+					<li class="nav-item nav-item__feature"><a href="#box-sizing" class="nav-link nav-link__feature-link">box-sizing</a></li>
+					<li class="nav-item nav-item__feature"><a href="#background-clip" class="nav-link nav-link__feature-link">background-clip</a></li>
+					<li class="nav-item nav-item__feature"><a href="#box-shadow" class="nav-link nav-link__feature-link">box-shadow (multiple)</a></li>
+					<li class="nav-item nav-item__feature"><a href="#border-radius" class="nav-link nav-link__feature-link">border-radius</a></li>
+					<li class="nav-item nav-item__feature"><a href="#opacity" class="nav-link nav-link__feature-link">opacity</a></li>
+					<li class="nav-item nav-item__feature"><a href="#gradients" class="nav-link nav-link__feature-link">gradients</a></li>
+					<li class="nav-item nav-item__feature"><a href="#background-size" class="nav-link nav-link__feature-link">background-size</a></li>
+					<li class="nav-item nav-item__feature"><a href="#columns" class="nav-link nav-link__feature-link">columns</a></li>
+					<li class="nav-item nav-item__feature"><a href="#transformations" class="nav-link nav-link__feature-link">transformations</a></li>
+					<li class="nav-item nav-item__feature"><a href="#transitions" class="nav-link nav-link__feature-link">transitions</a></li>
+					<li class="nav-item nav-item__feature"><a href="#animations" class="nav-link nav-link__feature-link">animations</a></li>
+					<li class="nav-item nav-item__feature"><a href="#user-select" class="nav-link nav-link__feature-link">user-select</a></li>
+					<li class="nav-item nav-item__feature"><a href="#filters" class="nav-link nav-link__feature-link">filters</a></li>
+					<li class="nav-item nav-item__feature"><a href="#border-image" class="nav-link nav-link__feature-link">border-image</a></li>
+					<li class="nav-item nav-item__feature"><a href="#flex-box" class="nav-link nav-link__feature-link">flex-box</a></li>
 				</ul>
 			</nav>
-			<section class="feature">
+			<section class="feature" id="seo">
 				<h3 class="heading heading__feature">SEO Helper</h3>
 				<p>Some usefull CSS properties to warn you if there're some SEO issues on your website. It's a development code only so make sure you remove it from the code when deploying to production.</p>
 				<code class="code code-box feature-input">
@@ -106,7 +104,7 @@
 				</code>
 				<p><a href="" class="link doc-link">SEO helper full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="normalize">
 				<h3 class="heading heading__feature">Normalize, reset, html5bp</h3>
 				<p>Convenient way to use normalize.css, reset.css or HTML5 Boilerplate rules in your stylesheet.</p>
 				<code class="code code-box feature-input">
@@ -123,7 +121,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Normalize, reset and html5bp full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="helper">
 				<h3 class="heading heading__feature">Helper Classes</h3>
 				<p>Usefull mixins made from HTML5 Boilerplate helper classes.</p>
 				<code class="code code-box feature-input">
@@ -162,7 +160,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Helper classes full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="font-face">
 				<h3 class="heading heading__feature">@font-face</h3>
 				<p>Shortcut mixin for @font-face declaration.</p>
 				<code class="code code-box feature-input">
@@ -181,7 +179,7 @@
 				</code>
 				<p><a href="" class="link doc-link">@font-face full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="box-sizing">
 				<h3 class="heading heading__feature">Box Sizing</h3>
 				<p>Change the basic box-model to the one you want.</p>
 				<code class="code code-box feature-input">
@@ -200,7 +198,7 @@
 				</code>
 				<p><a href="#" class="link doc-link">Box sizing full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="background-clip">
 				<h3 class="heading heading__feature">Background clip</h3>
 				<p></p>
 				<code class="code code-box feature-input">
@@ -218,7 +216,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Background clip full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="box-shadow">
 				<h3 class="heading heading__feature">Box shadow</h3>
 				<p>Create shadow behind or inside elements. Multiple shadow supported.</p>
 				<code class="code code-box feature-input">
@@ -237,7 +235,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Box shadow full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="border-radius">
 				<h3 class="heading heading__feature">Border radius</h3>
 				<p>Make your edges roundy. Mixins support elliptical radiuses and also there're mixins for specyfic corners.</p>
 				<code class="code code-box feature-input">
@@ -256,7 +254,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Border radius full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="opacity">
 				<h3 class="heading heading__feature">Opacity</h3>
 				<p>Make your elements transparent. This mixin includes old IE filter property and lets you use percentages and integers to declare the level of opacity.</p>
 				<code class="code code-box feature-input">
@@ -278,7 +276,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Opacity full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="gradients">
 				<h3 class="heading heading__feature">Gradients</h3>
 				<p>Use gradient as a background-image.</p>
 				<code class="code code-box feature-input">
@@ -299,7 +297,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Gradients full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="background-size">
 				<h3 class="heading heading__feature">Background size</h3>
 				<p>Define the size of a background image.</p>
 				<code class="code code-box feature-input">
@@ -317,7 +315,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Background size full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="columns">
 				<h3 class="heading heading__feature">Columns</h3>
 				<p>Divide the content into columns. There are also mixins for all specyfic columns properties.</p>
 				<code class="code code-box feature-input">
@@ -336,7 +334,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Columns full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="transformations">
 				<h3 class="heading heading__feature">Transformations</h3>
 				<p>CSS3 2D and 3D transformations with mixins for all types of transformations and similar properties (transform-style, transform-origin, perspective, perspective-origin and backface-visibilty).</p>
 				<code class="code code-box feature-input">
@@ -355,7 +353,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Transformations full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="transitions">
 				<h3 class="heading heading__feature">Transitions</h3>
 				<p>Animate the change in CSS properies' values. Mixin supports multiple transitions. There're also mixins for spesyfic transition properties.</p>
 				<code class="code code-box feature-input">
@@ -373,7 +371,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Transitions full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="animations">
 				<h3 class="heading heading__feature">Animations</h3>
 				<p>Animate your elements.</p>
 				<code class="code code-box feature-input">
@@ -391,7 +389,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Animations and @keyframes full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="user-select">
 				<h3 class="heading heading__feature">User Select</h3>
 				<p>Controls the selection model of an element.</p>
 				<code class="code code-box feature-input">
@@ -411,8 +409,8 @@
 				</code>
 				<p><a href="" class="link doc-link">User select full documentation</a></p>
 			</section>
-			<section class="feature">
-				<h3 class="heading heading__feature">Filter</h3>
+			<section class="feature" id="filters">
+				<h3 class="heading heading__feature">Filters</h3>
 				<p>Advanced graphic filters in CSS. Supports multiple filters.</p>
 				<code class="code code-box feature-input">
 					<span class="code-type">Write</span>
@@ -431,7 +429,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Filter full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="border-image">
 				<h3 class="heading heading__feature">Border image</h3>
 				<p>Use images as box borders.</p>
 				<code class="code code-box feature-input">
@@ -451,7 +449,7 @@
 				</code>
 				<p><a href="" class="link doc-link">Border image full documentation</a></p>
 			</section>
-			<section class="feature">
+			<section class="feature" id="flex-box">
 				<h3 class="heading heading__feature">Flexible Box Model</h3>
 				<p>Modern way to create layouts.</p>
 				<code class="code code-box feature-input">
@@ -474,11 +472,11 @@
 			</section>
 		</section>
 		
-		<section id="installation" class="b b__installation">
+		<section id="use" class="b b__installation">
 			<h2 class="heading heading-2 heading__general">How to use?</h2>
 			<section class="installation-point">
 				<h3 class="subheading heading-3">Basic use</h3>
-				<p><a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" onClick="javascript: _gaq.push(['_trackPageview', '/download-manual']);">Download 3L.zip file</a>, unzip it and place it in your project. You can start editing <span class="code code-span">style.less</span> file or <span class="code code-span">@import 3L.less</span> into your previously created LESS stylesheet. Use <span class="code code-span">.normalize()</span> or <span class="code code-span">.reset()</span> classes if you want.</p>
+				<p><a href="https://github.com/downloads/mateuszkocz/3l/3l-v1.3.3.zip" class="link" id="manualDownload" data-virtualPage="/download-manual">Download 3L.zip file</a>, unzip it and place it in your project. You can start editing <span class="code code-span">style.less</span> file or <span class="code code-span">@import 3L.less</span> into your previously created LESS stylesheet. Use <span class="code code-span">.normalize()</span> or <span class="code code-span">.reset()</span> classes if you want.</p>
 			</section>
 			<section class="installation-point">
 				<h3 class="subheading heading-3">Namespacing</h3>
@@ -486,26 +484,26 @@
 			</section>
 			<section class="installation-point">
 				<h3 class="subheading heading-3">Animations</h3>
-				<p><span class="code code-span">@import "animation[1-5]"</span> (they're in 3L/assets/animationsins) to your stylesheet, create a class <span class="code code-span">.animation[1-5]() {/*animation properties*/}</span> and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with <span class="code code-span">.animation()</span> mixin.</p>
+				<p><span class="code code-span">@import "animation[1-5]"</span> (they're in 3L/assets/animationsins) to your stylesheet, create a class <span class="code code-span">.animation[1-5]() {/* @keyframes properties */}</span> and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with <span class="code code-span">.animation()</span> mixin.</p>
 			</section>
 			<section class="installation-point">
 				<h3 class="subheading heading-3">Refer to the documentation</h3>
-				<p>The 3L.less file has all documentation included. If you want to know more how to use a mixin, what parameters it takes, what browsers it supports or where you could find more information about a CSS property just find the corresponding section in the file.</p>
+				<p>The 3L.less file has all documentation included. If you want to know more how to use a mixin, what parameters it takes, what browsers it supports or where you could find more information about a CSS property just find the corresponding section in the file or refer to the <a href="https://github.com/mateuszkocz/3l/wiki" class="link">3L wiki on GitHub</a></p>
 			</section>
 			<section class="installation-point">
 				<h3 class="subheading heading-3">Compile</h3>
-				<p>All .less files should be compiled to .css. You can use native LESS compiler or you can try <a href="http://winless.org/">Winless</a>, <a href="http://alphapixels.com/prepros/">Prepross</a> and <a href="http://incident57.com/codekit/">CodeKit</a>. Your output CSS file will be clean. Only the used mixins from 3L will be included, nothing else.</p>
+				<p>All .less files should be compiled to .css. You can use native LESS compiler or you can try <a href="http://winless.org/" class="link">Winless</a>, <a href="http://alphapixels.com/prepros/" class="link">Prepross</a> and <a href="http://incident57.com/codekit/" class="link">CodeKit</a>. Your output CSS file will be clean. Only the used mixins from 3L will be included, nothing else.</p>
 			</section>
 		</section>
 	</main>
 	
-	<footer role="contentinfo">
-		<a href="">Download</a> <a href="https://github.com/mateuszkocz/3l">Watch &amp; Fork on GitHub</a> <a href="http://radiatingstar.com">Radiating Star</a> <a href="http://lesscss.org/">LESS</a> Patterns: <a href="http://subtlepatterns.com/">Subtle Patterns</a> Font: <a href="http://font.ubuntu.com/">Ubuntu</a> <a href="http://mateusz.kocz.pl" rel="author">made by ★</a>
+	<footer role="contentinfo" class="footer page-footer">
+		<a href="" class="btn btn__download btn__secondary btn__secondary-download btn__footer-download" id="footerDownload" data-virtualPage="/download-footer">Download</a>Patterns: <a href="http://subtlepatterns.com/" class="link">Subtle Patterns</a> &hearts; Font: <a href="http://font.ubuntu.com/" class="link">Ubuntu</a> &hearts; 3L <a href="http://mateusz.kocz.pl" rel="author" class="link">made by ★</a>
 	</footer>
 	
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script type="text/javascript">
-		// DECIDE: Should this function stay? jQuery isn't critical.
+		// FIXME: jQuery just for animated scroll? C'mon!
 		window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>');
 		
 		// Fluid scroll
@@ -515,37 +513,13 @@
 					var $target = $(this.hash);
 					$target = $target.length && $target || $('[id=' + this.hash.slice(1) +']');
 					if ($target.length) {
-						var targetOffset = $target.offset().top - 110;
+						var targetOffset = $target.offset().top;
 						$('html,body').animate({scrollTop: targetOffset}, 300);
 						return false;
 					}
 				}
 			});
 		});
-		
-		// Toggling features
-		$('.subheading__feature').addClass('subheading__feature--not-toggled');
-		
-		$('.subheading__feature').click(function(e){
-			if ($(this).hasClass('subheading__feature--not-toggled')) {
-				$(this).removeClass('subheading__feature--not-toggled')
-					   .addClass('subheading__feature--toggled');
-			} else {
-				$(this).removeClass('subheading__feature--toggled')
-					   .addClass('subheading__feature--not-toggled');
-			}
-		});
-		
-		//TEMP
-		// document.addEventListener("keydown", keyup, false);
-		// function keyup(e) {
-			// var key = e.keyCode;
-			// e.preventDefault();
-			// if (key === 38) {
-				// console.log("asa");
-			// }
-		// }
-		
 		
 		// Twitter
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -555,7 +529,14 @@
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
-
+		
+		// GA events
+		var virtualPages = [asa,topDownload, topGit, mainDownload, manualDownload, footerDownload];
+		virtualPages.forEach(function(el,i,a){
+			el.addEventListener('click',function(e){
+				_gaq.push(['_trackPageview', el.getAttribute('data-virtualPage')]);
+			},false);
+		});
 	</script>
 </body>
 </html>
