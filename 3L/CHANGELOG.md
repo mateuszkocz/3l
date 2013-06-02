@@ -6,6 +6,7 @@
 * removed -o-filters since Opera's moving to Webkit.
 * the fallback color in gradients is present only if three parameters are used in gradients mixin.
 * fallback color in grdients use background-color property instead of background.
+* removed Bootstrap integration files.
 
 ## 1.4.3-beta
 * filter with unlimited arguments.
