@@ -1,9 +1,11 @@
 # CHANGELOG
 
-## 1.4.
+## 1.4.4
 * @font-face has the new parameter - 'filename'. Previously the filename was the same as font-name.
 * .hue-rotation() changed to .hue-rotate() since it's the valid name of the filter.
 * removed -o-filters since Opera's moving to Webkit.
+* the fallback color in gradients is present only if three parameters are used in gradients mixin.
+* fallback color in grdients use background-color property instead of background.
 
 ## 1.4.3-beta
 * filter with unlimited arguments.
