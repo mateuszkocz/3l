@@ -1,10 +1,3 @@
-__Important notice__
-*As for today and for as long as the version 1.4 of 3L is in beta, many information in the README (this file) and [3L website](http://mateuszkocz.github.io/3l/) are not up to date and mostly refers to the previous 3L's version. Especially this holds true for the usage instructions and [Bootstrap](http://twitter.github.io/bootstrap/) integration.*
-*The previous version is still downloadable [on the site](http://mateuszkocz.github.io/3l/) and if you feel uncofortable with the lack of infromation, please use the version 1.3 of 3L. However I strongly recomend you to use the version 1.4, since 1.3 is not updated for a long time and is obsolete.*
-
-TODO: Check the LESS version compatibility.
-
-
 # 3L was made for YOU to help you create awesome websites and fill the Internet with excessive amount of Love! ♥
 
 Keep up your good work!
@@ -15,19 +8,13 @@ Keep up your good work!
 * [Download .zip](https://github.com/mateuszkocz/3l/archive/master.zip)
 
 3L is MIT licensed.
+Includes normalize.css, reset.css and some code from HTML5 Boilerplate.
+For the licencess refer to the LICENCES.md.
 
-[LESS](http://lesscss.org/) is made by Alexis Sellier and licensed under [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-[reset.css](http://meyerweb.com/eric/tools/css/reset/) is made by Eric Meyer and is in public domain.
-
-[normalize.css](http://necolas.github.com/normalize.css/) is made by Nicolas Gallagher and Jonathan Neal and licensed under MIT License.
-
-[HTML5 Boiler Plate's default CSS](http://html5boilerplate.com/) is made by Nicolas Gallagher, Jonathan Neal, Kroc Camen, the H5BP dev community and other people and is licensed under MIT License.
-
-3L version: 1.4.3-beta (2013.04.10)
+3L version: 1.4.4 (2013.06.02)
 LESS version: 1.3.1
 Reset.css version: 2.0
-Normalize.css version: 2.0.1
+Normalize.css version: 2.1.2
 HTML5BP's CSS version: 4.0.1
 
 [Get your own LESS.js](http://lesscss.org/)
