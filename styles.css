@@ -7,52 +7,10 @@
 }
 @font-face {
   font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-RI-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-RI-webfont.woff') format('woff'), url('fonts/Ubuntu-RI-webfont.ttf') format('truetype'), url('fonts/Ubuntu-RI-webfont.svg') format('svg');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-B-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-B-webfont.woff') format('woff'), url('fonts/Ubuntu-B-webfont.ttf') format('truetype'), url('fonts/Ubuntu-B-webfont.svg') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-BI-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-BI-webfont.woff') format('woff'), url('fonts/Ubuntu-BI-webfont.ttf') format('truetype'), url('fonts/Ubuntu-BI-webfont.svg') format('svg');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Ubuntu';
   src: url('fonts/Ubuntu-L-webfont.eot');
   src: local('☺'), url('fonts/Ubuntu-L-webfont.woff') format('woff'), url('fonts/Ubuntu-L-webfont.ttf') format('truetype'), url('fonts/Ubuntu-L-webfont.svg') format('svg');
   font-weight: 300;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-LI-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-LI-webfont.woff') format('woff'), url('fonts/Ubuntu-LI-webfont.ttf') format('truetype'), url('fonts/Ubuntu-LI-webfont.svg') format('svg');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-M-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-M-webfont.woff') format('woff'), url('fonts/Ubuntu-M-webfont.ttf') format('truetype'), url('fonts/Ubuntu-M-webfont.svg') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('fonts/Ubuntu-MI-webfont.eot');
-  src: local('☺'), url('fonts/Ubuntu-MI-webfont.woff') format('woff'), url('fonts/Ubuntu-MI-webfont.ttf') format('truetype'), url('fonts/Ubuntu-MI-webfont.svg') format('svg');
-  font-weight: 500;
-  font-style: italic;
 }
 @font-face {
   font-family: 'Ubuntu Mono';
@@ -63,24 +21,10 @@
 }
 @font-face {
   font-family: 'Ubuntu Mono';
-  src: url('fonts/UbuntuMono-RI-webfont.eot');
-  src: local('☺'), url('fonts/UbuntuMono-RI-webfont.woff') format('woff'), url('fonts/UbuntuMono-RI-webfont.ttf') format('truetype'), url('fonts/UbuntuMono-RI-webfont.svg') format('svg');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Ubuntu Mono';
   src: url('fonts/UbuntuMono-B-webfont.eot');
   src: local('☺'), url('fonts/UbuntuMono-B-webfont.woff') format('woff'), url('fonts/UbuntuMono-B-webfont.ttf') format('truetype'), url('fonts/UbuntuMono-B-webfont.svg') format('svg');
   font-weight: 700;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('fonts/UbuntuMono-BI-webfont.eot');
-  src: local('☺'), url('fonts/UbuntuMono-BI-webfont.woff') format('woff'), url('fonts/UbuntuMono-BI-webfont.ttf') format('truetype'), url('fonts/UbuntuMono-BI-webfont.svg') format('svg');
-  font-weight: 700;
-  font-style: italic;
 }
 article,
 aside,
@@ -309,7 +253,6 @@ body {
   margin-right: 1em;
   margin-left: -0.1em;
   background-color: #ffffff;
-  background: #fafafa;
   background-image: -moz-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
   background-image: -webkit-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
   background-image: linear-gradient(to bottom, #fafafa 0%, #eaeaea 100%);
@@ -318,7 +261,6 @@ body {
 }
 .btn__download {
   background-color: #ffa500;
-  background: #ffa500;
   background-image: -moz-linear-gradient(top, #ffa500 0%, #ffae1a 100%);
   background-image: -webkit-linear-gradient(top, #ffa500 0%, #ffae1a 100%);
   background-image: linear-gradient(to bottom, #ffa500 0%, #ffae1a 100%);
