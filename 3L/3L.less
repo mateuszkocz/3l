@@ -505,10 +505,10 @@
 // * Create a beautiful gradient without images.
 // *
 // * @USAGE
-// * Pick a type of a gradient you want to have and put colours in
-// * brackets. You can put either two or three colours. In the first case
-// * the default colour for old browsers will be the same as the first colour provided.
-// * In the second case you can set that colour as a third argument.
+// * Pick a type of a gradient you want to have and put colours as arguments.
+// * You can put either two or three colours. In the first case
+// * you type only the gradient's colours. Three arguments gradient mixins
+// * will use the third colour as background-color.
 // *
 // * The default class - .gradient - is the same as .vertical-gradient.
 // *
@@ -528,31 +528,7 @@
 // * * https://developer.mozilla.org/en-US/docs/CSS/gradient
 // * * http://caniuse.com/#feat=css-gradients
 // *
-// * TODO: test if the beta-gradient is reverse-compatible with the old gradient.
 // **/
-
-// Multi-purpose gradient is in a BETA stage! Uncomment for your own responsibility.
-// * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
-// * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
-// * FIXME: does it work with "to top left" and similar or with angles?
-
-// .gradient(@gradientType, @direction, @rest...) {
-	// @valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
-	// @directionProcessedOld: ~`"@{direction}".replace(/[\[\]]|\,/g,'').replace("to ","").replace("top","bottom").replace("bottom","top").replace("right","left").replace("left","right").replace("at ","").replace("cover", "farthest-corner")`;
-	// @directionProcessedNew: ~`"@{direction}".replace(/[\[\]]|\,/g,'')`; 
-// 	
-	// @webkit1: `"-webkit-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
-	// @webkit2: ~`'@{webkit1}'.replace(/\"/g, '')`;
-	// background-image: @webkit2;
-// 	
-	// @moz1: `"-moz-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
-	// @moz2: ~`'@{moz1}'.replace(/\"/g, '')`;
-	// background-image: @moz2;
-// 	
-	// @w3c1: `"@{gradientType}" + "-gradient(" + "@{directionProcessedNew}," + "@{valuesProcessed}" + ")"`;
-	// @w3c2: ~`'@{w3c1}'.replace(/\"/g, '')`;
-	// background-image: @w3c2;
-// }
 
 .gradient (@color1, @color2){
 	background-image: -moz-linear-gradient(top, @color1 0%, @color2 100%);
@@ -609,6 +585,32 @@
 	background-image: radial-gradient(at center, @color1 0%,@color2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
 	}
+
+// !! WARNING !!
+// MULTIPLE ARGUMENTS GRADIENT MIXINS IS IN DEVELOPEMENT AND PROBABLY WON'T WORK.
+//
+// * TODO: test if the beta-gradient is reverse-compatible with the old gradient.
+// * FIXME: you don't need to provide the @direction value since default is "to bottom". How to make it works?
+// * FIXME: simple radial-gradient should work, but what if you provide some more advanced values?
+// * FIXME: does it work with "to top left" and similar or with angles?
+
+// .gradient(@gradientType, @direction, @rest...) {
+	// @valuesProcessed: ~`"@{rest}".replace(/[\[\]]/g, '')`;
+	// @directionProcessedOld: ~`"@{direction}".replace(/[\[\]]|\,/g,'').replace("to ","").replace("top","bottom").replace("bottom","top").replace("right","left").replace("left","right").replace("at ","").replace("cover", "farthest-corner")`;
+	// @directionProcessedNew: ~`"@{direction}".replace(/[\[\]]|\,/g,'')`; 
+// 	
+	// @webkit1: `"-webkit-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
+	// @webkit2: ~`'@{webkit1}'.replace(/\"/g, '')`;
+	// background-image: @webkit2;
+// 	
+	// @moz1: `"-moz-" + "@{gradientType}" + "-gradient(" + "@{directionProcessedOld}," + "@{valuesProcessed}" + ")"`;
+	// @moz2: ~`'@{moz1}'.replace(/\"/g, '')`;
+	// background-image: @moz2;
+// 	
+	// @w3c1: `"@{gradientType}" + "-gradient(" + "@{directionProcessedNew}," + "@{valuesProcessed}" + ")"`;
+	// @w3c2: ~`'@{w3c1}'.replace(/\"/g, '')`;
+	// background-image: @w3c2;
+// }
 
 ///**
 // * Background-size

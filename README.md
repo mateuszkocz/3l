@@ -1,7 +1,5 @@
 # 3L was made for YOU to help you create awesome websites and fill the Internet with excessive amount of Love! ♥
 
-Keep up your good work!
-
 * Author: [Mateusz Kocz](http://radiatingstar.com)
 * [Watch 3L on Github](https://github.com/mateuszkocz/3l)
 * [Submit a bug issue](https://github.com/mateuszkocz/3l/issues?state=open)
@@ -11,40 +9,40 @@ Keep up your good work!
 Includes normalize.css, reset.css and some code from HTML5 Boilerplate.
 For the licencess refer to the LICENCES.md.
 
-3L version: 1.4.4 (2013.06.02)
-LESS version: 1.3.1
+3L version: 1.4.4 (2013.06.03)
+LESS version: 1.3.3
 Reset.css version: 2.0
 Normalize.css version: 2.1.2
 HTML5BP's CSS version: 4.0.1
 
 [Get your own LESS.js](http://lesscss.org/)
 
-==========================================
+---
 
-HOW TO USE
+# HOW TO USE
 
-Inside the .zip file you have:
+## Basic use
+[Download 3L.zip file](https://github.com/mateuszkocz/3l/archive/master.zip), unzip it and place it in your project. You can start editing `style.less` file or `@import 3L.less` into your previously created LESS stylesheet. Use `.normalize()` or `.reset()` classes if you want.
 
-* my-style.less – here you'll be writing you code,
-* 3L-mini.less – the basic file with mixins,
-* 3L-maxi.less – mixins with documentation and examples,
-* less.js – the newest, compatible with 3L version of LESS.js,
-* animations.less – mixins required for declaring @keyframes,
-* bootstrap – files to be replaced in Bootstrap's less directory in order to use 3L together with Bootstrap.
+## Namespacing
+If you're using anoter mixins library you might want to put 3L into a namespace so the two libraries won't clash. Just type `#3L {@import '3L/3L';}` and the 3L will be fully contained in its own namespace. Access the mixins with `#3L > .mixin()`.
 
-Copy my-style.less, 3L-mini.less and less.js into the folder with your project. Place the code below in the <head> section of your .html file.
 
-	<link rel="stylesheet/less" type="text/css" href="my-style.less" />
-	<script src="less.js" type="text/javascript"></script>
+## Animations
+`@import "animation[1-5]"` (they're in 3L/assets/animationsins) to your stylesheet, create a class `.animation[1-5]() {/* @keyframes properties */}` and declare your animation. 3L will make the prefixed @keyframes for you. Now just use this animation in any element you want with `.animation()` mixin.
 
-You can now start writing your own style in my-style.less. Check out the documentation for class names available to use and make your code awesome!
+## Refer to the documentation
+The 3L.less file has all documentation included. If you want to know more how to use a mixin, what parameters it takes, what browsers it supports or where you could find more information about a CSS property just find the corresponding section in the file or refer to the [3L wiki on GitHub](https://github.com/mateuszkocz/3l/wiki).
 
-==========================================
+## Compile
+All .less files should be compiled to .css. You can use native LESS compiler or you can try [Winless](http://winless.org/), [Prepross](http://alphapixels.com/prepros/) and [CodeKit](http://incident57.com/codekit/). Your output CSS file will be clean. Only the used mixins from 3L will be included, nothing else.
 
-ANIMATIONS
+---
 
-Using animations with 3L is pretty easy. Copy the animations less files (animationX.less) to the folder where you have your style sheet. In your code just type @import "animation1" (or any other number), create a class .animation1 (or any other) and declare your animation. 3L will make @keyframes for you. Now just use this animation in any element you want with .animation() class.
+# ANIMATIONS
 
+Using animations with 3L is pretty easy. Copy the animations less files (animationX.less) to the folder where you have your style sheet. In your code just type `@import "animation1"` (or any other number), create a class `.animation1` (or any other) and declare your animation. 3L will make @keyframes for you. Now just use this animation in any element you want with `.animation()` class.
+```
 	@import "animation1";
 	.animation1 () {
 		/* your @keyframes rules */
@@ -52,41 +50,13 @@ Using animations with 3L is pretty easy. Copy the animations less files (animati
 	.someClassName {
 		.animation(.animation1 1s);
 		}
-	
-==========================================
-
-FAQ and TROUBLESHOOTING
-
-How to make 3L compatible with Bootstrap?
-
-It's easy! First you need to download pre-compiled Bootstrap (tested on v.2.0.2) with LESS files. Get it here -> https://github.com/twitter/bootstrap/ and unzip it. Then, in your downloaded 3L folder, you have a bootstrap folder with 2 files: bootstrap.less and mixins.less. Replace Bootstrap's original files in less folder with those two. After that just copy and paste 3l-mini.less (and all animations if you wish to use them) to the Bootstrap's less folder and create some awesome website!
-
+```
 ---
 
-Where are my grids?
-
-3L doesn't have a grid system implemented. It is not meant to have any style included. Of course grids are cool so create yours with Gridpak —> http://gridpak.com/ . Gridpak gives you a responsive grid in LESS file so you can use it together with 3L.
-
----
+# FAQ and TROUBLESHOOTING
 
 Compiler I use fail to compile 3L!
 
 Unfortunately not all compilers can deal with some of the 3L classes. The hardest to compile are opacity in percentages (it uses a small piece of JavaSript), keyframes and guarded mixins. I strongly encourage you to use WinLess (also the online version) as it works very well with all 3L classes.
 
-If you're on a Mac and compiler you use was able to deal with all the issues stated above, please, let me know (mateusz@radiatingstar.com)!
-
 Other solution would be to delete the option to declare opacity in percentages (it's the biggest class in opacity block in 3L.less file and uses JavaScript). If it still doesn't help, you seriously need to consider getting a better compiler compatible with all LESS functionality!
-
----
-
-I've found a bug (in your English)
-
-That's great! Please, submit an issue via GitHub, so I'll get it fixed ASAP. -> https://github.com/mateuszkocz/3l/issues?state=open
-
-If you find an error in language — be it on this website or in 3L's documentation — do not hesitate to also point that out! 3L is learning English very hard!
-
----
-
-After compilation I have many comments in my style sheet
-
-The reason is that you're using 3L-maxi.less that has documentation included. Your compiler leaves the comments intact. Solution is pretty easy — use either 3L-mini.less (if you use my-style.less 3L-mini is the default) or minify your CSS. Actually you should always minify CSS files so even if you were using 3L-maxi.less, those comments will be deleted eventually.
