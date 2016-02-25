@@ -1,6 +1,6 @@
 {
 	"name": "3l",
-	"version": "1.4.4",
+	"version": "1.4.5",
 	"main": "3L/3L.less",
 	"description": "Lots of Love for LESS - the up-to-date mixins library for the LESS preprocessor",
 	"homepage": "http://mateuszkocz.github.io/3l/",

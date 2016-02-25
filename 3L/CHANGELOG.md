@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.5
+* fixed not working .transition-property() mixin (thanks [@gwarnants](https://github.com/gwarnants)).
+
 ## 1.4.4
 * @font-face has the new parameter - 'filename'. Previously the filename was the same as font-name.
 * .hue-rotation() changed to .hue-rotate() since it's the valid name of the filter.

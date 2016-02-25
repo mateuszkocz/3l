@@ -9,7 +9,7 @@
 Includes normalize.css, reset.css and some code from HTML5 Boilerplate.
 For the licencess refer to the LICENCES.md.
 
-3L version: 1.4.4 (2013.06.03)
+3L version: 1.4.5 (2016.02.25)
 LESS version: 1.3.3
 Reset.css version: 2.0
 Normalize.css version: 2.1.2
