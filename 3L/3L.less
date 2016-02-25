@@ -967,7 +967,7 @@
 .transition-property(@property1, @property2:X, ...) {
 	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
 	-webkit-transition-property: @properties;
-	transition-property: @@properties;
+	transition-property: @properties;
 }
 .transition-duration(@property1, @property2:X, ...) {
 	@properties: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
