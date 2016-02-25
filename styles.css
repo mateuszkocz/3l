@@ -81,7 +81,7 @@ dfn {
 }
 mark {
   background: #ff0;
-  color: #000000;
+  color: #000;
 }
 code,
 kbd,
@@ -183,7 +183,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/*var*/html {
+/*var*/
+html {
   background-color: #101010;
   background-image: url(img/low_contrast_linen.png);
   background-attachment: fixed;
@@ -206,7 +207,7 @@ body {
   }
 }
 .link {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   border-bottom: 1px solid;
 }
@@ -227,7 +228,7 @@ body {
 .bar__social:after {
   content: "♥";
   float: right;
-  color: #ffffff;
+  color: #fff;
   font-size: 2em;
   line-height: .7;
 }
@@ -252,7 +253,7 @@ body {
 .btn__git {
   margin-right: 1em;
   margin-left: -0.1em;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: -moz-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
   background-image: -webkit-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
   background-image: linear-gradient(to bottom, #fafafa 0%, #eaeaea 100%);
@@ -265,12 +266,12 @@ body {
   background-image: -webkit-linear-gradient(top, #ffa500 0%, #ffae1a 100%);
   background-image: linear-gradient(to bottom, #ffa500 0%, #ffae1a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa500', endColorstr='#ffae1a', GradientType=0);
-  color: #000000;
+  color: #000;
 }
 .btn__main-download {
   display: block;
   width: 10em;
-  margin: 1.6666666666666667em auto;
+  margin: 1.66666667em auto 1em;
   padding: .5em;
   text-align: center;
   font-size: 1.2em;
@@ -316,12 +317,12 @@ body {
 .nav-link__feature-link {
   display: block;
   padding: 0.5em 0 0.5em 1em;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 .nav-link__feature-link:hover {
   background-color: #ffa500;
-  color: #000000;
+  color: #000;
 }
 .header {
   background-image: url(img/stressed_linen.png);
@@ -346,8 +347,9 @@ body {
   color: #ffa500;
   font-weight: 300;
 }
-/* var */.heading__general {
-  padding-left: 0.6180469715698392em;
+/* var */
+.heading__general {
+  padding-left: 0.61804697em;
   color: #ffa500;
   font-size: 1.618em;
   font-weight: 400;
@@ -378,14 +380,16 @@ body {
   color: #cccccc;
   text-align: right;
 }
-.code {
+.code,
+.console-install {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   font-family: 'Ubuntu Mono', monospace;
   font-weight: 400;
 }
-.code-span {
+.code-span,
+.console-install {
   padding: .1em;
   background-color: #424242;
   color: #fff;
@@ -410,4 +414,10 @@ body {
   margin-left: 1em;
   margin-right: 1em;
   color: #cccccc;
+}
+.console-install {
+  display: block;
+  max-width: 12em;
+  margin: 0 auto 1em;
+  padding: 0 .5em;
 }

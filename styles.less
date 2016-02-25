@@ -84,7 +84,7 @@ body {
 		.btn__main-download {
 			display: block;
 			width: 10em;
-			margin: 2em/1.2em auto;
+			margin: 2em/1.2em auto 1em;
 			padding: .5em;
 			
 			text-align: center;
@@ -245,4 +245,13 @@ body {
 	margin-left: @main-margin;
 	margin-right: @main-margin;
 	color: @copyColor;
+}
+
+.console-install {
+	&:extend(.code);
+	&:extend(.code-span);
+	display: block;
+	max-width: 12em;
+	margin: 0 auto 1em;
+	padding: 0 .5em;
 }
